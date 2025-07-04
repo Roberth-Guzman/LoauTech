@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-06-2025 a las 17:51:32
+-- Tiempo de generación: 04-07-2025 a las 05:28:41
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -80,10 +80,11 @@ INSERT INTO `contactos` (`IDcont`, `numerocont`, `direccioncont`, `correocont`, 
 (17, 3211312121, 'calle 4 a sur', 'branaa@gmail.com', 'activo', 18),
 (18, 3204887815, 'carrera 8: 22', 'miguelcastiblanco2468@gmail.com', 'activo', 19),
 (19, 3204887815, 'calle 3 a sur', 'miguelcastiblanco2468@gmail.com', 'activo', 20),
-(22, 3333333333, 'crra 4a 2a 1', 'porteria1@gmail.com', 'activo', 23),
-(23, 3203113210, 'crra 3a 1 cali', 'pablo@gmail.com', 'activo', 24),
 (24, 3211231234, 'crar 3 a54 1', 'usuario@gmail.com', 'activo', 25),
-(25, 3334333333, 'crra 4a 2a 1', 'rob@gmail.com', 'activo', 26);
+(25, 3334333333, 'crra 4a 2a 1', 'rob@gmail.com', 'activo', 26),
+(27, 3123426546, 'calle 1 sur # 3-46', 'sernacordobalizethdayana@gmail.com', 'activo', 28),
+(28, 32401848122, 'crra 3a 1 bogota', 'miguela@gmail.com', 'activo', 29),
+(29, 3204441607, 'crra 4e 2a 67', 'adriiang322@gmail.com', 'activo', 30);
 
 -- --------------------------------------------------------
 
@@ -95,22 +96,25 @@ CREATE TABLE `cuentas` (
   `IDcue` int(11) NOT NULL,
   `numerodoc` bigint(15) NOT NULL,
   `contracue` varchar(200) NOT NULL,
-  `estadocue` enum('activo','inactivo') NOT NULL
+  `estadocue` enum('activo','inactivo') NOT NULL,
+  `reset_token` varchar(64) DEFAULT NULL,
+  `token_expira` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `cuentas`
 --
 
-INSERT INTO `cuentas` (`IDcue`, `numerodoc`, `contracue`, `estadocue`) VALUES
-(13, 1014862578, '$2y$10$PSqqvFGPMv0nW0x5FkqAtOdQ2jMpuoZwZgO7uZ/qCBis5/CYOJ6SO', 'activo'),
-(15, 12365478, '$2y$10$tjoUJ3zn1G2Ok67NcKt66ur8cmcEeh4nmh.NEh0cI61yZMXRo7dBS', 'activo'),
-(16, 10148999, '$2y$10$GYAr20jymPZQHav4yaiaf.dYCBtsWoXrEx8h11WfeDUiH.566L7nm', 'activo'),
-(17, 99995999, '$2y$10$gBrUaM2JaP/ClfBfVu4L5.UDg6Dz/oDPkeX.R9ZaP5SVqcTOLt45y', 'activo'),
-(22, 1081402720, '$2y$10$2QNA0BxVfjhvUugle3GR6uqwfbhsiD3RYVxR5EqM1Cd0sBH1lm4ly', 'activo'),
-(23, 11111111, '$2y$10$33QHaXkZ5UTjeOZ71srKKe2InNNv76tUAi64bOmp9MpYi8d2uZcmi', 'activo'),
-(24, 22222222, '$2y$10$ZdZcHqbWgfui9gEyixa7feB7OeNgMg5R32YMhh6I71EWu7qaGSeii', 'activo'),
-(25, 33333333, '$2y$10$iGP.3E1qxiYiGYg8ZOWEMOHxVehn3IuvJ7EDat4EiR5DOGe2Uc3QW', 'activo');
+INSERT INTO `cuentas` (`IDcue`, `numerodoc`, `contracue`, `estadocue`, `reset_token`, `token_expira`) VALUES
+(13, 1014862578, '$2y$10$PSqqvFGPMv0nW0x5FkqAtOdQ2jMpuoZwZgO7uZ/qCBis5/CYOJ6SO', 'activo', NULL, NULL),
+(15, 12365478, '$2y$10$tjoUJ3zn1G2Ok67NcKt66ur8cmcEeh4nmh.NEh0cI61yZMXRo7dBS', 'activo', NULL, NULL),
+(16, 10148999, '$2y$10$GYAr20jymPZQHav4yaiaf.dYCBtsWoXrEx8h11WfeDUiH.566L7nm', 'activo', NULL, NULL),
+(17, 99995999, '$2y$10$gBrUaM2JaP/ClfBfVu4L5.UDg6Dz/oDPkeX.R9ZaP5SVqcTOLt45y', 'activo', NULL, NULL),
+(24, 22222222, '$2y$10$ZdZcHqbWgfui9gEyixa7feB7OeNgMg5R32YMhh6I71EWu7qaGSeii', 'activo', NULL, NULL),
+(25, 33333333, '$2y$10$iGP.3E1qxiYiGYg8ZOWEMOHxVehn3IuvJ7EDat4EiR5DOGe2Uc3QW', 'activo', NULL, NULL),
+(27, 1081401177, '$2y$10$ngOUKPeWwoQ9OeCy8GrBVOt8ZFv/Vv4eYQyMrWolFFeKIn.umAoiy', 'activo', NULL, NULL),
+(28, 1081721028, '$2y$10$ezcBzZWcBLfVoI5RuSSvY.u7TA4gWKsCxDFrUxqsgaf1vnEGcP96W', 'activo', NULL, NULL),
+(29, 1081402721, '$2y$10$gl6bDo5MLMhU.imDFCFwr.9VuSjQGJ3bxXHYqim2aI7T9.wvI9jjO', 'activo', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -248,10 +252,11 @@ INSERT INTO `personas` (`IDper`, `nombrecompletoper`, `tipodocumento`, `numerodo
 (18, 'mauserr', 'TI', 99995999, ''),
 (19, 'Miguel Ángel Castiblanco Rivera', 'CC', 1081401474, ''),
 (20, 'Miguel Ángel Castiblanco Rivera', 'CC', 1081401474, ''),
-(23, 'Roberth Guzman', 'CC', 1081402720, ''),
-(24, 'pablo', 'CC', 11111111, ''),
 (25, 'usuario pruebas', 'CC', 22222222, ''),
-(26, 'porteria robsito', 'CC', 33333333, '');
+(26, 'porteria robsito', 'CC', 33333333, ''),
+(28, 'Lizeth Dayana Serna', 'CC', 1081401177, ''),
+(29, 'miguel garcia', 'TI', 1081721028, ''),
+(30, 'Roberth Guzman Salazar', 'CC', 1081402721, '');
 
 -- --------------------------------------------------------
 
@@ -295,10 +300,11 @@ INSERT INTO `roles` (`IDrol`, `rol`, `estadorol`, `idper`) VALUES
 (18, 'admin', 'activo', 18),
 (19, 'usuario', 'activo', 19),
 (20, 'admin', 'activo', 20),
-(23, 'porteria', 'activo', 23),
-(24, 'admin', 'activo', 24),
 (25, 'usuario', 'activo', 25),
-(26, 'porteria', 'activo', 26);
+(26, 'porteria', 'activo', 26),
+(28, 'admin', 'activo', 28),
+(29, 'admin', 'activo', 29),
+(30, 'admin', 'activo', 30);
 
 --
 -- Índices para tablas volcadas
@@ -425,13 +431,13 @@ ALTER TABLE `codigos_barras`
 -- AUTO_INCREMENT de la tabla `contactos`
 --
 ALTER TABLE `contactos`
-  MODIFY `IDcont` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `IDcont` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `cuentas`
 --
 ALTER TABLE `cuentas`
-  MODIFY `IDcue` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `IDcue` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `detallesprestamo`
@@ -455,7 +461,7 @@ ALTER TABLE `fotos_perfil`
 -- AUTO_INCREMENT de la tabla `ingresoelementos`
 --
 ALTER TABLE `ingresoelementos`
-  MODIFY `IDingele` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `IDingele` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `marcaciones`
@@ -479,7 +485,7 @@ ALTER TABLE `notificaciones`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `IDper` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `IDper` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `prestamos`
@@ -491,7 +497,7 @@ ALTER TABLE `prestamos`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `IDrol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `IDrol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Restricciones para tablas volcadas
