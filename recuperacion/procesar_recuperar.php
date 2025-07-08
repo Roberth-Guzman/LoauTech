@@ -1,6 +1,6 @@
 <?php
 include '../conexion.php';
-require_once 'enviar_correo.php'; // Asegúrate de tener este archivo
+require_once 'enviar_correo.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $correo = trim($_POST['correo']);

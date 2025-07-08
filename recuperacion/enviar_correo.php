@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once '../vendor/autoload.php'; // Autoload de Composer
+require_once '../vendor/autoload.php';
 
 function enviarCorreoRecuperacion($para, $enlace) {
     $mail = new PHPMailer(true);
