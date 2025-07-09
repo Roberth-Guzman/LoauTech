@@ -1,0 +1,30 @@
+[09-Jul-2025 15:37:40 Europe/Berlin] Login exitoso para usuario: 809875 rol: porteria
+[09-Jul-2025 15:39:49 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 15:39:49 Europe/Berlin] Archivo de panel no encontrado: panel-almacenes/gestion-peticiones/panel-peticiones.php
+[09-Jul-2025 15:46:56 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 15:47:55 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 15:53:10 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 15:54:06 Europe/Berlin] Login exitoso para usuario: 9873 rol: almacenes
+[09-Jul-2025 15:56:19 Europe/Berlin] Login exitoso para usuario: 9873 rol: almacenes
+[09-Jul-2025 15:57:24 Europe/Berlin] Login exitoso para usuario: 9873 rol: almacenes
+[09-Jul-2025 15:57:53 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 16:41:50 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 16:43:24 Europe/Berlin] Intento fallido de login para documento: 98736611
+[09-Jul-2025 16:43:33 Europe/Berlin] Login exitoso para usuario: 98736611 rol: almacenes
+[09-Jul-2025 16:56:17 Europe/Berlin] Intento fallido de login para documento: 98736611
+[09-Jul-2025 17:00:14 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 17:05:24 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 17:09:39 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 17:14:39 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 17:17:21 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 17:35:03 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 17:43:24 Europe/Berlin] Intento fallido de login para documento: 00809873
+[09-Jul-2025 17:43:51 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 17:51:21 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 17:55:32 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[09-Jul-2025 18:04:20 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in C:\xampp\htdocs\loautech-main\login.php:50
+Stack trace:
+#0 C:\xampp\htdocs\loautech-main\login.php(50): mysqli->prepare('SELECT c.*, p.I...')
+#1 {main}
+  thrown in C:\xampp\htdocs\loautech-main\login.php on line 50
+[09-Jul-2025 18:04:50 Europe/Berlin] Login exitoso para usuario: 22222222 rol: usuario
