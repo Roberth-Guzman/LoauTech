@@ -1,33 +1,69 @@
+<?php
+// Iniciar sesión al principio del script
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario'])) {
+    header('Location: /login.php');
+    exit();
+}
+
+// Verificar permisos
+if ($_SESSION['usuario']['rol'] !== 'admin' && $_SESSION['usuario']['rol'] !== 'almacenes') {
+    header('Location: /index.php');
+    exit();
+}
+
+// Incluir el archivo de conexión a la base de datos
+require_once __DIR__ . '/../../conexion.php';
+
+// Resto del código HTML y PHP...
+?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualización de Inventario</title>
+    <title>Visualización de Inventario - Gestión de Inventario</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .status-available { background-color: #d1fae5; color: #065f46; }
+        .status-loaned { background-color: #fef3c7; color: #92400e; }
+        .status-inactive { background-color: #fee2e2; color: #991b1b; }
+    </style>
 </head>
-
 <body class="bg-gray-100">
     <!-- Navbar -->
     <nav class="bg-gray-800 text-white shadow-lg">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <i class="fas fa-boxes"></i>
-                <span class="font-bold">Gestión de Inventario</span>
+                <i class="fas fa-eye"></i>
+                <span class="font-bold">Sistema de Inventario</span>
             </div>
             <div class="flex items-center space-x-4">
-                <div class="relative">
-                    <button class="relative p-2 rounded-full hover:bg-gray-700">
-                        <i class="fas fa-bell"></i>
-                        <span class="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">2</span>
-                    </button>
-                </div>
+                <a href="panel-solicitudes.php" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                    <i class="fas fa-clipboard-list mr-1"></i> Solicitudes
+                </a>
+                <a href="elementos/panel-inventario.php" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                    <i class="fas fa-boxes mr-1"></i> Inventario
+                </a>
+                <a href="visualizacion-inventario.php" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">
+                    <i class="fas fa-eye mr-1"></i> Visualización
+                </a>
                 <div class="relative">
                     <button class="flex items-center space-x-2 hover:bg-gray-700 px-3 py-2 rounded">
                         <i class="fas fa-user-circle"></i>
-                        <span>Usuario</span>
+                        <span><?= htmlspecialchars($_SESSION['usuario']['nombre'] ?? 'Usuario') ?></span>
                     </button>
                 </div>
             </div>
@@ -37,241 +73,313 @@
     <div class="container mx-auto px-4 py-6">
         <div class="bg-white rounded-lg shadow overflow-hidden">
             <div class="bg-gradient-to-r from-blue-600 to-purple-700 text-white px-6 py-4">
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-images"></i>
-                    <h2 class="text-xl font-bold">Visualización de Inventario</h2>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-boxes"></i>
+                        <h2 class="text-xl font-bold">Visualización de Inventario</h2>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button id="gridView" class="p-2 rounded-full hover:bg-blue-700">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button id="listView" class="p-2 rounded-full hover:bg-blue-700">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
                 </div>
+                <p class="mt-1 text-sm text-blue-100">Explora y busca elementos del inventario</p>
             </div>
+            
             <div class="p-6">
-                <!-- Tabs -->
-                <div class="mb-6">
-                    <div class="border-b border-gray-200">
-                        <nav class="flex space-x-2">
-                            <button onclick="window.location.href='panel-solicitudes.php'" class="py-2 px-4 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                                Solicitudes Pendientes
-                                <span class="bg-yellow-500 text-white rounded-full px-2 py-0.5 text-xs ml-1">2</span>
-                            </button>
-                            <button onclick="window.location.href='panel-inventario.php'" class="py-2 px-4 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                                Gestión de Inventario
-                            </button>
-                            <button onclick="window.location.href='visualizacion-inventario.php'" class="py-2 px-4 border-b-2 font-medium text-sm border-blue-500 text-blue-600">
-                                Visualización de Inventario
-                            </button>
-                        </nav>
-                    </div>
-                </div>
-
                 <!-- Filtros -->
-                <div class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="mb-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-2">
+                        <div class="relative">
+                            <input type="text" id="searchInput" 
+                                   class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                   placeholder="Buscar por nombre o código...">
+                            <div class="absolute left-3 top-2.5 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div>
-                        <label for="categoryFilter" class="block text-sm font-medium text-gray-700 mb-1">Categoría</label>
-                        <select id="categoryFilter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <select id="categoryFilter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             <option value="">Todas las categorías</option>
-                            <option value="computers">Computadores</option>
-                            <option value="audio_video">Audio/Video</option>
-                            <option value="printers">Impresoras</option>
-                            <option value="furniture">Mobiliario</option>
-                            <option value="other">Otros</option>
+                            <option value="Computadores">Computadores</option>
+                            <option value="Monitores">Monitores</option>
+                            <option value="Teclados">Teclados</option>
+                            <option value="Mouse">Mouse</option>
+                            <option value="Impresoras">Impresoras</option>
+                            <option value="Muebles">Muebles</option>
+                            <option value="Otros">Otros</option>
                         </select>
                     </div>
                     <div>
-                        <label for="statusFilter" class="block text-sm font-medium text-gray-700 mb-1">Estado</label>
-                        <select id="statusFilter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <select id="statusFilter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             <option value="">Todos los estados</option>
-                            <option value="available">Disponible</option>
-                            <option value="maintenance">Mantenimiento</option>
-                            <option value="out_of_order">Fuera de servicio</option>
+                            <option value="activo">Disponible</option>
+                            <option value="en prestamo">En préstamo</option>
+                            <option value="inactivo">Inactivo</option>
                         </select>
                     </div>
-                    <div>
-                        <label for="searchFilter" class="block text-sm font-medium text-gray-700 mb-1">Buscar</label>
-                        <input type="text" id="searchFilter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Buscar por nombre o código...">
-                    </div>
                 </div>
 
-                <!-- Grid de elementos -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <!-- Ejemplo de elemento -->
-                    <div class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="bg-gray-100 h-48 flex items-center justify-center">
-                            <img src="https://via.placeholder.com/300x200?text=Laptop+Dell+XPS" alt="Laptop Dell XPS" class="max-h-full max-w-full object-contain">
+                <!-- Vista de tarjetas (grid) -->
+                <div id="gridViewContent" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <?php
+                    $sql = "SELECT * FROM elementos WHERE estado = 'activo' ORDER BY nombreele ASC";
+                    $result = $conn->query($sql);
+                    
+                    if ($result->num_rows > 0):
+                        while($elemento = $result->fetch_assoc()):
+                            $statusClass = '';
+                            $statusText = '';
+                            
+                            switch($elemento['estado']) {
+                                case 'activo':
+                                    $statusClass = 'status-available';
+                                    $statusText = 'Disponible';
+                                    break;
+                                case 'en prestamo':
+                                    $statusClass = 'status-loaned';
+                                    $statusText = 'En préstamo';
+                                    break;
+                                case 'inactivo':
+                                    $statusClass = 'status-inactive';
+                                    $statusText = 'Inactivo';
+                                    break;
+                            }
+                    ?>
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow" 
+                         data-category="<?= htmlspecialchars($elemento['caracteristicasele'] ?? '') ?>" 
+                         data-status="<?= $elemento['estado'] ?>">
+                        <div class="relative">
+                            <?php if (!empty($elemento['imagen'])): ?>
+                                <img src="/<?= htmlspecialchars($elemento['imagen']) ?>" 
+                                     alt="<?= htmlspecialchars($elemento['nombreele']) ?>" 
+                                     class="w-full h-48 object-cover">
+                            <?php else: ?>
+                                <div class="w-full h-48 bg-gray-200 flex items-center justify-center">
+                                    <i class="fas fa-image text-4xl text-gray-400"></i>
+                                </div>
+                            <?php endif; ?>
+                            <span class="absolute top-2 right-2 px-2 py-1 text-xs font-semibold rounded-full <?= $statusClass ?>">
+                                <?= $statusText ?>
+                            </span>
                         </div>
                         <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <h3 class="text-lg font-semibold text-gray-800">Laptop Dell XPS</h3>
-                                <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs">Disponible</span>
-                            </div>
-                            <p class="text-sm text-gray-600 mt-1">Código: LAP001</p>
-                            <p class="text-sm text-gray-600">Categoría: Computadores</p>
-                            <p class="text-sm text-gray-600">Stock: 5</p>
-                            
-                            <div class="mt-3 pt-3 border-t border-gray-200">
-                                <h4 class="text-sm font-medium text-gray-700">Descripción:</h4>
-                                <p class="text-sm text-gray-600 mt-1">Laptop de alto rendimiento para tareas de oficina, 16GB RAM, 512GB SSD, pantalla 15.6"</p>
-                            </div>
-                            
-                            <div class="mt-4 flex justify-between items-center">
-                                <span class="text-xs text-gray-500">Última actualización: 15/06/2023</span>
-                                <button onclick="openItemDetail('LAP001')" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
-                                    Ver detalles <i class="fas fa-chevron-right ml-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Puedes añadir más elementos aquí -->
-                    <div class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="bg-gray-100 h-48 flex items-center justify-center">
-                            <img src="https://via.placeholder.com/300x200?text=Proyector" alt="Proyector Epson" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <h3 class="text-lg font-semibold text-gray-800">Proyector Epson</h3>
-                                <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs">Mantenimiento</span>
-                            </div>
-                            <p class="text-sm text-gray-600 mt-1">Código: PRO002</p>
-                            <p class="text-sm text-gray-600">Categoría: Audio/Video</p>
-                            <p class="text-sm text-gray-600">Stock: 2</p>
-                            
-                            <div class="mt-3 pt-3 border-t border-gray-200">
-                                <h4 class="text-sm font-medium text-gray-700">Descripción:</h4>
-                                <p class="text-sm text-gray-600 mt-1">Proyector Full HD 1080p, 3,500 lúmenes, entrada HDMI y VGA</p>
-                            </div>
-                            
-                            <div class="mt-4 flex justify-between items-center">
-                                <span class="text-xs text-gray-500">Última actualización: 10/06/2023</span>
-                                <button onclick="openItemDetail('PRO002')" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
-                                    Ver detalles <i class="fas fa-chevron-right ml-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de Detalles del Elemento -->
-    <div id="itemDetailModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
-        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-            </div>
-            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
-                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                    <div class="sm:flex sm:items-start">
-                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900 mb-4" id="itemDetailModalTitle">
-                                Detalles del Elemento
+                            <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                                <?= htmlspecialchars($elemento['nombreele']) ?>
                             </h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-gray-100 rounded-lg flex items-center justify-center h-64">
-                                    <img id="detailItemImage" src="" alt="Imagen del elemento" class="max-h-full max-w-full object-contain">
-                                </div>
-                                <div>
-                                    <h4 id="detailItemName" class="text-xl font-bold text-gray-800"></h4>
-                                    <p id="detailItemCode" class="text-sm text-gray-600 mt-1"></p>
-                                    <p id="detailItemCategory" class="text-sm text-gray-600"></p>
-                                    
-                                    <div class="mt-4 grid grid-cols-2 gap-2">
-                                        <div>
-                                            <p class="text-sm font-medium text-gray-700">Stock</p>
-                                            <p id="detailItemStock" class="text-sm text-gray-600"></p>
-                                        </div>
-                                        <div>
-                                            <p class="text-sm font-medium text-gray-700">Estado</p>
-                                            <p id="detailItemStatus" class="text-sm text-gray-600"></p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="mt-4">
-                                        <p class="text-sm font-medium text-gray-700">Descripción</p>
-                                        <p id="detailItemDescription" class="text-sm text-gray-600 mt-1"></p>
-                                    </div>
-                                    
-                                    <div class="mt-4">
-                                        <p class="text-sm font-medium text-gray-700">Ubicación</p>
-                                        <p id="detailItemLocation" class="text-sm text-gray-600 mt-1">Estante A-3</p>
-                                    </div>
-                                    
-                                    <div class="mt-4">
-                                        <p class="text-sm font-medium text-gray-700">Última actualización</p>
-                                        <p id="detailItemLastUpdate" class="text-sm text-gray-600 mt-1">15/06/2023</p>
-                                    </div>
-                                </div>
+                            <p class="text-sm text-gray-600 mb-2">
+                                <span class="font-medium">Código:</span> <?= htmlspecialchars($elemento['codigoele']) ?>
+                            </p>
+                            <p class="text-sm text-gray-600 mb-3">
+                                <span class="font-medium">Cantidad:</span> <?= $elemento['cantidadele'] ?>
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded">
+                                    <?= htmlspecialchars($elemento['caracteristicasele'] ?? 'Sin categoría') ?>
+                                </span>
+                                <a href="elementos/detalles.php?id=<?= $elemento['IDele'] ?>" 
+                                   class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                    Ver detalles <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
+                    <?php 
+                        endwhile;
+                    else:
+                    ?>
+                    <div class="col-span-full text-center py-8">
+                        <i class="fas fa-inbox text-4xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-600">No se encontraron elementos en el inventario.</p>
+                    </div>
+                    <?php endif; ?>
                 </div>
-                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                    <button type="button" onclick="closeModal('itemDetailModal')" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
-                        Cerrar
-                    </button>
+
+                <!-- Vista de lista (oculta por defecto) -->
+                <div id="listViewContent" class="hidden">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Elemento
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Código
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Categoría
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Cantidad
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Estado
+                                    </th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Acciones
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <?php
+                                if (isset($result) && $result->num_rows > 0) {
+                                    $result->data_seek(0); // Reiniciar el puntero del resultado
+                                    while($elemento = $result->fetch_assoc()):
+                                        $statusClass = '';
+                                        $statusText = '';
+                                        
+                                        switch($elemento['estado']) {
+                                            case 'activo':
+                                                $statusClass = 'status-available';
+                                                $statusText = 'Disponible';
+                                                break;
+                                            case 'en prestamo':
+                                                $statusClass = 'status-loaned';
+                                                $statusText = 'En préstamo';
+                                                break;
+                                            case 'inactivo':
+                                                $statusClass = 'status-inactive';
+                                                $statusText = 'Inactivo';
+                                                break;
+                                        }
+                                ?>
+                                <tr class="hover:bg-gray-50" 
+                                    data-category="<?= htmlspecialchars($elemento['caracteristicasele'] ?? '') ?>" 
+                                    data-status="<?= $elemento['estado'] ?>">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <?php if (!empty($elemento['imagen'])): ?>
+                                                    <img class="h-10 w-10 rounded-full object-cover" 
+                                                         src="/<?= htmlspecialchars($elemento['imagen']) ?>" 
+                                                         alt="<?= htmlspecialchars($elemento['nombreele']) ?>">
+                                                <?php else: ?>
+                                                    <div class="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center">
+                                                        <i class="fas fa-box text-gray-400"></i>
+                                                    </div>
+                                                <?php endif; ?>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">
+                                                    <?= htmlspecialchars($elemento['nombreele']) ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900"><?= htmlspecialchars($elemento['codigoele']) ?></div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
+                                            <?= htmlspecialchars($elemento['caracteristicasele'] ?? 'Sin categoría') ?>
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <?= $elemento['cantidadele'] ?>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full <?= $statusClass ?>">
+                                            <?= $statusText ?>
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="elementos/detalles.php?id=<?= $elemento['IDele'] ?>" 
+                                           class="text-blue-600 hover:text-blue-900">Ver detalles</a>
+                                    </td>
+                                </tr>
+                                <?php 
+                                    endwhile;
+                                } else {
+                                ?>
+                                <tr>
+                                    <td colspan="6" class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">
+                                        No se encontraron elementos en el inventario.
+                                    </td>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Funciones para manejar modales
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.remove('hidden');
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.add('hidden');
-        }
-
-        // Cerrar modal al hacer clic fuera del contenido
-        window.onclick = function(event) {
-            if (event.target.classList.contains('fixed')) {
-                const modals = document.querySelectorAll('.fixed.inset-0.z-50');
-                modals.forEach(modal => {
-                    if (!modal.classList.contains('hidden')) {
-                        modal.classList.add('hidden');
-                    }
-                });
-            }
-        }
-
-        // Cerrar modal con la tecla Escape
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const modals = document.querySelectorAll('.fixed.inset-0.z-50');
-                modals.forEach(modal => {
-                    if (!modal.classList.contains('hidden')) {
-                        modal.classList.add('hidden');
-                    }
-                });
-            }
+        // Cambiar entre vista de cuadrícula y lista
+        document.getElementById('gridView').addEventListener('click', function() {
+            document.getElementById('gridViewContent').classList.remove('hidden');
+            document.getElementById('listViewContent').classList.add('hidden');
+            this.classList.add('bg-blue-700');
+            document.getElementById('listView').classList.remove('bg-blue-700');
         });
 
-        // Función para abrir detalles del elemento
-        function openItemDetail(itemId) {
-            // Aquí podrías cargar los datos del elemento con AJAX
-            // Ejemplo simplificado:
-            if (itemId === 'LAP001') {
-                document.getElementById('detailItemName').textContent = 'Laptop Dell XPS';
-                document.getElementById('detailItemCode').textContent = 'Código: LAP001';
-                document.getElementById('detailItemCategory').textContent = 'Categoría: Computadores';
-                document.getElementById('detailItemStock').textContent = '5 unidades';
-                document.getElementById('detailItemStatus').innerHTML = '<span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs">Disponible</span>';
-                document.getElementById('detailItemDescription').textContent = 'Laptop de alto rendimiento para tareas de oficina, 16GB RAM, 512GB SSD, pantalla 15.6"';
-                document.getElementById('detailItemImage').src = 'https://via.placeholder.com/300x200?text=Laptop+Dell+XPS';
-            } else if (itemId === 'PRO002') {
-                document.getElementById('detailItemName').textContent = 'Proyector Epson';
-                document.getElementById('detailItemCode').textContent = 'Código: PRO002';
-                document.getElementById('detailItemCategory').textContent = 'Categoría: Audio/Video';
-                document.getElementById('detailItemStock').textContent = '2 unidades';
-                document.getElementById('detailItemStatus').innerHTML = '<span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs">Mantenimiento</span>';
-                document.getElementById('detailItemDescription').textContent = 'Proyector Full HD 1080p, 3,500 lúmenes, entrada HDMI y VGA';
-                document.getElementById('detailItemImage').src = 'https://via.placeholder.com/300x200?text=Proyector';
+        document.getElementById('listView').addEventListener('click', function() {
+            document.getElementById('listViewContent').classList.remove('hidden');
+            document.getElementById('gridViewContent').classList.add('hidden');
+            this.classList.add('bg-blue-700');
+            document.getElementById('gridView').classList.remove('bg-blue-700');
+        });
+
+        // Filtros
+        const searchInput = document.getElementById('searchInput');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const statusFilter = document.getElementById('statusFilter');
+        const cards = document.querySelectorAll('.card');
+        const rows = document.querySelectorAll('tbody tr');
+
+        function filterItems() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
+            const selectedStatus = statusFilter.value;
+
+            // Función para verificar si un elemento coincide con los filtros
+            function matchesFilters(element) {
+                const name = element.querySelector('h3') ? element.querySelector('h3').textContent.toLowerCase() : '';
+                const code = element.querySelector('p:nth-of-type(1)') ? 
+                             element.querySelector('p:nth-of-type(1)').textContent.toLowerCase() : '';
+                
+                const category = element.getAttribute('data-category') || '';
+                const status = element.getAttribute('data-status') || '';
+
+                const matchesSearch = name.includes(searchTerm) || code.includes(searchTerm);
+                const matchesCategory = !selectedCategory || category === selectedCategory;
+                const matchesStatus = !selectedStatus || status === selectedStatus;
+
+                return matchesSearch && matchesCategory && matchesStatus;
             }
-            
-            openModal('itemDetailModal');
+
+            // Aplicar filtros a las tarjetas (vista de cuadrícula)
+            cards.forEach(card => {
+                if (matchesFilters(card)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Aplicar filtros a las filas (vista de lista)
+            rows.forEach(row => {
+                if (row.getAttribute('data-category') !== null) { // Solo filas de datos, no el encabezado
+                    if (matchesFilters(row)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
         }
+
+        // Agregar event listeners para los filtros
+        searchInput.addEventListener('input', filterItems);
+        categoryFilter.addEventListener('change', filterItems);
+        statusFilter.addEventListener('change', filterItems);
     </script>
 </body>
-
 </html>

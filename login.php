@@ -34,42 +34,84 @@ function redirigirSegunRol($rolesValidos)
 
     $ruta = $rutas[$_SESSION['usuario']['rol']] ?? 'login.php';
 
+    // Verificar si el archivo existe, si no, redirigir a una ruta por defecto
     if (!file_exists($ruta)) {
         error_log("Archivo de panel no encontrado: $ruta");
-        header('Location: login.php?error=panel_no_encontrado');
-        exit();
+        // Redirigir a una ruta por defecto basada en el rol
+        $ruta_por_rol = [
+            'admin' => 'panel-admin/panel-principal.php',
+            'porteria' => 'panel-porteria/panel-principal.php',
+            'usuario' => 'panel-usuario/panel-principal.php',
+            'cuentadante' => 'panel-almecenes/panel-principal.php',
+            'almacenes' => 'panel-almecenes/panel-principal.php'
+        ];
+        
+        $ruta = $ruta_por_rol[$_SESSION['usuario']['rol']] ?? 'login.php?error=panel_no_encontrado';
+        
+        if (!file_exists($ruta)) {
+            // Si aún no existe, redirigir a login con error
+            header('Location: login.php?error=panel_no_encontrado');
+            exit();
+        }
     }
 
+    // Redirigir a la ruta correcta
     header("Location: $ruta");
     exit();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $documento = filter_input(INPUT_POST, 'numerodoc', FILTER_SANITIZE_NUMBER_INT);
+    $documento = trim($_POST['numerodoc'] ?? '');
+    $contrasena = $_POST['contrasena'] ?? '';
 
-    $stmt = $conn->prepare("SELECT c.*, p.IDper, p.nombrecompletoper, r.rol 
-                            FROM cuentas c
-                            JOIN personas p ON c.numerodoc = p.numerodoc
-                            JOIN roles r ON p.IDper = r.idper
-                            WHERE c.numerodoc = ? AND c.estadocue = 'activo'");
-
-    $stmt->bind_param("i", $documento);
-    $stmt->execute();
-    $usuario = $stmt->get_result()->fetch_assoc();
-
-    if ($usuario && password_verify($_POST['contrasena'], $usuario['contracue'])) {
-        $_SESSION['usuario'] = [
-            'IDper' => $usuario['IDper'],
-            'nombre' => $usuario['nombrecompletoper'],
-            'documento' => $usuario['numerodoc'],
-            'rol' => $usuario['rol']
-        ];
-
-        error_log("Login exitoso para usuario: " . $usuario['numerodoc'] . " rol: " . $usuario['rol']);
-        redirigirSegunRol($rolesValidos);
+    // Validar que se hayan enviado los datos necesarios
+    if (empty($documento) || empty($contrasena)) {
+        $error = "Por favor ingrese su número de documento y contraseña.";
     } else {
-        error_log("Intento fallido de login para documento: " . ($documento ?? ''));
-        $error = "Credenciales incorrectas";
+        // Consulta para obtener la cuenta y la información del usuario
+        $sql = "SELECT c.*, p.IDper, p.nombrecompletoper, r.rol 
+                FROM cuentas c
+                INNER JOIN personas p ON c.numerodoc = p.numerodoc
+                INNER JOIN roles r ON r.idper = p.IDper
+                WHERE c.numerodoc = ? AND c.estadocue = 'activo'";
+                
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $documento);
+        
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+            
+            if ($result->num_rows === 1) {
+                $usuario = $result->fetch_assoc();
+                
+                // Verificar la contraseña
+                if (password_verify($contrasena, $usuario['contracue'])) {
+                    // Iniciar sesión
+                    $_SESSION['usuario'] = [
+                        'IDper' => $usuario['IDper'],
+                        'nombre' => $usuario['nombrecompletoper'],
+                        'documento' => $usuario['numerodoc'],
+                        'rol' => $usuario['rol']
+                    ];
+                    
+                    error_log("Inicio de sesión exitoso para: " . $usuario['numerodoc'] . " - Rol: " . $usuario['rol']);
+                    
+                    // Redirigir según el rol
+                    redirigirSegunRol($rolesValidos);
+                } else {
+                    error_log("Contraseña incorrecta para el documento: $documento");
+                    $error = "Número de documento o contraseña incorrectos.";
+                }
+            } else {
+                error_log("No se encontró cuenta activa para el documento: $documento");
+                $error = "Número de documento o contraseña incorrectos.";
+            }
+        } else {
+            error_log("Error en la consulta de autenticación: " . $stmt->error);
+            $error = "Error al procesar la solicitud. Por favor, intente nuevamente.";
+        }
+        
+        $stmt->close();
     }
 }
 

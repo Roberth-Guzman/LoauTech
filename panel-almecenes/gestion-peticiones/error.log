@@ -1,0 +1,381 @@
+[25-Jul-2025 04:32:09 Europe/Berlin] Error en aprobar_prestamo.php: Unknown column 'fechaaprobacion' in 'field list'
+[25-Jul-2025 04:32:12 Europe/Berlin] Error en aprobar_prestamo.php: Unknown column 'fechaaprobacion' in 'field list'
+[25-Jul-2025 04:32:20 Europe/Berlin] Error en rechazar_prestamo.php: Unknown column 'fechaaprobacion' in 'field list'
+[25-Jul-2025 04:32:27 Europe/Berlin] Error en aprobar_prestamo.php: Unknown column 'fechaaprobacion' in 'field list'
+[25-Jul-2025 04:35:09 Europe/Berlin] Error en aprobar_prestamo.php: Unknown column 'fechaaprobacion' in 'field list'
+[25-Jul-2025 04:35:27 Europe/Berlin] Error en rechazar_prestamo.php: Unknown column 'fechaaprobacion' in 'field list'
+[25-Jul-2025 04:39:28 Europe/Berlin] Error en aprobar_prestamo.php: Unknown column 'cargorechaza' in 'field list'
+[25-Jul-2025 04:39:35 Europe/Berlin] Error en rechazar_prestamo.php: Unknown column 'cargorechaza' in 'field list'
+[25-Jul-2025 04:39:42 Europe/Berlin] Error en aprobar_prestamo.php: Unknown column 'cargorechaza' in 'field list'
+[25-Jul-2025 05:06:28 Europe/Berlin] PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 132
+[25-Jul-2025 05:06:38 Europe/Berlin] PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 132
+[25-Jul-2025 05:35:56 Europe/Berlin] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\includes\Mailer.php on line 2
+[25-Jul-2025 05:35:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\includes\Mailer.php:2
+Stack trace:
+#0 C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php(168): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\loautech-main\includes\Mailer.php on line 2
+[25-Jul-2025 05:48:30 Europe/Berlin] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\includes\Mailer.php on line 2
+[25-Jul-2025 05:48:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\includes\Mailer.php:2
+Stack trace:
+#0 C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php(168): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\loautech-main\includes\Mailer.php on line 2
+[25-Jul-2025 05:50:21 Europe/Berlin] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\includes\Mailer.php on line 2
+[25-Jul-2025 05:50:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\includes\Mailer.php:2
+Stack trace:
+#0 C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php(168): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\loautech-main\includes\Mailer.php on line 2
+[25-Jul-2025 05:50:27 Europe/Berlin] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\includes\Mailer.php on line 2
+[25-Jul-2025 05:50:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\includes\Mailer.php:2
+Stack trace:
+#0 C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php(168): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\loautech-main\includes\Mailer.php on line 2
+[25-Jul-2025 05:50:48 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 8
+[25-Jul-2025 05:50:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 8
+[25-Jul-2025 05:57:14 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 05:57:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 05:57:24 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 05:57:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 05:57:30 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 05:57:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 05:57:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 05:57:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 05:59:30 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 05:59:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:02:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:02:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:02:45 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:02:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:02:51 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:02:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:06 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:13 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:18 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:25 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:27 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:32 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:34 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:07:56 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:07:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:08:00 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:03 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:10 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:11 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:14 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:17 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:28 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:39 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:08:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:13:09 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:13:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:13:14 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:16 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:16 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:18 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:18 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:18 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:18 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:13:26 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:13:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:18:13 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:18:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:18:54 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:18:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:19:32 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:19:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:53 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:53 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:54 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:54 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:22:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:23:07 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:23:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:26:15 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:26:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:26:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:26:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:26:28 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:26:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 06:26:33 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 06:26:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 15:00:29 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 15:00:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 15:21:02 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 15:21:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\rechazar_prestamo.php on line 9
+[25-Jul-2025 15:25:37 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 15:25:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones/../../includes/conexion.php' (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 9
+[25-Jul-2025 15:45:19 Europe/Berlin] Error en aprobar_prestamo.php: Unknown column 'fechaautorizaciom' in 'field list'
+[25-Jul-2025 15:50:28 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string - int in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:89
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 89
+[25-Jul-2025 15:50:35 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string - int in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:89
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 89
+[25-Jul-2025 15:50:44 Europe/Berlin] Préstamo #13 rechazado por brandod. Motivo: x. Detalles: 
+[25-Jul-2025 15:50:47 Europe/Berlin] Error en rechazar_prestamo.php: Préstamo no encontrado o ya procesado
+[25-Jul-2025 15:51:06 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string - int in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:89
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 89
+[25-Jul-2025 15:54:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string - int in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php:100
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\loautech-main\panel-almecenes\gestion-peticiones\aprobar_prestamo.php on line 100
+[25-Jul-2025 16:03:30 Europe/Berlin] Error en aprobar_prestamo.php: Stock insuficiente. Disponible: 0, Solicitado: 1
+[25-Jul-2025 16:05:30 Europe/Berlin] Préstamo #14 rechazado por brandod. Motivo: no. Detalles: 
+[25-Jul-2025 16:09:06 Europe/Berlin] Préstamo #9 rechazado por brandod. Motivo: pq si. Detalles: 
+[25-Jul-2025 16:12:36 Europe/Berlin] Préstamo #10 rechazado por brandod. Motivo: x. Detalles: 
+[25-Jul-2025 17:39:01 Europe/Berlin] Préstamo #12 rechazado por brandod. Motivo: sin stock. Detalles: 
+[25-Jul-2025 17:39:06 Europe/Berlin] Préstamo #11 rechazado por brandod. Motivo: sin stock. Detalles: 
+[25-Jul-2025 17:52:13 Europe/Berlin] Préstamo #20 rechazado por brandod. Motivo: xd. Detalles: 

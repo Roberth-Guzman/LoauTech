@@ -10,11 +10,24 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['rol'] != 'admin') {
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 // Obtener datos del elemento
-$elemento = [];
+$elemento = [
+    'nombreele' => '',
+    'cantidadele' => 1,
+    'cantidadest' => 'activo',
+    'codigoele' => '',
+    'codigoinventario' => '',
+    'descripcionele' => '',
+    'caracteristicasele' => '',
+    'estado' => 'activo',
+    'estadoelemento' => 'activo'
+];
 
 if ($id > 0) {
-    $query = "SELECT * FROM ingresoelementos WHERE IDingele = $id";
-    $result = $conn->query($query);
+    $query = "SELECT * FROM elementos WHERE IDele = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
     
     if ($result->num_rows > 0) {
         $elemento = $result->fetch_assoc();
@@ -24,38 +37,54 @@ if ($id > 0) {
     }
 }
 
-// Obtener personas para el select
-$personas = [];
-$result_personas = $conn->query("SELECT IDper, nombrecompletoper FROM personas");
-while ($row = $result_personas->fetch_assoc()) {
-    $personas[] = $row;
-}
-
 // Procesar formulario
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nombre = $conn->real_escape_string($_POST['nombre']);
-    $tipo = $conn->real_escape_string($_POST['tipo']);
-    $descripcion = $conn->real_escape_string($_POST['descripcion']);
-    $observacion = $conn->real_escape_string($_POST['observacion']);
-    $persona_id = intval($_POST['persona_id']);
+    $nombreele = $conn->real_escape_string($_POST['nombreele']);
+    $cantidadele = intval($_POST['cantidadele']);
+    $cantidadest = $_POST['cantidadest'] === 'activo' ? 'activo' : 'inactivo';
+    $codigoele = $conn->real_escape_string($_POST['codigoele']);
+    $codigoinventario = $conn->real_escape_string($_POST['codigoinventario']);
+    $descripcionele = $conn->real_escape_string($_POST['descripcionele']);
+    $caracteristicasele = $conn->real_escape_string($_POST['caracteristicasele']);
+    $estado = in_array($_POST['estado'], ['activo', 'inactivo', 'en prestamo']) ? $_POST['estado'] : 'activo';
+    $estadoelemento = $_POST['estadoelemento'] === 'activo' ? 'activo' : 'inactivo';
     
     if ($id > 0) {
         // Actualizar elemento existente
-        $conn->query("UPDATE ingresoelementos SET 
-                      nombreingele = '$nombre',
-                      tipoelemento = '$tipo',
-                      descripcioningele = '$descripcion',
-                      observacioningele = '$observacion',
-                      IDPER = $persona_id
-                      WHERE IDingele = $id");
+        $query = "UPDATE elementos SET 
+                  nombreele = ?, 
+                  cantidadele = ?, 
+                  cantidadest = ?,
+                  codigoele = ?,
+                  codigoinventario = ?,
+                  descripcionele = ?,
+                  caracteristicasele = ?,
+                  estado = ?,
+                  estadoelemento = ?
+                  WHERE IDele = ?";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("sississssi", 
+            $nombreele, $cantidadele, $cantidadest, $codigoele, $codigoinventario,
+            $descripcionele, $caracteristicasele, $estado, $estadoelemento, $id
+        );
     } else {
         // Crear nuevo elemento
-        $conn->query("INSERT INTO ingresoelementos 
-                      (nombreingele, tipoelemento, descripcioningele, observacioningele, IDPER) 
-                      VALUES ('$nombre', '$tipo', '$descripcion', '$observacion', $persona_id)");
+        $query = "INSERT INTO elementos 
+                 (nombreele, cantidadele, cantidadest, codigoele, codigoinventario, descripcionele, 
+                  caracteristicasele, estado, estadoelemento) 
+                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("sississss", 
+            $nombreele, $cantidadele, $cantidadest, $codigoele, $codigoinventario,
+            $descripcionele, $caracteristicasele, $estado, $estadoelemento
+        );
     }
     
-    header("Location: consultar.php?success=Elemento guardado correctamente");
+    if ($stmt->execute()) {
+        header("Location: consultar.php?success=Elemento " . ($id > 0 ? 'actualizado' : 'creado') . " correctamente");
+    } else {
+        $error = "Error al " . ($id > 0 ? 'actualizar' : 'crear') . " el elemento: " . $conn->error;
+    }
     exit;
 }
 ?>
@@ -78,48 +107,87 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?= $id > 0 ? 'Editar Elemento' : 'Nuevo Elemento' ?>
             </h2>
             
+            <?php if (isset($error)): ?>
+                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4" role="alert">
+                    <p><?= htmlspecialchars($error) ?></p>
+                </div>
+            <?php endif; ?>
+            
             <form method="POST" class="space-y-4">
-                <div>
-                    <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required
-                           value="<?= htmlspecialchars($elemento['nombreingele'] ?? '') ?>"
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="nombreele" class="block text-sm font-medium text-gray-700 mb-1">Nombre del Elemento *</label>
+                        <input type="text" id="nombreele" name="nombreele" required
+                               value="<?= htmlspecialchars($elemento['nombreele']) ?>"
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label for="codigoele" class="block text-sm font-medium text-gray-700 mb-1">Código *</label>
+                        <input type="text" id="codigoele" name="codigoele" required
+                               value="<?= htmlspecialchars($elemento['codigoele']) ?>"
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="codigoinventario" class="block text-sm font-medium text-gray-700 mb-1">Código de Inventario *</label>
+                        <input type="text" id="codigoinventario" name="codigoinventario" required
+                               value="<?= htmlspecialchars($elemento['codigoinventario']) ?>"
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                               placeholder="Ingrese el código de inventario">
+                    </div>
+                    
+                    <div>
+                        <label for="cantidadele" class="block text-sm font-medium text-gray-700 mb-1">Cantidad *</label>
+                        <input type="number" id="cantidadele" name="cantidadele" min="0" required
+                               value="<?= htmlspecialchars($elemento['cantidadele']) ?>"
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label for="cantidadest" class="block text-sm font-medium text-gray-700 mb-1">Estado de Cantidad *</label>
+                        <select id="cantidadest" name="cantidadest" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <option value="activo" <?= $elemento['cantidadest'] === 'activo' ? 'selected' : '' ?>>Activo</option>
+                            <option value="inactivo" <?= $elemento['cantidadest'] === 'inactivo' ? 'selected' : '' ?>>Inactivo</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="estado" class="block text-sm font-medium text-gray-700 mb-1">Estado *</label>
+                        <select id="estado" name="estado" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <option value="activo" <?= $elemento['estado'] === 'activo' ? 'selected' : '' ?>>Activo</option>
+                            <option value="en prestamo" <?= $elemento['estado'] === 'en prestamo' ? 'selected' : '' ?>>En Préstamo</option>
+                            <option value="inactivo" <?= $elemento['estado'] === 'inactivo' ? 'selected' : '' ?>>Inactivo</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="estadoelemento" class="block text-sm font-medium text-gray-700 mb-1">Estado del Elemento *</label>
+                        <select id="estadoelemento" name="estadoelemento" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <option value="activo" <?= $elemento['estadoelemento'] === 'activo' ? 'selected' : '' ?>>Activo</option>
+                            <option value="inactivo" <?= $elemento['estadoelemento'] === 'inactivo' ? 'selected' : '' ?>>Inactivo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label for="descripcionele" class="block text-sm font-medium text-gray-700 mb-1">Descripción *</label>
+                        <textarea id="descripcionele" name="descripcionele" rows="2" required
+                                  class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"><?= htmlspecialchars($elemento['descripcionele']) ?></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label for="caracteristicasele" class="block text-sm font-medium text-gray-700 mb-1">Características</label>
+                        <textarea id="caracteristicasele" name="caracteristicasele" rows="3"
+                                  class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"><?= htmlspecialchars($elemento['caracteristicasele']) ?></textarea>
+                    </div>
                 </div>
                 
-                <div>
-                    <label for="tipo" class="block text-sm font-medium text-gray-700 mb-1">Tipo</label>
-                    <input type="text" id="tipo" name="tipo" required
-                           value="<?= htmlspecialchars($elemento['tipoelemento'] ?? '') ?>"
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                </div>
-                
-                <div>
-                    <label for="descripcion" class="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
-                    <textarea id="descripcion" name="descripcion" rows="3" required
-                              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"><?= htmlspecialchars($elemento['descripcioningele'] ?? '') ?></textarea>
-                </div>
-                
-                <div>
-                    <label for="observacion" class="block text-sm font-medium text-gray-700 mb-1">Observación</label>
-                    <textarea id="observacion" name="observacion" rows="2"
-                              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"><?= htmlspecialchars($elemento['observacioningele'] ?? '') ?></textarea>
-                </div>
-                
-                <div>
-                    <label for="persona_id" class="block text-sm font-medium text-gray-700 mb-1">Responsable</label>
-                    <select id="persona_id" name="persona_id" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                        <?php foreach ($personas as $persona): ?>
-                        <option value="<?= $persona['IDper'] ?>" <?= ($elemento['IDPER'] ?? 0) == $persona['IDper'] ? 'selected' : '' ?>>
-                            <?= htmlspecialchars($persona['nombrecompletoper']) ?>
-                        </option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                
-                <div class="flex justify-end space-x-3 pt-4">
+                <div class="flex justify-end space-x-3 pt-6 border-t border-gray-200 mt-6">
                     <a href="consultar.php" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400">
-                        Cancelar
+                        <i class="fas fa-times mr-2"></i> Cancelar
                     </a>
                     <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
                         <i class="fas fa-save mr-2"></i> Guardar

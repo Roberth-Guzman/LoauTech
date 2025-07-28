@@ -22,61 +22,147 @@ require_once '../conexion.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Usuario - Loautech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Panel de Usuario - LOAUTECH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <div class="container-fluid p-0">
-        <!-- Header -->
-        <div class="bg-primary text-white text-center py-4 mb-4">
-            <div class="container">
-                <h2 class="mb-1">BIENVENIDO AL PANEL DE USUARIO</h2>
-                <div class="d-flex justify-content-center gap-4 align-items-center">
-                    <a href="perfil.php" class="text-white text-decoration-none d-flex align-items-center">
-                        <i class="bi bi-person me-2"></i>Perfil
-                    </a>
-                    <a href="../logout.php" class="text-white text-decoration-none d-flex align-items-center">
-                        <i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión
-                    </a>
-                </div>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 text-white fixed top-0 left-0 bottom-0 z-10">
+            <div class="p-4 border-b border-gray-700">
+                <h1 class="text-xl font-bold">LOAUTECH</h1>
+                <p class="text-sm text-gray-400">Panel de Usuario</p>
             </div>
+            
+            <nav class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="panel-principal.php" class="flex items-center p-2 rounded hover:bg-gray-700 bg-gray-700">
+                            <i class="fas fa-tachometer-alt mr-3"></i>
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="inventario.php" class="flex items-center p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-boxes mr-3"></i>
+                            Inventario
+                        </a>
+                    </li>
+                    <li>
+                        <a href="registroelemento.php" class="flex items-center p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-plus-circle mr-3"></i>
+                            Registrar Elemento
+                        </a>
+                    </li>
+                    <li>
+                        <a href="peticion.php" class="flex items-center p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-paper-plane mr-3"></i>
+                            Mis Peticiones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="perfil.php" class="flex items-center p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-user mr-3"></i>
+                            Mi Perfil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../logout.php" class="flex items-center p-2 rounded hover:bg-gray-700 text-red-400 hover:text-red-300">
+                            <i class="fas fa-sign-out-alt mr-3"></i>
+                            Cerrar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
         <!-- Contenido principal -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 col-sm-12">
-                    <!-- Sección de Inventario -->
-                    <a href="inventario.php" class="text-decoration-none">
-                        <div class="card shadow-sm mb-4">
-                            <div class="card-body p-4">
-                                <h5 class="text-primary">INVENTARIO</h5>
+        <div class="flex-1 ml-64 overflow-auto">
+            <!-- Header -->
+            <div class="bg-white shadow-sm">
+                <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
+                    <h1 class="text-xl font-bold text-gray-900">
+                        Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario']['nombre'] ?? 'Usuario'); ?>
+                    </h1>
+                    <div class="flex items-center space-x-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                            <?php echo ucfirst(htmlspecialchars($_SESSION['usuario']['rol'] ?? 'usuario')); ?>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido -->
+            <main class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <!-- Tarjeta Inventario -->
+                    <a href="inventario.php" class="block">
+                        <div class="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
+                            <div class="flex items-center">
+                                <div class="p-3 rounded-full bg-blue-100 text-blue-600 mr-4">
+                                    <i class="fas fa-boxes text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">Inventario</h3>
+                                    <p class="text-sm text-gray-600">Consulta los elementos disponibles</p>
+                                </div>
                             </div>
                         </div>
                     </a>
-                    
-                    <!-- Sección de Petición -->
-                    <a href="peticion.php" class="text-decoration-none">
-                        <div class="card shadow-sm mb-4">
-                            <div class="card-body p-4">
-                                <h5 class="text-primary">PETICIÓN</h5>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <!-- Nueva sección para registro de elementos -->
-                    <a href="registroelemento.php" class="text-decoration-none">
-                        <div class="card shadow-sm mb-4">
-                            <div class="card-body p-4">
-                                <h5 class="text-primary">REGISTRO DE ELEMENTOS</h5>
+
+                    <!-- Tarjeta Registrar Elemento -->
+                    <a href="registroelemento.php" class="block">
+                        <div class="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
+                            <div class="flex items-center">
+                                <div class="p-3 rounded-full bg-green-100 text-green-600 mr-4">
+                                    <i class="fas fa-plus-circle text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">Registrar Elemento</h3>
+                                    <p class="text-sm text-gray-600">Registra un nuevo elemento en el sistema</p>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
-            </div>
+
+                <!-- Sección de Acciones Rápidas -->
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Acciones Rápidas</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <a href="inventario.php" class="bg-blue-50 hover:bg-blue-100 rounded-lg p-4 text-center transition-colors">
+                            <i class="fas fa-search text-blue-600 text-2xl mb-2"></i>
+                            <p class="font-medium text-gray-700">Consultar Inventario</p>
+                        </a>
+                        <a href="registroelemento.php" class="bg-green-50 hover:bg-green-100 rounded-lg p-4 text-center transition-colors">
+                            <i class="fas fa-plus-circle text-green-600 text-2xl mb-2"></i>
+                            <p class="font-medium text-gray-700">Nuevo Elemento</p>
+                        </a>
+                        <a href="peticion.php" class="bg-yellow-50 hover:bg-yellow-100 rounded-lg p-4 text-center transition-colors">
+                            <i class="fas fa-paper-plane text-yellow-600 text-2xl mb-2"></i>
+                            <p class="font-medium text-gray-700">Mis Peticiones</p>
+                        </a>
+                        <a href="perfil.php" class="bg-purple-50 hover:bg-purple-100 rounded-lg p-4 text-center transition-colors">
+                            <i class="fas fa-user-edit text-purple-600 text-2xl mb-2"></i>
+                            <p class="font-medium text-gray-700">Editar Perfil</p>
+                        </a>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-white border-t mt-8">
+                <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+                    <p class="text-center text-sm text-gray-500">
+                        &copy; <?php echo date('Y'); ?> LOAUTECH - Todos los derechos reservados
+                    </p>
+                </div>
+            </footer>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>

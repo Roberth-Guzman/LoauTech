@@ -101,6 +101,12 @@ $_SESSION['user'] = [
                         </a>
                     </li>
                     <li>
+                        <a href="almacenes/listar_autorizaciones.php" class="flex items-center p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-warehouse mr-3"></i>
+                            Almacenes
+                        </a>
+                    </li>
+                    <li>
                         <a href="database/exportar_db.php" class="flex items-center p-2 rounded hover:bg-gray-700">
                             <i class="fas fa-database mr-3"></i>
                             Base de Datos
@@ -229,6 +235,10 @@ $_SESSION['user'] = [
                             <i class="fas fa-file-import text-yellow-600 text-2xl mb-2"></i>
                             <p class="font-medium">Importar BD</p>
                         </a>
+                        <a href="database/eliminardb.php" class="bg-red-50 hover:bg-red-100 rounded-lg p-4 text-center transition-colors" onclick="return confirm('¿Estás seguro de que deseas eliminar la base de datos? Esta acción no se puede deshacer.');">
+                            <i class="fas fa-trash-alt text-red-600 text-2xl mb-2"></i>
+                            <p class="font-medium">Eliminar BD</p>
+                        </a>
                     </div>
                 </div>
 
@@ -245,7 +255,6 @@ $_SESSION['user'] = [
                                     <tr>
                                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nombre</th>
                                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Documento</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
@@ -258,18 +267,10 @@ $_SESSION['user'] = [
                                             echo "<tr>
                                                     <td class='px-6 py-4 whitespace-nowrap'>".htmlspecialchars($row['nombrecompletoper'])."</td>
                                                     <td class='px-6 py-4 whitespace-nowrap'>".htmlspecialchars($row['numerodoc'])."</td>
-                                                    <td class='px-6 py-4 whitespace-nowrap'>
-                                                        <a href='personas/editar.php?id=".$row['IDper']."' class='text-blue-600 hover:text-blue-800 mr-2'>
-                                                            <i class='fas fa-edit'></i>
-                                                        </a>
-                                                        <a href='personas/eliminar.php?id=".$row['IDper']."' class='text-red-600 hover:text-red-800'>
-                                                            <i class='fas fa-trash'></i>
-                                                        </a>
-                                                    </td>
                                                 </tr>";
                                         }
                                     } else {
-                                        echo "<tr><td colspan='3' class='px-6 py-4 text-center'>No hay usuarios registrados</td></tr>";
+                                        echo "<tr><td colspan='2' class='px-6 py-4 text-center'>No hay usuarios registrados</td></tr>";
                                     }
                                     ?>
                                 </tbody>

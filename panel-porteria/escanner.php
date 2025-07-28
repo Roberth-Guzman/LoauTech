@@ -68,73 +68,120 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['codigo'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escáner - Loautech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Escáner - LOAUTECH</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
-    <style>
-        #scanner-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            height: 300px;
-            margin: 0 auto;
-            border: 3px solid #0d6efd;
-            border-radius: 8px;
-            overflow: hidden;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        scan: {
+                            '0%': { top: '0', opacity: '0.8' },
+                            '50%': { opacity: '1' },
+                            '100%': { top: '100%', opacity: '0.8' },
+                        },
+                    },
+                    animation: {
+                        'scan': 'scan 2s ease-in-out infinite',
+                    },
+                },
+            },
         }
-        #scanner-line {
-            position: absolute;
-            height: 3px;
-            background: #dc3545;
-            width: 100%;
-            animation: scan 2s infinite linear;
-        }
-        @keyframes scan {
-            0% { top: 0; }
-            100% { top: 100%; }
-        }
-        #resultado {
-            display: none;
-        }
-    </style>
+    </script>
 </head>
-<body class="bg-light">
-    <div class="container mt-3 mt-md-5">
-        <div class="card mx-auto shadow" style="max-width: 600px;">
-            <div class="card-header bg-primary text-white text-center py-3">
-                <h1 class="card-title h4 mb-0">ESCANER DE CÓDIGO DE BARRAS</h1>
-            </div>
-            <div class="card-body text-center p-4">
-                <div class="mb-4">
-                    <!-- Contenedor de la cámara -->
-                    <div id="scanner-container">
-                        <div id="interactive" class="viewport"></div>
-                        <div id="scanner-line"></div>
-                    </div>
-                    
-                    <!-- Resultado del escaneo -->
-                    <div id="resultado" class="mt-3 p-3 bg-light rounded">
-                        <h5 class="text-primary">Resultado:</h5>
-                        <p id="nombre-persona"></p>
-                        <p id="documento-persona"></p>
-                        <p id="tipo-registro" class="fw-bold"></p>
-                    </div>
-                    
-                    <!-- Mensajes -->
-                    <div id="no-camera-warning" class="alert alert-warning mt-3 d-none">
-                        No se encontró una cámara disponible.
-                    </div>
-                    <div id="error-message" class="alert alert-danger mt-3 d-none"></div>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Barra de navegación -->
+    <nav class="bg-gray-800 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="panel-principal.php" class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-arrow-left text-xl mr-2"></i>
+                        <span class="text-xl font-bold">LOAUTECH</span>
+                    </a>
                 </div>
+                <div class="flex items-center">
+                    <a href="../logout.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        <i class="fas fa-sign-out-alt mr-1"></i> Cerrar Sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <!-- Encabezado -->
+            <div class="bg-blue-600 px-6 py-4">
+                <h1 class="text-2xl font-bold text-white text-center">
+                    <i class="fas fa-qrcode mr-2"></i> ESCÁNER DE CÓDIGO DE BARRAS
+                </h1>
+            </div>
+
+            <!-- Cuerpo -->
+            <div class="p-6">
+                <p class="text-gray-600 text-center mb-6">
+                    Escanea el código de barras del carnet del personal para registrar entrada o salida
+                </p>
                 
-                <div class="d-flex justify-content-center gap-3">
-                    <button id="startScannerBtn" class="btn btn-primary btn-lg px-4 py-2">
-                        <i class="bi bi-camera me-2"></i>INICIAR ESCANER
+                <!-- Contenedor del escáner -->
+                <div class="mb-6">
+                    <div id="scanner-container" class="relative w-full max-w-[500px] h-[300px] mx-auto border-4 border-blue-500 rounded-lg overflow-hidden bg-gray-900">
+                        <!-- Línea de escaneo -->
+                        <div id="scanner-line" class="absolute h-1 w-full bg-red-500 shadow-[0_0_10px_#ef4444] animate-scan z-10"></div>
+                        
+                        <!-- Esquinas decorativas -->
+                        <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-blue-500 rounded-tl-lg"></div>
+                        <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-blue-500 rounded-tr-lg"></div>
+                        <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-blue-500 rounded-bl-lg"></div>
+                        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-blue-500 rounded-br-lg"></div>
+                        
+                        <!-- Mensaje inicial -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <p class="text-gray-400 text-center px-4">
+                                <i class="fas fa-camera text-3xl block mb-2"></i>
+                                La cámara se activará al iniciar el escáner
+                            </p>
+                        </div>
+                        
+                            <!-- Elemento de video para la cámara -->
+                            <video id="video" class="w-full h-full object-cover hidden"></video>
+                    </div>
+                </div>
+
+                <!-- Controles del escáner -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                    <button id="startScannerBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center">
+                        <i class="fas fa-camera mr-2"></i> Iniciar Escáner
                     </button>
-                    <button id="stopScannerBtn" class="btn btn-danger btn-lg px-4 py-2 d-none">
-                        <i class="bi bi-stop-circle me-2"></i>DETENER ESCANER
+                    <button id="stopScannerBtn" class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center" disabled>
+                        <i class="fas fa-stop-circle mr-2"></i> Detener
                     </button>
+                </div>
+
+                <!-- Advertencia de cámara -->
+                <div id="no-camera-warning" class="hidden bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 rounded">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-triangle text-yellow-600 text-xl"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-yellow-700">
+                                No se pudo acceder a la cámara. Asegúrate de otorgar los permisos necesarios y que la cámara no esté siendo utilizada por otra aplicación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resultado del escaneo -->
+                <div id="resultado" class="bg-gray-50 rounded-lg p-6 shadow-inner border border-gray-200 hidden">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 text-center border-b pb-2">
+                        <i class="fas fa-user-check text-green-500 mr-2"></i> Registro de Asistencia
+                    </h3>
+                    <div id="datos-persona" class="space-y-3"></div>
                 </div>
             </div>
         </div>

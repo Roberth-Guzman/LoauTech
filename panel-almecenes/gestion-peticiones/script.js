@@ -47,45 +47,49 @@ document.addEventListener('keydown', function(event) {
 
 // Funciones específicas de gestión de peticiones
 function approveRequest(requestId) {
-    console.log('Aprobando petición:', requestId);
-    // Aquí iría la lógica para aprobar la petición
-    // Por ejemplo, una llamada AJAX al servidor
+    if (!requestId) {
+        console.error('ID de solicitud no proporcionado');
+        return;
+    }
     
-    // Mostrar mensaje de éxito (puedes implementar un toast o alerta)
-    alert(`Petición #${requestId} aprobada con éxito`);
+    // Crear un formulario dinámico para enviar la solicitud
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'aprobar_prestamo.php';
     
-    // Cerrar el modal
-    closeModal('approveModal');
+    // Agregar el ID de la solicitud
+    const idInput = document.createElement('input');
+    idInput.type = 'hidden';
+    idInput.name = 'id';
+    idInput.value = requestId;
+    form.appendChild(idInput);
     
-    // Actualizar la interfaz (podrías recargar la página o actualizar solo el elemento)
-    // location.reload();
+    // Agregar el formulario al documento y enviarlo
+    document.body.appendChild(form);
+    form.submit();
 }
 
-function rejectRequest(requestId) {
+function rejectRequest() {
+    const requestId = document.getElementById('rejectRequestId').value;
     const reason = document.getElementById('rejectReason').value;
-    const details = document.getElementById('rejectDetails').value;
-    const notifyApplicant = document.getElementById('notifyApplicant').checked;
     
     // Validación básica
     if (!reason) {
         alert('Por favor seleccione un motivo de rechazo');
-        return;
+        return false; // Evita que el formulario se envíe
     }
     
-    console.log('Rechazando petición:', requestId, 'Motivo:', reason, 'Detalles:', details, 'Notificar:', notifyApplicant);
-    
-    // Aquí iría la lógica para rechazar la petición
-    // Por ejemplo, una llamada AJAX al servidor con el motivo
-    
-    // Mostrar mensaje de éxito
-    alert(`Petición #${requestId} rechazada. Motivo: ${reason}`);
-    
-    // Cerrar el modal y limpiar el formulario
-    closeModal('rejectModal');
-    document.getElementById('rejectReason').value = '';
-    document.getElementById('rejectDetails').value = '';
-    document.getElementById('notifyApplicant').checked = false;
-    
-    // Actualizar la interfaz
-    // location.reload();
+    // Si llegamos aquí, la validación pasó
+    // El formulario se enviará automáticamente
+    return true;
 }
+
+// Configurar el evento de envío del formulario de rechazo
+document.addEventListener('DOMContentLoaded', function() {
+    const rejectForm = document.getElementById('rejectForm');
+    if (rejectForm) {
+        rejectForm.onsubmit = function() {
+            return rejectRequest();
+        };
+    }
+});

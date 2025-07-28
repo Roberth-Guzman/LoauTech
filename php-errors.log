@@ -28,3 +28,166 @@ Stack trace:
 #1 {main}
   thrown in C:\xampp\htdocs\loautech-main\login.php on line 50
 [09-Jul-2025 18:04:50 Europe/Berlin] Login exitoso para usuario: 22222222 rol: usuario
+[13-Jul-2025 23:22:26 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[13-Jul-2025 23:23:08 Europe/Berlin] Login exitoso para usuario: 22222222 rol: usuario
+[13-Jul-2025 23:24:19 Europe/Berlin] Login exitoso para usuario: 98736611 rol: almacenes
+[13-Jul-2025 23:25:42 Europe/Berlin] Intento fallido de login para documento: 00809875
+[13-Jul-2025 23:25:59 Europe/Berlin] Intento fallido de login para documento: 00809875
+[13-Jul-2025 23:26:15 Europe/Berlin] Intento fallido de login para documento: 809875
+[13-Jul-2025 23:26:22 Europe/Berlin] Login exitoso para usuario: 33333333 rol: porteria
+[13-Jul-2025 23:40:09 Europe/Berlin] Intento fallido de login para documento: 00809871
+[13-Jul-2025 23:40:33 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[13-Jul-2025 23:57:59 Europe/Berlin] Login exitoso para usuario: 22222222 rol: usuario
+[14-Jul-2025 00:04:02 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[14-Jul-2025 00:10:57 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[14-Jul-2025 00:13:58 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[14-Jul-2025 00:14:58 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[14-Jul-2025 00:15:54 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[14-Jul-2025 00:24:30 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[14-Jul-2025 00:33:11 Europe/Berlin] Login exitoso para usuario: 1081402721 rol: porteria
+[14-Jul-2025 00:33:54 Europe/Berlin] Login exitoso para usuario: 1081402721 rol: usuario
+[14-Jul-2025 01:38:26 Europe/Berlin] Intento fallido de login para documento: 98716611
+[14-Jul-2025 01:38:52 Europe/Berlin] Login exitoso para usuario: 98736611 rol: almacenes
+[14-Jul-2025 01:39:32 Europe/Berlin] Login exitoso para usuario: 809871 rol: cuentadante
+[19-Jul-2025 21:48:12 Europe/Berlin] Login exitoso para usuario: 1081402721 rol: usuario
+[19-Jul-2025 22:32:11 Europe/Berlin] Intento fallido de login para documento: 1081402721
+[19-Jul-2025 22:32:19 Europe/Berlin] Intento fallido de login para documento: 1081402721
+[19-Jul-2025 22:33:33 Europe/Berlin] Login exitoso para usuario: 1081402721 rol: admin
+[19-Jul-2025 22:34:02 Europe/Berlin] Login exitoso para usuario: 1081402721 rol: usuario
+[19-Jul-2025 22:34:44 Europe/Berlin] Login exitoso para usuario: 1081402721 rol: usuario
+[19-Jul-2025 22:35:44 Europe/Berlin] Login exitoso para usuario: 1081402721 rol: usuario
+[20-Jul-2025 18:42:50 Europe/Berlin] Login exitoso para usuario: 55555555 rol: cuentadante
+[20-Jul-2025 18:49:13 Europe/Berlin] Login exitoso para usuario: 1081402721 rol: usuario
+[23-Jul-2025 16:04:36 Europe/Berlin] Login exitoso para usuario: 3333665544 rol: usuario
+[23-Jul-2025 16:31:23 Europe/Berlin] Intento fallido de login para documento: 66666699887
+[23-Jul-2025 16:31:48 Europe/Berlin] Intento fallido de login para documento: 66666699887
+[23-Jul-2025 16:39:57 Europe/Berlin] Login exitoso para usuario: 99995999 rol: admin
+[23-Jul-2025 16:40:11 Europe/Berlin] Login exitoso para usuario: 2211447733 rol: porteria
+[23-Jul-2025 17:19:37 Europe/Berlin] Login exitoso para usuario: 99995999 rol: admin
+[24-Jul-2025 15:32:28 Europe/Berlin] Login exitoso para usuario: 99995999 rol: admin
+[24-Jul-2025 18:38:20 Europe/Berlin] Login exitoso para usuario: 3333665544 rol: usuario
+[24-Jul-2025 18:41:18 Europe/Berlin] Login exitoso para usuario: 99995999 rol: admin
+[24-Jul-2025 18:57:00 Europe/Berlin] Login exitoso para usuario: 3333665544 rol: usuario
+[24-Jul-2025 20:46:38 Europe/Berlin] Intento fallido de login para documento: 1014862578
+[24-Jul-2025 20:47:06 Europe/Berlin] Intento fallido de login para documento: 1014862578
+[24-Jul-2025 20:47:08 Europe/Berlin] Login exitoso para usuario: 3333665544 rol: usuario
+[24-Jul-2025 21:03:46 Europe/Berlin] Intento fallido de login para documento: 809871
+[24-Jul-2025 21:05:15 Europe/Berlin] Intento fallido de login para documento: 1014862578
+[24-Jul-2025 21:32:30 Europe/Berlin] Intento fallido de login para documento: 1014862578
+[24-Jul-2025 21:34:09 Europe/Berlin] Intento fallido de login para documento: 1014862578
+[24-Jul-2025 21:35:00 Europe/Berlin] Intento fallido de login para documento: 1014862578
+[24-Jul-2025 21:45:01 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[24-Jul-2025 21:45:01 Europe/Berlin] Archivo de panel no encontrado: panel-cuentadante/gestion-peticiones/panel-peticiones.php
+[24-Jul-2025 21:52:15 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[24-Jul-2025 22:03:53 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[24-Jul-2025 22:08:42 Europe/Berlin] Inicio de sesión exitoso para: 3333665544 - Rol: usuario
+[24-Jul-2025 22:10:32 Europe/Berlin] Contraseña incorrecta para el documento: 8888885544
+[24-Jul-2025 22:11:15 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[24-Jul-2025 22:11:28 Europe/Berlin] Contraseña incorrecta para el documento: 8888885544
+[24-Jul-2025 22:11:51 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[24-Jul-2025 22:17:14 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[24-Jul-2025 22:34:07 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[24-Jul-2025 22:34:26 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[24-Jul-2025 22:42:57 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[24-Jul-2025 22:54:20 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[24-Jul-2025 22:54:40 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[24-Jul-2025 23:06:05 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[24-Jul-2025 23:06:20 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 00:46:15 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 00:47:10 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 00:47:24 Europe/Berlin] Inicio de sesión exitoso para: 3333665544 - Rol: usuario
+[25-Jul-2025 00:48:01 Europe/Berlin] Inicio de sesión exitoso para: 1014862802 - Rol: usuario
+[25-Jul-2025 00:48:27 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 00:48:51 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 01:57:05 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 02:41:50 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 02:41:57 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 02:42:07 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 02:43:25 Europe/Berlin] Inicio de sesión exitoso para: 1014862802 - Rol: usuario
+[25-Jul-2025 02:50:36 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 02:50:45 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 02:52:08 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 02:52:31 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 03:01:10 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 03:01:16 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 03:02:03 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 03:08:22 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 03:08:28 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 03:08:47 Europe/Berlin] No se encontró cuenta activa para el documento: 1014862578
+[25-Jul-2025 03:10:25 Europe/Berlin] Inicio de sesión exitoso para: 1014862802 - Rol: usuario
+[25-Jul-2025 03:10:49 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 03:20:01 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 03:29:05 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 03:29:09 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 03:29:45 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 03:30:03 Europe/Berlin] Inicio de sesión exitoso para: 1014862802 - Rol: usuario
+[25-Jul-2025 03:30:36 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 03:39:42 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 03:42:24 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 03:42:41 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 03:42:48 Europe/Berlin] Inicio de sesión exitoso para: 1014862802 - Rol: usuario
+[25-Jul-2025 03:43:06 Europe/Berlin] Inicio de sesión exitoso para: 1014862802 - Rol: usuario
+[25-Jul-2025 03:43:11 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 04:39:23 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 04:48:25 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 04:51:37 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 04:56:22 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 05:48:28 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 05:50:24 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 05:57:11 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 06:02:44 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 06:07:04 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 06:13:25 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 06:17:28 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 06:17:41 Europe/Berlin] Inicio de sesión exitoso para: 1014862802 - Rol: usuario
+[25-Jul-2025 06:18:11 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 06:18:36 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 06:18:44 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 06:18:49 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 06:22:47 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 06:22:57 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 06:23:03 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 06:26:24 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 06:31:10 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 07:11:46 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 07:11:53 Europe/Berlin] Inicio de sesión exitoso para: 3333665544 - Rol: usuario
+[25-Jul-2025 07:11:59 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 07:12:13 Europe/Berlin] Inicio de sesión exitoso para: 3333665544 - Rol: usuario
+[25-Jul-2025 07:12:24 Europe/Berlin] Inicio de sesión exitoso para: 99995999 - Rol: admin
+[25-Jul-2025 08:09:46 Europe/Berlin] Inicio de sesión exitoso para: 99995999 - Rol: admin
+[25-Jul-2025 08:09:54 Europe/Berlin] Inicio de sesión exitoso para: 88888111 - Rol: almacenes
+[25-Jul-2025 08:12:07 Europe/Berlin] Inicio de sesión exitoso para: 1014862802 - Rol: usuario
+[25-Jul-2025 08:12:45 Europe/Berlin] Contraseña incorrecta para el documento: 2211447733
+[25-Jul-2025 14:39:37 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
+[25-Jul-2025 14:47:14 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
+[25-Jul-2025 15:00:13 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
+[25-Jul-2025 15:02:13 Europe/Berlin] Inicio de sesión exitoso para: 1081402722 - Rol: almacenes
+[25-Jul-2025 15:08:11 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: admin
+[25-Jul-2025 15:20:35 Europe/Berlin] Contraseña incorrecta para el documento: 8888885544
+[25-Jul-2025 15:20:42 Europe/Berlin] Inicio de sesión exitoso para: 8888885544 - Rol: cuentadante
+[25-Jul-2025 16:04:18 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
+[25-Jul-2025 22:24:08 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
+[25-Jul-2025 22:24:28 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
+[25-Jul-2025 22:24:55 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: usuario
+[25-Jul-2025 22:25:58 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: usuario
+[25-Jul-2025 22:26:09 Europe/Berlin] No se encontró cuenta activa para el documento: 222212312
+[25-Jul-2025 22:26:18 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: usuario
+[25-Jul-2025 22:27:06 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
+[25-Jul-2025 22:32:38 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: almacenes
+[25-Jul-2025 22:34:02 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
+[27-Jul-2025 22:24:19 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
+[27-Jul-2025 23:06:59 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
+[27-Jul-2025 23:07:20 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
+[27-Jul-2025 23:08:00 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
+[27-Jul-2025 23:08:14 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
+[27-Jul-2025 23:13:56 Europe/Berlin] No se encontró cuenta activa para el documento: 12345678
+[27-Jul-2025 23:15:44 Europe/Berlin] Inicio de sesión exitoso para: 44444444 - Rol: admin
+[27-Jul-2025 23:16:36 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
+[27-Jul-2025 23:18:46 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
+[27-Jul-2025 23:19:07 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
+[27-Jul-2025 23:19:36 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
+[28-Jul-2025 13:24:16 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
+[28-Jul-2025 13:24:38 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
+[28-Jul-2025 13:35:22 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
+[28-Jul-2025 13:38:05 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
+[28-Jul-2025 13:47:18 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante

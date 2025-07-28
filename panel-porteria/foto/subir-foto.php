@@ -1,55 +1,83 @@
 <?php
 session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: ../login.php");
+    exit;
+}
+
 include '../../conexion.php';
 
-$idUsuario = $_SESSION['usuario']['IDper'] ?? null;
+$idUsuario = $_SESSION['usuario']['IDper'];
 
-
-if (!$idUsuario || !isset($_FILES['foto_perfil'])) {
-    $_SESSION['error'] = "No se ha recibido la imagen.";
+if (!isset($_FILES['foto_perfil']) || $_FILES['foto_perfil']['error'] !== UPLOAD_ERR_OK) {
+    $_SESSION['error'] = "Error al subir la foto. Intenta de nuevo.";
     header("Location: ../perfil-porteria.php");
     exit;
 }
 
 $foto = $_FILES['foto_perfil'];
 
-// Carpeta común para fotos
-$carpetaDestino = "uploads/fotos_perfil/";
-
-// Crear carpeta si no existe
-if (!is_dir("../../" . $carpetaDestino)) {
-    mkdir("../../" . $carpetaDestino, 0755, true);
-}
-
-// Extensión segura y nombre único
-$ext = strtolower(pathinfo($foto["name"], PATHINFO_EXTENSION));
-$nombreArchivo = "porteria_" . $idUsuario . "_" . time() . "." . $ext;
-$rutaFoto = $carpetaDestino . $nombreArchivo;
-$destino = "../../" . $rutaFoto;
-
-$extensionesPermitidas = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
-if (!in_array($ext, $extensionesPermitidas)) {
-    $_SESSION['error'] = "Formato de imagen no permitido.";
+// Validar tipo de archivo
+$permitidos = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+if (!in_array($foto['type'], $permitidos)) {
+    $_SESSION['error'] = "Formato de archivo no permitido. Usa JPG, PNG, GIF o WEBP.";
     header("Location: ../perfil-porteria.php");
     exit;
 }
 
-if (move_uploaded_file($foto["tmp_name"], $destino)) {
+// Validar tamaño máximo (2MB)
+$maxSize = 2 * 1024 * 1024;
+if ($foto['size'] > $maxSize) {
+    $_SESSION['error'] = "El archivo es demasiado grande. Máximo 2MB.";
+    header("Location: ../perfil-porteria.php");
+    exit;
+}
+
+// Crear carpeta si no existe
+$carpeta = "../../uploads/fotos_perfil/";
+if (!is_dir($carpeta)) {
+    mkdir($carpeta, 0755, true);
+}
+
+$extension = pathinfo($foto['name'], PATHINFO_EXTENSION);
+$nombreArchivo = "perfil_" . $idUsuario . "_" . time() . "." . $extension;
+$rutaDestino = $carpeta . $nombreArchivo;
+
+// Mover archivo
+if (!move_uploaded_file($foto['tmp_name'], $rutaDestino)) {
+    $_SESSION['error'] = "No se pudo guardar la foto en el servidor.";
+    header("Location: ../perfil-porteria.php");
+    exit;
+}
+
+// Ruta relativa para la base de datos
+$rutaBD = "uploads/fotos_perfil/" . $nombreArchivo;
+
+$conn->begin_transaction();
+
+try {
     // Marcar todas las fotos anteriores como no actuales
-    $stmtUpdate = $conn->prepare("UPDATE fotos_perfil SET es_actual = 0 WHERE id_persona = ?");
-    $stmtUpdate->bind_param("i", $idUsuario);
-    $stmtUpdate->execute();
+    $sqlNoActual = "UPDATE fotos_perfil SET es_actual = 0 WHERE id_persona = ?";
+    $stmt = $conn->prepare($sqlNoActual);
+    $stmt->bind_param("i", $idUsuario);
+    $stmt->execute();
 
-    // Insertar nueva foto
-    $stmtInsert = $conn->prepare("INSERT INTO fotos_perfil (id_persona, ruta, es_actual) VALUES (?, ?, 1)");
-    $stmtInsert->bind_param("is", $idUsuario, $rutaFoto);
-    $stmtInsert->execute();
+    // Insertar la nueva foto como actual
+    $sqlInsert = "INSERT INTO fotos_perfil (id_persona, ruta, es_actual) VALUES (?, ?, 1)";
+    $stmt = $conn->prepare($sqlInsert);
+    $stmt->bind_param("is", $idUsuario, $rutaBD);
+    $stmt->execute();
 
-    $_SESSION['mensaje'] = "Foto actualizada correctamente.";
-} else {
-    $_SESSION['error'] = "Error al subir la foto.";
+    $conn->commit();
+    $_SESSION['mensaje'] = "Foto de perfil actualizada correctamente.";
+} catch (Exception $e) {
+    $conn->rollback();
+    // Eliminar el archivo subido si hay un error en la base de datos
+    if (file_exists($rutaDestino)) {
+        unlink($rutaDestino);
+    }
+    $_SESSION['error'] = "Error al guardar la foto en la base de datos: " . $e->getMessage();
 }
 
 header("Location: ../perfil-porteria.php");
 exit;
-?>
