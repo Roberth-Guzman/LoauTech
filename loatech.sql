@@ -26,9 +26,9 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `aprobaciones`
 --
-DROP DATABASE IF EXISTS loautech;
-CREATE DATABASE loautech;
-USE loautech;
+DROP DATABASE IF EXISTS loatech;
+CREATE DATABASE loatech;
+USE loatech;
 
 CREATE TABLE `aprobaciones` (
   `id` int(11) NOT NULL,

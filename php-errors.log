@@ -1,33 +1,13 @@
-[31-Jul-2025 02:27:04 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
-[31-Jul-2025 02:29:12 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
-[31-Jul-2025 03:23:37 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
-[31-Jul-2025 03:26:03 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
-[31-Jul-2025 03:26:33 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
-[31-Jul-2025 04:27:13 Europe/Berlin] Inicio de sesión exitoso para: 44444444 - Rol: admin
-[31-Jul-2025 04:32:35 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
-[31-Jul-2025 04:37:40 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
-[31-Jul-2025 05:06:28 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
-[31-Jul-2025 05:06:44 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
-[31-Jul-2025 05:07:15 Europe/Berlin] No se encontró cuenta activa para el documento: 3333333
-[31-Jul-2025 05:07:23 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
-[31-Jul-2025 05:08:14 Europe/Berlin] Inicio de sesión exitoso para: 44444444 - Rol: admin
-[31-Jul-2025 05:13:10 Europe/Berlin] Inicio de sesión exitoso para: 44444444 - Rol: admin
-[31-Jul-2025 05:46:16 Europe/Berlin] No se encontró cuenta activa para el documento: 3333333
-[31-Jul-2025 05:46:26 Europe/Berlin] No se encontró cuenta activa para el documento: 33333333
-[31-Jul-2025 05:46:36 Europe/Berlin] No se encontró cuenta activa para el documento: 33333333
-[31-Jul-2025 05:46:56 Europe/Berlin] No se encontró cuenta activa para el documento: 33333333
-[31-Jul-2025 05:47:23 Europe/Berlin] No se encontró cuenta activa para el documento: 33333333
-[31-Jul-2025 05:47:31 Europe/Berlin] No se encontró cuenta activa para el documento: 33333333
-[31-Jul-2025 05:47:40 Europe/Berlin] No se encontró cuenta activa para el documento: 33333333
-[31-Jul-2025 05:47:56 Europe/Berlin] No se encontró cuenta activa para el documento: 1081402721
-[31-Jul-2025 05:48:11 Europe/Berlin] No se encontró cuenta activa para el documento: 22222222
-[31-Jul-2025 05:49:14 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
-[31-Jul-2025 05:49:27 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
-[31-Jul-2025 05:49:53 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
-[31-Jul-2025 05:50:36 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
-[31-Jul-2025 05:50:56 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
-[31-Jul-2025 05:52:07 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
-[31-Jul-2025 05:53:09 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante
-[31-Jul-2025 05:53:26 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
-[31-Jul-2025 05:56:03 Europe/Berlin] Inicio de sesión exitoso para: 33333333 - Rol: porteria
-[31-Jul-2025 22:23:27 Europe/Berlin] Inicio de sesión exitoso para: 44444444 - Rol: admin
+[01-Aug-2025 13:27:28 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in C:\xampp\htdocs\loautech-main\login.php:78
+Stack trace:
+#0 C:\xampp\htdocs\loautech-main\login.php(78): mysqli->prepare('SELECT c.*, p.I...')
+#1 {main}
+  thrown in C:\xampp\htdocs\loautech-main\login.php on line 78
+[01-Aug-2025 13:29:19 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'loatech.cuentas' doesn't exist in C:\xampp\htdocs\loautech-main\login.php:78
+Stack trace:
+#0 C:\xampp\htdocs\loautech-main\login.php(78): mysqli->prepare('SELECT c.*, p.I...')
+#1 {main}
+  thrown in C:\xampp\htdocs\loautech-main\login.php on line 78
+[01-Aug-2025 13:32:33 Europe/Berlin] Inicio de sesión exitoso para: 1081402721 - Rol: usuario
+[01-Aug-2025 13:35:13 Europe/Berlin] Inicio de sesión exitoso para: 22222222 - Rol: almacenes
+[01-Aug-2025 13:36:42 Europe/Berlin] Inicio de sesión exitoso para: 55555555 - Rol: cuentadante

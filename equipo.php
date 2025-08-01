@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -108,27 +111,42 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <form class="needs-validation" novalidate>
+        <?php
+        // Mostrar mensajes de éxito o error
+        if (isset($_SESSION['mensaje_contacto'])) {
+            $mensaje = $_SESSION['mensaje_contacto'];
+            $clase = $mensaje['tipo'] === 'exito' ? 'alert-success' : 'alert-danger';
+            echo '<div class="alert ' . $clase . ' alert-dismissible fade show mb-4" role="alert">
+                    ' . htmlspecialchars($mensaje['texto']) . '
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  </div>';
+            unset($_SESSION['mensaje_contacto']);
+        }
+        ?>
+        <form class="needs-validation" method="POST" action="procesar_contacto.php" novalidate>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="nombre" required />
+            <input type="text" class="form-control" id="nombre" name="nombre" required />
+            <div class="invalid-feedback">Por favor ingresa tu nombre completo</div>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" required />
+            <input type="email" class="form-control" id="email" name="email" required />
             <div class="invalid-feedback">Ingresa un correo válido</div>
           </div>
           <div class="mb-3">
             <label for="telefono" class="form-label">Teléfono</label>
-            <input type="tel" class="form-control" id="telefono" title="Ingresa un número de 10 dígitos" />
+            <input type="tel" class="form-control" id="telefono" name="telefono" title="Ingresa un número de 10 dígitos" />
           </div>
           <div class="mb-3">
             <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            <div class="invalid-feedback">Por favor ingresa tu mensaje</div>
           </div>
           <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" id="privacidad" required />
+            <input class="form-check-input" type="checkbox" id="privacidad" name="privacidad" required />
             <label class="form-check-label" for="privacidad">Acepto términos y condiciones</label>
+            <div class="invalid-feedback">Debes aceptar los términos y condiciones</div>
           </div>
           <div class="d-grid">
             <button type="submit" class="btn btn-primary btn-lg">
@@ -152,5 +170,27 @@
 
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Validación del formulario -->
+<script>
+// Ejemplo de validación del formulario
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+</script>
 </body>
 </html>
