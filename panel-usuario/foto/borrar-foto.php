@@ -1,36 +1,34 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['usuario'])) {
     header("Location: ../login.php");
     exit;
 }
 
-include '../../conexion.php';
+include '../conexion.php';
 
 $idUsuario = $_SESSION['usuario']['IDper'];
 
-$sql = "SELECT id, ruta FROM fotos_perfil WHERE id_persona = ? AND es_actual = 1";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $idUsuario);
-$stmt->execute();
-$result = $stmt->get_result();
-$foto = $result->fetch_assoc();
-
-if ($foto) {
-    $rutaFoto = __DIR__ . '/../../' . $foto['ruta'];
-
-    if (file_exists($rutaFoto)) {
-        unlink($rutaFoto);
+// Obtener la ruta de la foto actual
+$result = $conn->query("SELECT id, ruta FROM fotos_perfil WHERE id_persona = $idUsuario AND es_actual = 1");
+if ($result->num_rows > 0) {
+    $foto = $result->fetch_assoc();
+    
+    // Eliminar el archivo físico
+    $ruta_archivo = "../" . $foto['ruta'];
+    if (file_exists($ruta_archivo)) {
+        unlink($ruta_archivo);
     }
-
-    $stmt = $conn->prepare("DELETE FROM fotos_perfil WHERE id = ?");
-    $stmt->bind_param("i", $foto['id']);
-    $stmt->execute();
-
-    $_SESSION['mensaje'] = "Foto de perfil borrada correctamente.";
+    
+    // Eliminar el registro de la base de datos
+    $conn->query("DELETE FROM fotos_perfil WHERE id = " . $foto['id']);
+    
+    $_SESSION['exito'] = "Foto de perfil eliminada correctamente.";
 } else {
-    $_SESSION['error'] = "No se encontró una foto de perfil para borrar.";
+    $_SESSION['error'] = "No se encontró ninguna foto de perfil para eliminar.";
 }
 
-header("Location: ../perfil-usuario.php");
+header("Location: perfil.php");
 exit;
+?>

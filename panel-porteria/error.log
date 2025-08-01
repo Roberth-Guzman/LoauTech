@@ -1,0 +1,13 @@
+[27-Jul-2025 17:42:07 America/Bogota] Error en registrar_salida.php: Solicitud no encontrada o no está aprobada para salida
+[27-Jul-2025 17:42:24 America/Bogota] Error en registrar_salida.php: Solicitud no encontrada o no está aprobada para salida
+[27-Jul-2025 17:52:00 America/Bogota] Error en registrar_salida.php: Unknown column 'IDprestamo' in 'where clause'
+[27-Jul-2025 17:53:24 America/Bogota] Error en registrar_salida.php: Unknown column 'IDprestamo' in 'field list'
+[27-Jul-2025 17:53:34 America/Bogota] Error en registrar_salida.php: Unknown column 'IDprestamo' in 'field list'
+[27-Jul-2025 17:56:02 America/Bogota] Error en registrar_salida.php: Column 'nomvigilanteingreso' cannot be null
+[27-Jul-2025 17:56:53 America/Bogota] Error en registrar_salida.php: Column 'hfecingresomarc' cannot be null
+[27-Jul-2025 17:57:47 America/Bogota] Error en registrar_salida.php: Cannot add or update a child row: a foreign key constraint fails (`loatech`.`marcaciones`, CONSTRAINT `marcaciones_ibfk_1` FOREIGN KEY (`IDautori`) REFERENCES `autorizacion` (`IDaut`))
+[27-Jul-2025 17:59:02 America/Bogota] Salida autorizada - Solicitud #23 - Vigilante: porteria robsito - Fecha: 2025-07-27 17:59:02
+[28-Jul-2025 08:25:22 America/Bogota] Salida autorizada - Solicitud #28 - Vigilante: porteria robsito - Fecha: 2025-07-28 08:25:22
+[30-Jul-2025 16:26:41 America/Bogota] Error en registrar_salida.php: Solicitud no encontrada o no está aprobada para salida
+[30-Jul-2025 16:27:01 America/Bogota] Error en registrar_salida.php: Solicitud no encontrada o no está aprobada para salida
+[30-Jul-2025 22:56:48 America/Bogota] Error en registrar_salida.php: Solicitud no encontrada o no está aprobada para salida

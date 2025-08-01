@@ -1,0 +1,1789 @@
+[2025-07-25 03:08:04] ERROR: Table 'loatech.articulos' doesn't exist
+[2025-07-25 03:08:22] ERROR: Table 'loatech.articulos' doesn't exist
+[2025-07-25 03:08:28] ERROR: Table 'loatech.articulos' doesn't exist
+[2025-07-25 03:19:51] ERROR: Unknown column 'p.fechasolicitud' in 'field list'
+[2025-07-25 03:19:55] ERROR: Unknown column 'p.fechasolicitud' in 'field list'
+[2025-07-25 03:29:02] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 03:29:05] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 03:29:09] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 04:39:16] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 04:48:21] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 04:48:27] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:07:40] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:07:43] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:17:28] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:18:32] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:18:33] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:18:36] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:18:44] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:22:45] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:22:47] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:22:57] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:31:04] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:31:10] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:32:53] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:34:31] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:34:36] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 06:49:19] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:04:33] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:11:16] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:11:46] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:16:58] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:50:01] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:50:04] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:50:14] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:50:46] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:53:39] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:53:42] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:54:16] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:56:23] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:56:30] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 07:56:32] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:01:22] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:02:02] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:06:47] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:09:33] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:09:37] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:09:54] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:10:00] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:11:38] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:11:39] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 08:11:52] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:02:13] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:02:38] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:03:13] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:03:18] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:03:52] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:03:59] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:04:01] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:04:04] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-25 15:04:13] ERROR: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-28 13:42:03] ERROR: Unknown column 'p.fechapre' in 'field list'
+[2025-07-28 13:42:11] ERROR: Unknown column 'p.fechapre' in 'field list'
+[2025-07-28 13:42:13] ERROR: Unknown column 'p.fechapre' in 'field list'
+[2025-07-28 13:42:59] ERROR: Unknown column 'p.fechapre' in 'field list'
+[2025-07-28 13:46:00] ERROR: Unknown column 'p.fechapre' in 'field list'
+[2025-07-28 14:04:51] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:04:51] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:04:52] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:04:52] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:04:52] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:04:52] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:04:54] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:04:54] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:05:27] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:05:27] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:06:08] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:06:08] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:07:17] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:07:17] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:07:19] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:07:19] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:07:40] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:07:40] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:07:42] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:07:42] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:08:20] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:08:20] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-28 14:10:40] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:10:40] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen')
+[2025-07-28 14:10:57] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:10:57] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen')
+[2025-07-28 14:10:57] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:10:57] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:11:27] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:11:27] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen')
+[2025-07-28 14:11:27] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:11:27] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:12:34] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:12:34] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen')
+[2025-07-28 14:12:34] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:12:34] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:12:44] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:12:44] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen')
+[2025-07-28 14:12:44] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:12:44] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:13:33] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:13:33] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen')
+[2025-07-28 14:13:33] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:13:33] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:15:54] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:15:54] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen')
+[2025-07-28 14:15:54] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:15:54] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:20:13] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:20:13] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:20:13] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:20:13] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:20:21] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:20:21] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:20:21] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:20:21] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:21:27] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:21:27] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:21:27] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:21:27] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:31:11] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:31:11] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:31:11] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:31:11] ERROR: Número de solicitudes encontradas: 6
+[2025-07-28 14:31:26] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:31:26] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:31:26] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:31:26] ERROR: Número de solicitudes encontradas: 5
+[2025-07-28 14:31:39] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:31:39] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:31:39] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:31:39] ERROR: Número de solicitudes encontradas: 4
+[2025-07-28 14:36:31] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:36:31] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:36:31] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:36:31] ERROR: Número de solicitudes encontradas: 4
+[2025-07-28 14:36:47] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:36:47] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:36:47] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:36:47] ERROR: Número de solicitudes encontradas: 3
+[2025-07-28 14:37:44] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:37:44] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:37:44] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:37:44] ERROR: Número de solicitudes encontradas: 3
+[2025-07-28 14:37:55] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:37:55] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:37:55] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:37:55] ERROR: Número de solicitudes encontradas: 2
+[2025-07-28 14:44:53] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:44:53] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:44:53] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:44:53] ERROR: Número de solicitudes encontradas: 2
+[2025-07-28 14:45:10] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:45:10] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:45:10] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:45:10] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 14:47:09] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:47:09] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:47:09] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:47:09] ERROR: Número de solicitudes encontradas: 2
+[2025-07-28 14:52:23] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 14:52:23] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 14:52:23] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 14:52:23] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:22:57] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:22:57] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:22:57] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:22:57] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:23:04] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:23:04] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:23:04] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:23:04] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:23:08] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:23:08] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:23:08] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:23:08] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:23:09] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:23:09] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:23:09] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:23:09] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:37:56] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:37:56] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:37:56] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:37:56] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:39:52] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:39:52] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:39:52] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:39:52] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:40:24] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:40:24] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:40:24] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:40:24] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:43:57] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:43:57] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:43:57] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:43:57] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:51:00] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:51:00] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:51:00] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:51:00] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:55:17] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:55:17] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:55:17] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:55:17] ERROR: Número de solicitudes encontradas: 4
+[2025-07-28 15:55:53] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:55:53] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:55:53] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:55:53] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:56:42] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:56:42] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:56:42] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:56:42] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:56:55] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:56:55] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:56:55] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:56:55] ERROR: Número de solicitudes encontradas: 1
+[2025-07-28 15:57:51] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:57:51] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:57:51] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:57:51] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:58:54] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:58:54] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:58:54] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:58:54] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 15:59:45] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 15:59:45] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 15:59:45] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 15:59:45] ERROR: Número de solicitudes encontradas: 1
+[2025-07-28 16:01:04] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 16:01:04] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 16:01:04] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 16:01:04] ERROR: Número de solicitudes encontradas: 0
+[2025-07-28 16:01:40] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 16:01:40] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 16:01:40] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 16:01:40] ERROR: Número de solicitudes encontradas: 1
+[2025-07-28 17:25:31] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 17:25:31] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 17:25:31] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 17:25:31] ERROR: Número de solicitudes encontradas: 1
+[2025-07-28 23:48:06] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-28 23:48:06] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-28 23:48:06] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-28 23:48:06] ERROR: Número de solicitudes encontradas: 2
+[2025-07-30 14:15:19] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 14:15:19] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-30 14:15:19] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-30 14:15:19] ERROR: Número de solicitudes encontradas: 3
+[2025-07-30 17:21:28] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 17:21:28] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-30 17:21:28] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-30 17:21:28] ERROR: Número de solicitudes encontradas: 3
+[2025-07-30 23:00:05] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:00:05] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-30 23:00:05] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:00:05] ERROR: Número de solicitudes encontradas: 3
+[2025-07-30 23:01:44] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:01:44] ERROR: Filtro almacenes: a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+[2025-07-30 23:01:44] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut IN ('activo', 'pendiente_almacen') AND a.estadoaut NOT IN ('rechazado', 'aprobado')
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:01:44] ERROR: Número de solicitudes encontradas: 4
+[2025-07-30 23:04:11] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:04:11] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:04:11] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:04:11] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:04:14] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:04:14] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:04:14] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:04:14] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:07:35] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:07:35] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:07:35] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:07:35] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:07:37] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:07:37] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:07:37] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:07:37] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:39] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:39] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:39] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:39] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:41] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:41] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:41] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:41] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:41] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:41] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:41] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:41] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:41] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:41] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:41] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:41] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:42] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:42] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:42] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:42] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:42] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:42] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:42] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:42] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:42] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:42] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:42] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:42] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:42] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:42] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:42] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:42] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:12:50] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:12:50] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:12:50] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:12:50] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:18:54] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:18:54] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:18:54] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:18:54] ERROR: Número de solicitudes encontradas: 2
+[2025-07-30 23:19:13] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:19:13] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:19:13] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:19:13] ERROR: Número de solicitudes encontradas: 0
+[2025-07-30 23:19:53] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:19:53] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:19:53] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:19:53] ERROR: Número de solicitudes encontradas: 1
+[2025-07-30 23:26:09] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-30 23:26:09] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-30 23:26:09] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-30 23:26:09] ERROR: Número de solicitudes encontradas: 1
+[2025-07-31 00:17:30] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 00:17:30] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 00:17:30] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 00:17:30] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 00:17:37] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 00:17:37] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 00:17:37] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 00:17:37] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 00:17:37] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 00:17:37] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 00:17:37] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 00:17:37] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 00:17:53] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 00:17:53] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 00:17:53] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 00:17:53] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 00:17:58] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 00:17:58] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 00:17:58] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 00:17:58] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 00:18:05] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 00:18:05] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 00:18:05] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 00:18:05] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 02:29:12] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 02:29:12] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 02:29:12] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 02:29:12] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 03:26:03] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 03:26:03] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 03:26:03] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 03:26:03] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:03:23] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:03:23] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:03:23] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:03:23] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:06:44] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:06:44] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:06:44] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:06:44] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:50:56] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:50:56] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:50:56] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:50:56] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:00] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:00] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:00] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:00] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:01] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:01] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:01] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:01] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:01] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:01] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:01] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:01] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:01] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:01] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:01] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:01] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:02] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:02] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:02] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:02] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:02] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:02] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:02] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:02] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:02] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:02] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:02] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:02] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:02] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:02] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:02] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:02] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:02] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:02] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:02] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:02] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:03] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:03] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:03] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:03] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:08] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:08] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:08] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:08] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:51:54] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:51:54] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:51:54] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:51:54] ERROR: Número de solicitudes encontradas: 0
+[2025-07-31 05:53:26] ERROR: Usuario: usuario pruebas, Rol: almacenes
+[2025-07-31 05:53:26] ERROR: Filtro almacenes: a.estadoaut = 'pendiente_almacen'
+[2025-07-31 05:53:26] ERROR: Consulta SQL: SELECT 
+                p.IDpre as id_prestamo,
+                p.cantidad,
+                p.formacionodependencia,
+                p.cargopre,
+                p.lugardetraslado,
+                per.nombrecompletoper as solicitante,
+                per.numerodoc as documento,
+                e.nombreele as elemento,
+                e.codigoele as codigo_elemento,
+                a.estadoaut as estado_autorizacion
+            FROM prestamos p
+            JOIN personas per ON p.IDpersonas = per.IDper
+            JOIN elementos e ON p.IDelementos = e.IDele
+            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+            WHERE a.estadoaut = 'pendiente_almacen'
+            ORDER BY p.IDpre DESC
+[2025-07-31 05:53:26] ERROR: Número de solicitudes encontradas: 1

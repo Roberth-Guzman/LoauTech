@@ -21,7 +21,7 @@ if (ini_get("session.use_cookies")) {
 // Destruir la sesión
 session_destroy();
 
-// Redireccionar al login
-header("Location: login.php");
+// Redireccionar al inicio
+header("Location: index.php");
 exit();
 ?>

@@ -1,0 +1,2564 @@
+[2025-07-24 20:29:45] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:30:36] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:30:52] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:31:09] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:31:47] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:39:23] ERROR: Consulta SQL: SELECT p.IDpre, p.fechasolicitudpre, p.horapre, p.horaregreso, p.estadopre,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fechasolicitudpre DESC
+[2025-07-24 20:39:23] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:39:33] ERROR: Consulta SQL: SELECT p.IDpre, p.fechasolicitudpre, p.horapre, p.horaregreso, p.estadopre,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fechasolicitudpre DESC
+[2025-07-24 20:39:33] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:39:35] ERROR: Consulta SQL: SELECT p.IDpre, p.fechasolicitudpre, p.horapre, p.horaregreso, p.estadopre,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fechasolicitudpre DESC
+[2025-07-24 20:39:35] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:39:42] ERROR: Consulta SQL: SELECT p.IDpre, p.fechasolicitudpre, p.horapre, p.horaregreso, p.estadopre,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fechasolicitudpre DESC
+[2025-07-24 20:39:42] ERROR: Error cargando solicitudes: Unknown column 'p.fechasolicitudpre' in 'field list'
+[2025-07-24 20:42:19] ERROR: Consulta SQL: SELECT p.IDpre, p.fecha_solicitud, p.hora_inicio, p.hora_fin, p.estado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fecha_solicitud DESC
+[2025-07-24 20:42:19] ERROR: Error cargando solicitudes: Unknown column 'p.fecha_solicitud' in 'field list'
+[2025-07-24 20:42:20] ERROR: Consulta SQL: SELECT p.IDpre, p.fecha_solicitud, p.hora_inicio, p.hora_fin, p.estado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fecha_solicitud DESC
+[2025-07-24 20:42:20] ERROR: Error cargando solicitudes: Unknown column 'p.fecha_solicitud' in 'field list'
+[2025-07-24 20:42:24] ERROR: Consulta SQL: SELECT p.IDpre, p.fecha_solicitud, p.hora_inicio, p.hora_fin, p.estado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fecha_solicitud DESC
+[2025-07-24 20:42:24] ERROR: Error cargando solicitudes: Unknown column 'p.fecha_solicitud' in 'field list'
+[2025-07-24 20:42:26] ERROR: Consulta SQL: SELECT p.IDpre, p.fecha_solicitud, p.hora_inicio, p.hora_fin, p.estado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fecha_solicitud DESC
+[2025-07-24 20:42:26] ERROR: Error cargando solicitudes: Unknown column 'p.fecha_solicitud' in 'field list'
+[2025-07-24 20:42:28] ERROR: Consulta SQL: SELECT p.IDpre, p.fecha_solicitud, p.hora_inicio, p.hora_fin, p.estado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fecha_solicitud DESC
+[2025-07-24 20:42:28] ERROR: Error cargando solicitudes: Unknown column 'p.fecha_solicitud' in 'field list'
+[2025-07-24 20:42:41] ERROR: Consulta SQL: SELECT p.IDpre, p.fecha_solicitud, p.hora_inicio, p.hora_fin, p.estado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fecha_solicitud DESC
+[2025-07-24 20:42:41] ERROR: Error cargando solicitudes: Unknown column 'p.fecha_solicitud' in 'field list'
+[2025-07-24 20:43:11] ERROR: Consulta SQL: SELECT p.IDpre, p.fecha_solicitud, p.hora_inicio, p.hora_fin, p.estado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.fecha_solicitud DESC
+[2025-07-24 20:43:11] ERROR: Error cargando solicitudes: Unknown column 'p.fecha_solicitud' in 'field list'
+[2025-07-24 21:31:05] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:31:05] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:31:05] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:31:05] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:31:05] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:31:05] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:31:05] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:39:14] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:39:14] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:39:14] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:39:14] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:39:14] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:39:14] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:39:14] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:39:20] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:39:20] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:39:20] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:39:20] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:39:20] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:39:20] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:39:20] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:39:23] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:39:23] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:39:23] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:39:23] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:39:23] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:39:23] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:39:23] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:48:19] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:48:19] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:48:19] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:48:19] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:48:19] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:48:19] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:48:19] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:48:25] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:48:25] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:48:25] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:48:25] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:48:25] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:48:25] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:48:25] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:51:26] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:51:26] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:51:26] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:51:26] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:51:26] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:51:26] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:51:26] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:51:28] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:51:28] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:51:28] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:51:28] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:51:28] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:51:28] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:51:28] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:51:37] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:51:37] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:51:37] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:51:37] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:51:37] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:51:37] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:51:37] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:56:19] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:56:19] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:56:19] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:56:19] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:56:19] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:56:19] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:56:19] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:56:20] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:56:20] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:56:20] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:56:20] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:56:20] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:56:20] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:56:20] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 21:56:22] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 21:56:22] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 21:56:22] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 21:56:22] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 21:56:22] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 21:56:22] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 21:56:22] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 22:06:24] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 22:06:24] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 22:06:24] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 22:06:24] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 22:06:24] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 22:06:24] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 22:06:24] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 22:35:54] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 22:35:54] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 22:35:54] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 22:35:54] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 22:35:54] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 22:35:54] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 22:35:54] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 22:48:28] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 22:48:28] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 22:48:28] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 22:48:28] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 22:48:28] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 22:48:28] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 22:48:28] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 22:50:19] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 22:50:19] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 22:50:19] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 22:50:19] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 22:50:19] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 22:50:19] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 22:50:19] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 22:50:25] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 22:50:25] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 22:50:25] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 22:50:25] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 22:50:25] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 22:50:25] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 22:50:25] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 22:57:11] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 22:57:11] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 22:57:11] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 22:57:11] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 22:57:11] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 22:57:11] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 22:57:11] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 22:57:16] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 22:57:16] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 22:57:16] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 22:57:16] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 22:57:16] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 22:57:16] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 22:57:16] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 22:57:22] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 22:57:22] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 22:57:22] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 22:57:22] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 22:57:22] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 22:57:22] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 22:57:22] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:02:37] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:02:37] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:02:37] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:02:37] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:02:37] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:02:37] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:02:37] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:02:44] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:02:44] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:02:44] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:02:44] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:02:44] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:02:44] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:02:44] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:07:04] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:07:04] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:07:04] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:07:04] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:07:04] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:07:04] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:07:04] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:07:09] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:07:09] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:07:09] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:07:09] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:07:09] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:07:09] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:07:09] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:07:10] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:07:10] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:07:10] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:07:10] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:07:10] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:07:10] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:07:10] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:13:07] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:13:07] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:13:07] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:13:07] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:13:07] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:13:07] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:13:07] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:13:25] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:13:25] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:13:25] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:13:25] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:13:25] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:13:25] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:13:25] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:18:11] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:18:11] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:18:11] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:18:11] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:18:11] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:18:11] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:18:11] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:18:49] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:18:49] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:18:49] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:18:49] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:18:49] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:18:49] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:18:49] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:19:27] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:19:27] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:19:27] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:19:27] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:19:27] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:19:27] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:19:27] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:19:29] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:19:29] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:19:29] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:19:29] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:19:29] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:19:29] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:19:29] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:22:35] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:22:35] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:22:35] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:22:35] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:22:35] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:22:35] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:22:35] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:22:38] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:22:38] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:22:38] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:22:38] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:22:38] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:22:38] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:22:38] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:23:03] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:23:03] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:23:03] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:23:03] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:23:03] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:23:03] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:23:03] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:26:16] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:26:16] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:26:16] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:26:16] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:26:16] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:26:16] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:26:16] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:26:21] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:26:21] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:26:21] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:26:21] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:26:21] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:26:21] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:26:21] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:26:24] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:26:24] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:26:24] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:26:24] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:26:24] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:26:24] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:26:24] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:26:30] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:26:30] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:26:30] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:26:30] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:26:30] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:26:30] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:26:30] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-24 23:26:35] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-24 23:26:35] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-24 23:26:35] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-24 23:26:35] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-24 23:26:35] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-24 23:26:35] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-24 23:26:35] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 00:11:59] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 00:11:59] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 00:11:59] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 00:11:59] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 00:11:59] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 00:11:59] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 00:11:59] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 07:47:14] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 07:47:14] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-25 07:47:32] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 07:47:32] ERROR: Fila encontrada - ID: 8, Estado: pendiente
+[2025-07-25 08:00:13] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:00:13] ERROR: Fila encontrada - ID: 8, Estado: pendiente
+[2025-07-25 08:00:37] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:00:37] ERROR: Fila encontrada - ID: 8, Estado: pendiente
+[2025-07-25 08:20:42] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:20:42] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:20:42] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:20:42] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:20:42] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:20:42] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:20:42] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:21:03] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:21:03] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:21:03] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:21:03] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:21:03] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:21:03] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:21:03] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:25:40] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:25:40] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:25:40] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:25:40] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:25:40] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:25:40] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:25:40] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:31:23] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:31:23] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:31:23] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:31:23] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:31:23] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:31:23] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:31:23] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:31:25] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:31:25] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:31:25] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:31:25] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:31:25] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:31:25] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:31:25] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:33:08] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:33:08] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:33:08] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:33:08] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:33:08] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:33:08] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:33:08] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:39:37] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:39:37] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:39:37] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:39:37] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:39:37] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:39:37] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:39:37] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:45:16] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:45:16] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:45:16] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:45:16] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:45:16] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:45:16] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:45:16] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:45:28] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:45:28] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:45:28] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:45:28] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:45:28] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:45:28] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:45:28] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:50:25] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:50:25] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:50:25] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:50:25] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:50:25] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:50:25] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:50:25] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:50:32] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:50:32] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:50:32] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:50:32] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:50:32] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:50:32] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:50:32] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:50:33] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:50:33] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:50:33] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:50:33] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:50:33] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:50:33] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:50:33] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:50:38] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:50:38] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:50:38] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-25 08:50:38] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:50:38] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:50:38] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:50:38] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:50:51] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:50:51] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:50:51] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:50:51] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:50:51] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:50:51] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:54:38] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:54:38] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:54:38] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:54:38] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:54:38] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:54:38] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:54:39] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:54:39] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:54:39] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:54:39] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:54:39] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:54:39] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:54:40] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:54:40] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:54:40] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:54:40] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:54:40] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:54:40] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:55:00] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:55:00] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:55:00] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:55:00] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:55:00] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:55:00] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:55:15] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:55:15] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:55:15] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:55:15] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:55:15] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:55:15] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 08:55:18] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 08:55:18] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 08:55:18] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 08:55:18] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 08:55:18] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 08:55:18] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 09:03:27] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:03:27] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 09:03:27] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:03:27] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:03:27] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 09:03:27] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 09:03:35] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:03:35] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 09:03:35] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:03:35] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:03:35] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 09:03:35] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 09:04:43] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:04:43] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-25 09:04:43] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 09:04:43] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:04:43] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:04:43] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 09:04:43] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 09:05:26] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:05:26] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-25 09:05:26] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:05:26] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:05:26] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 09:05:26] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 09:09:00] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:09:00] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:09:00] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:09:00] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 09:09:00] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-25 09:09:08] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:09:08] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:09:08] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:09:08] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-25 09:12:37] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:12:37] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:12:37] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:12:38] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:12:38] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:12:38] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:14:01] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:14:01] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-25 09:14:01] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:14:01] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:15:30] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:15:30] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:15:30] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:51:02] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:51:02] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-25 09:51:02] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:51:02] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 09:51:06] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 09:51:06] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 09:51:06] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 10:12:35] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:12:35] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-25 10:12:35] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 10:12:35] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 10:12:38] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:12:38] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 10:12:38] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 10:33:53] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:33:53] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-25 10:33:53] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 10:33:53] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 10:33:56] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:33:56] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-25 10:33:56] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 10:39:02] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:39:02] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-25 10:39:07] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:39:07] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-25 10:39:10] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:39:10] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-25 10:52:04] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:52:04] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-25 10:52:14] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 10:52:14] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-25 11:08:58] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 11:08:58] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-25 11:09:02] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 11:09:02] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-25 15:24:28] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-25 15:24:28] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-27 16:08:14] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-27 16:08:14] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-27 16:17:19] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-27 16:17:19] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-27 16:18:11] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-27 16:18:11] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-27 16:18:46] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-27 16:18:46] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-27 16:50:09] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-27 16:50:09] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-27 16:50:17] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-27 16:50:17] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 06:45:06] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 06:45:06] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-28 06:45:19] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 06:45:19] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 06:45:34] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 06:45:34] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 06:58:36] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 06:58:36] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 06:59:23] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 06:59:23] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-28 06:59:29] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 06:59:29] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 07:46:46] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 07:46:46] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-28 07:46:46] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-28 07:46:58] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 07:46:58] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-28 07:47:03] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 07:47:03] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 08:24:18] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:24:18] ERROR: Fila encontrada - ID: 28, Estado: pendiente
+[2025-07-28 08:24:26] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:24:26] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 08:53:52] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:53:52] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 08:54:56] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:54:56] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-28 08:55:59] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:55:59] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-28 08:56:45] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:56:45] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-28 08:56:48] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:56:48] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-28 08:56:52] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:56:52] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 08:59:33] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:59:33] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-28 08:59:37] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 08:59:37] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 09:01:31] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 09:01:31] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-28 09:01:37] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 09:01:37] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 10:24:49] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 10:24:49] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-28 10:25:24] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 10:25:24] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-28 16:47:18] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 16:47:18] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-28 16:47:55] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-28 16:47:55] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 07:07:59] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-30 07:07:59] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 07:09:36] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-30 07:09:36] ERROR: Fila encontrada - ID: 33, Estado: pendiente
+[2025-07-30 07:13:42] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                 per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                 e.codigoinventario, e.descripcionele, p.cantidad
+                          FROM prestamos p
+                          JOIN personas per ON p.IDpersonas = per.IDper
+                          JOIN elementos e ON p.IDelementos = e.IDele
+                          JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                          WHERE a.estadoaut = 'pendiente' 
+                          AND a.cargoquienautoriza = 'sistema'
+                          ORDER BY p.IDpre DESC
+[2025-07-30 07:13:42] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 10:25:43] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 10:25:43] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 15:59:13] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 15:59:13] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 16:01:37] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:01:37] ERROR: Fila encontrada - ID: 34, Estado: pendiente
+[2025-07-30 16:01:41] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:01:41] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 16:07:16] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:07:16] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 16:07:31] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:07:31] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 16:07:45] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:07:45] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 16:07:46] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:07:46] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 16:12:30] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:12:30] ERROR: Fila encontrada - ID: 36, Estado: pendiente
+[2025-07-30 16:12:36] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:12:36] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 16:19:38] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 37, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 36, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 16:19:38] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 36, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 16:19:48] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 36, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 16:25:42] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 36, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 16:25:50] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 16:25:51] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 16:25:55] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 17:21:07] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 17:21:17] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 17:21:26] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 17:22:41] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 21:32:36] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 21:32:47] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 21:32:56] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 21:33:04] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 21:33:06] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 21:33:45] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 21:33:56] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:37:05] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 21:37:15] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 22:50:36] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 22:50:36] ERROR: Fila encontrada - ID: 34, Estado: pendiente
+[2025-07-30 22:50:42] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 22:50:42] ERROR: No se encontraron solicitudes pendientes en la base de datos
+[2025-07-30 22:53:09] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 38, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 22:53:09] ERROR: Fila encontrada - ID: 9, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Consulta SQL: SELECT p.IDpre, p.formacionodependencia, p.cargopre, p.lugardetraslado,
+                                  per.nombrecompletoper, e.nombreele, a.estadoaut, a.cargoquienautoriza,
+                                  e.codigoinventario, e.descripcionele, p.cantidad
+                            FROM prestamos p
+                            JOIN personas per ON p.IDpersonas = per.IDper
+                            JOIN elementos e ON p.IDelementos = e.IDele
+                            JOIN autorizacion a ON p.IDautorizacion = a.IDaut
+                            WHERE a.estadoaut = 'pendiente' 
+                            AND a.cargoquienautoriza = 'sistema'
+                            ORDER BY p.IDpre DESC
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 35, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 32, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 31, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 30, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 29, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 27, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 26, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 25, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 24, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 23, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 22, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 21, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 20, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 19, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 18, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 17, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 16, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 15, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 14, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 13, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 12, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 11, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 10, Estado: pendiente
+[2025-07-30 22:53:14] ERROR: Fila encontrada - ID: 9, Estado: pendiente

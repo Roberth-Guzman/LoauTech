@@ -73,49 +73,8 @@ $_SESSION['user'] = [
 </head>
 <body class="bg-gray-100">
     <div class="flex h-screen">
-        <!-- Sidebar - Usando fixed para posición fija -->
-        <div class="w-64 bg-gray-800 text-white fixed top-0 left-0 bottom-0 z-10">
-            <div class="p-4 border-b border-gray-700">
-                <h1 class="text-xl font-bold">LOAUTECH</h1>
-                <p class="text-sm text-gray-400">Panel de Administración</p>
-            </div>
-            
-            <nav class="p-4">
-                <ul class="space-y-2">
-                    <li>
-                        <a href="panel-principal.php" class="flex items-center p-2 rounded hover:bg-gray-700">
-                            <i class="fas fa-tachometer-alt mr-3"></i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li>
-                        <a href="personas/consultar.php" class="flex items-center p-2 rounded hover:bg-gray-700">
-                            <i class="fas fa-users mr-3"></i>
-                            Usuarios
-                        </a>
-                    </li>
-                    <li>
-                        <a href="elementos/consultar.php" class="flex items-center p-2 rounded hover:bg-gray-700">
-                            <i class="fas fa-boxes mr-3"></i>
-                            Elementos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="database/exportar_db.php" class="flex items-center p-2 rounded hover:bg-gray-700">
-                            <i class="fas fa-database mr-3"></i>
-                            Base de Datos
-                        </a>
-                    </li>
-                    <li class="pt-4 mt-4 border-t border-gray-700">
-                        <a href="../logout.php" class="flex items-center p-2 rounded hover:bg-red-600">
-                            <i class="fas fa-sign-out-alt mr-3"></i>
-                            Cerrar Sesión
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
+     
+    <?php include 'includes/sidebar-admin.php'; ?>
         <!-- Contenido principal con margen para el sidebar -->
         <div class="flex-1 ml-64 overflow-auto">
             <!-- Header -->
@@ -127,9 +86,11 @@ $_SESSION['user'] = [
                     </h1>
                     <div class="flex items-center space-x-4">
                         <div class="flex items-center">
-                            <img src="https://ui-avatars.com/api/?name=<?= urlencode($_SESSION['user']['nombre'] ?? 'Admin') ?>&background=random" 
-                                 alt="Usuario" class="h-8 w-8 rounded-full">
-                            <span class="ml-2 text-sm font-medium text-gray-700"><?= htmlspecialchars($_SESSION['user']['nombre'] ?? 'Admin') ?></span>
+                            <a href="perfil.php" class="flex items-center hover:bg-gray-100 rounded-lg p-2 transition-colors duration-200">
+                                <img src="https://ui-avatars.com/api/?name=<?= urlencode($_SESSION['usuario']['nombre'] ?? 'Admin') ?>&background=random" 
+                                     alt="Usuario" class="h-8 w-8 rounded-full cursor-pointer">
+                                <span class="ml-2 text-sm font-medium text-gray-700"><?= htmlspecialchars($_SESSION['usuario']['nombre'] ?? 'Admin') ?></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -229,6 +190,10 @@ $_SESSION['user'] = [
                             <i class="fas fa-file-import text-yellow-600 text-2xl mb-2"></i>
                             <p class="font-medium">Importar BD</p>
                         </a>
+                        <a href="database/eliminardb.php" class="bg-red-50 hover:bg-red-100 rounded-lg p-4 text-center transition-colors" onclick="return confirm('¿Estás seguro de que deseas eliminar la base de datos? Esta acción no se puede deshacer.');">
+                            <i class="fas fa-trash-alt text-red-600 text-2xl mb-2"></i>
+                            <p class="font-medium">Eliminar BD</p>
+                        </a>
                     </div>
                 </div>
 
@@ -245,7 +210,6 @@ $_SESSION['user'] = [
                                     <tr>
                                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nombre</th>
                                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Documento</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
@@ -258,18 +222,10 @@ $_SESSION['user'] = [
                                             echo "<tr>
                                                     <td class='px-6 py-4 whitespace-nowrap'>".htmlspecialchars($row['nombrecompletoper'])."</td>
                                                     <td class='px-6 py-4 whitespace-nowrap'>".htmlspecialchars($row['numerodoc'])."</td>
-                                                    <td class='px-6 py-4 whitespace-nowrap'>
-                                                        <a href='personas/editar.php?id=".$row['IDper']."' class='text-blue-600 hover:text-blue-800 mr-2'>
-                                                            <i class='fas fa-edit'></i>
-                                                        </a>
-                                                        <a href='personas/eliminar.php?id=".$row['IDper']."' class='text-red-600 hover:text-red-800'>
-                                                            <i class='fas fa-trash'></i>
-                                                        </a>
-                                                    </td>
                                                 </tr>";
                                         }
                                     } else {
-                                        echo "<tr><td colspan='3' class='px-6 py-4 text-center'>No hay usuarios registrados</td></tr>";
+                                        echo "<tr><td colspan='2' class='px-6 py-4 text-center'>No hay usuarios registrados</td></tr>";
                                     }
                                     ?>
                                 </tbody>

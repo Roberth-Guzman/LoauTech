@@ -8,75 +8,108 @@ if (isset($_SESSION['usuario'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $tipoIdentidad = $conn->real_escape_string($_POST['tipoIdentidad']);
-    $numeroIdentidad = $conn->real_escape_string($_POST['numeroIdentidad']);
-    $nombre = $conn->real_escape_string($_POST['nombre']);
-    $correo = $conn->real_escape_string($_POST['correo']);
-    $telefono = $conn->real_escape_string($_POST['telefono']);
-    $direccion = $conn->real_escape_string($_POST['direccion']);
-    $contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
-    $rol = (int) $_POST['rol'];
+    // Validación de datos de entrada
+    $tipoIdentidad = $conn->real_escape_string(trim($_POST['tipoIdentidad'] ?? ''));
+    $numeroIdentidad = $conn->real_escape_string(trim($_POST['numeroIdentidad'] ?? ''));
+    $nombre = $conn->real_escape_string(trim($_POST['nombre'] ?? ''));
+    $correo = $conn->real_escape_string(trim($_POST['correo'] ?? ''));
+    $telefono = $conn->real_escape_string(trim($_POST['telefono'] ?? ''));
+    $direccion = $conn->real_escape_string(trim($_POST['direccion'] ?? ''));
+    $contrasena = $_POST['contrasena'] ?? '';
+    $rol = (int) ($_POST['rol'] ?? 1); // Por defecto 'usuario'
 
-    $conn->begin_transaction();
+    // Validaciones básicas
+    if (empty($tipoIdentidad) || empty($numeroIdentidad) || empty($nombre) || empty($contrasena)) {
+        $error = "Por favor complete todos los campos obligatorios.";
+    } elseif (strlen($contrasena) < 8) {
+        $error = "La contraseña debe tener al menos 8 caracteres.";
+    } else {
+        // Hash de la contraseña
+        $contrasenaHash = password_hash($contrasena, PASSWORD_DEFAULT);
+        
+        $conn->begin_transaction();
 
-    try {
-        $sqlPersona = "INSERT INTO personas (nombrecompletoper, tipodocumento, numerodoc) VALUES (?, ?, ?)";
-        $stmtPersona = $conn->prepare($sqlPersona);
-        $stmtPersona->bind_param("sss", $nombre, $tipoIdentidad, $numeroIdentidad);
-        $stmtPersona->execute();
-        $idPersona = $conn->insert_id;
-        $stmtPersona->close();
+        try {
+            // 1. Insertar en personas
+            $sqlPersona = "INSERT INTO personas (nombrecompletoper, tipodocumento, numerodoc) VALUES (?, ?, ?)";
+            $stmtPersona = $conn->prepare($sqlPersona);
+            $stmtPersona->bind_param("sss", $nombre, $tipoIdentidad, $numeroIdentidad);
+            
+            if (!$stmtPersona->execute()) {
+                throw new Exception("Error al crear el registro de persona: " . $stmtPersona->error);
+            }
+            
+            $idPersona = $conn->insert_id;
+            $stmtPersona->close();
 
-        $roles = [1 => 'usuario', 2 => 'porteria', 3 => 'admin', 4 => 'cuentadante', 5 => 'almacenes'];
-        $rolNombre = $roles[$rol] ?? 'usuario';
+            // 2. Asignar rol
+            $roles = [1 => 'usuario', 2 => 'porteria', 3 => 'admin', 4 => 'cuentadante', 5 => 'almacenes'];
+            $rolNombre = $roles[$rol] ?? 'usuario';
 
-        $sqlRol = "INSERT INTO roles (rol, estadorol, idper) VALUES (?, 'activo', ?)";
-        $stmtRol = $conn->prepare($sqlRol);
-        $stmtRol->bind_param("si", $rolNombre, $idPersona);
-        $stmtRol->execute();
-        $stmtRol->close();
+            $sqlRol = "INSERT INTO roles (rol, estadorol, idper) VALUES (?, 'activo', ?)";
+            $stmtRol = $conn->prepare($sqlRol);
+            $stmtRol->bind_param("si", $rolNombre, $idPersona);
+            
+            if (!$stmtRol->execute()) {
+                throw new Exception("Error al asignar el rol: " . $stmtRol->error);
+            }
+            $stmtRol->close();
 
-        $sqlCuenta = "INSERT INTO cuentas (numerodoc, contracue, estadocue) VALUES (?, ?, 'activo')";
-        $stmtCuenta = $conn->prepare($sqlCuenta);
-        $stmtCuenta->bind_param("ss", $numeroIdentidad, $contrasena);
-        $stmtCuenta->execute();
-        $stmtCuenta->close();
+            // 3. Crear cuenta de usuario
+            $sqlCuenta = "INSERT INTO cuentas (numerodoc, contracue, estadocue) VALUES (?, ?, 'activo')";
+            $stmtCuenta = $conn->prepare($sqlCuenta);
+            $stmtCuenta->bind_param("ss", $numeroIdentidad, $contrasenaHash);
+            
+            if (!$stmtCuenta->execute()) {
+                throw new Exception("Error al crear la cuenta: " . $stmtCuenta->error);
+            }
+            $stmtCuenta->close();
 
-        $sqlContacto = "INSERT INTO contactos (numerocont, direccioncont, correocont, estadocont, IDperso) VALUES (?, ?, ?, 'activo', ?)";
-        $stmtContacto = $conn->prepare($sqlContacto);
-        $stmtContacto->bind_param("sssi", $telefono, $direccion, $correo, $idPersona);
-        $stmtContacto->execute();
-        $stmtContacto->close();
+            // 4. Insertar información de contacto
+            $sqlContacto = "INSERT INTO contactos (numerocont, direccioncont, correocont, estadocont, IDperso) VALUES (?, ?, ?, 'activo', ?)";
+            $stmtContacto = $conn->prepare($sqlContacto);
+            $stmtContacto->bind_param("sssi", $telefono, $direccion, $correo, $idPersona);
+            
+            if (!$stmtContacto->execute()) {
+                throw new Exception("Error al guardar la información de contacto: " . $stmtContacto->error);
+            }
+            $stmtContacto->close();
 
-        $conn->commit();
+            // Si todo salió bien, hacemos commit
+            $conn->commit();
 
-        $_SESSION['usuario'] = [
-            'id' => $idPersona,
-            'nombre' => $nombre,
-            'documento' => $numeroIdentidad,
-            'rol' => $rolNombre
-        ];
+            // Iniciar sesión automáticamente
+            $_SESSION['usuario'] = [
+                'IDper' => $idPersona,
+                'nombre' => $nombre,
+                'documento' => $numeroIdentidad,
+                'rol' => $rolNombre
+            ];
 
-        $redirecciones = [
-            'admin' => 'panel-admin/panel-principal.php',
-            'porteria' => 'panel-porteria/panel-principal.php',
-            'usuario' => 'panel-usuario/panel-principal.php',
-            'cuentadante' => 'panel-almacenes/gestion-peticiones/panel-peticiones.php',
-            'almacenes' => 'panel-almacenes/inventario/panel-solicitudes.php'
-        ];
-        $ruta = $redirecciones[$rolNombre] ?? 'login.php?registro=exito';
+            // Redirigir según el rol
+            $redirecciones = [
+                'admin' => 'panel-admin/panel-principal.php',
+                'porteria' => 'panel-porteria/panel-principal.php',
+                'usuario' => 'panel-usuario/panel-principal.php',
+                'cuentadante' => 'panel-almecenes/panel-principal.php',
+                'almacenes' => 'panel-almecenes/panel-principal.php'
+            ];
+            
+            $ruta = $redirecciones[$rolNombre] ?? 'login.php?registro=exito';
+            
+            // Verificar si el archivo existe, si no, redirigir a login con mensaje de éxito
+            if (!file_exists($ruta)) {
+                $ruta = 'login.php?registro=exito';
+            }
+            
+            header("Location: $ruta");
+            exit();
 
-        if (!file_exists($ruta)) {
-            $ruta = 'login.php?registro=exito';
+        } catch (Exception $e) {
+            $conn->rollback();
+            $error = "Error en el registro: " . $e->getMessage();
+            error_log($error);
         }
-
-        header("Location: $ruta");
-        exit();
-
-    } catch (Exception $e) {
-        $conn->rollback();
-        $error = "Error en el registro: " . $e->getMessage();
-        error_log($error);
     }
 }
 ?>
@@ -96,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="w-full max-w-4xl">
         <div class="bg-white rounded-xl shadow-lg overflow-hidden">
             <div class="bg-blue-600 py-6 px-8 text-center relative">
-                <!-- Flechita + texto "Home" a la izquierda -->
+                <!-- Botón de volver al inicio -->
                 <a href="index.php"
                     class="absolute left-6 top-1/2 transform -translate-y-1/2 flex items-center text-white hover:text-blue-200 text-sm"
                     title="Volver al inicio">
@@ -104,7 +137,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <span class="font-medium">HOME</span>
                 </a>
 
-                <!-- Título centrado -->
                 <h1 class="text-2xl font-bold text-white">LOAUTECH</h1>
             </div>
 

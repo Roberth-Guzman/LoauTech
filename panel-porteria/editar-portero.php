@@ -13,47 +13,34 @@ $mensaje = "";
 
 // Procesar formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['nombre'] ?? '';
     $correo = $_POST['correo'] ?? '';
     $telefono = $_POST['telefono'] ?? '';
-    $tipoDoc = $_POST['tipodocumento'] ?? '';
-    $numeroDoc = $_POST['numerodoc'] ?? '';
-    $nuevaContrasena = $_POST['nueva_contrasena'] ?? '';
 
-    // Actualizar tabla personas
-    $sql1 = "UPDATE personas SET nombrecompletoper = ?, tipodocumento = ?, numerodoc = ? WHERE IDper = ?";
-    $stmt1 = $conn->prepare($sql1);
-    $stmt1->bind_param("ssii", $nombre, $tipoDoc, $numeroDoc, $idUsuario);
-    $stmt1->execute();
-
-    // Actualizar tabla contactos
-    $sql2 = "UPDATE contactos SET correocont = ?, numerocont = ? WHERE IDperso = ?";
-    $stmt2 = $conn->prepare($sql2);
-    $stmt2->bind_param("sii", $correo, $telefono, $idUsuario);
-    $stmt2->execute();
-
-    // Actualizar contraseña si se escribió una nueva
-    if (!empty($nuevaContrasena)) {
-        $hash = password_hash($nuevaContrasena, PASSWORD_DEFAULT);
-        $sql3 = "UPDATE cuentas SET contracue = ? WHERE numerodoc = ?";
-        $stmt3 = $conn->prepare($sql3);
-        $stmt3->bind_param("si", $hash, $numeroDoc);
-        $stmt3->execute();
+    // Validar datos
+    if (empty($correo) || empty($telefono)) {
+        $mensaje = "Todos los campos son obligatorios.";
+    } else {
+        // Actualizar tabla contactos
+        $sql = "UPDATE contactos SET correocont = ?, numerocont = ? WHERE IDperso = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssi", $correo, $telefono, $idUsuario);
+        
+        if ($stmt->execute()) {
+            $mensaje = "Datos actualizados correctamente.";
+            // Actualizar datos en la sesión
+            $_SESSION['usuario']['correo'] = $correo;
+        } else {
+            $mensaje = "Error al actualizar los datos. Por favor, intente nuevamente.";
+        }
     }
-
-    $mensaje = "Datos actualizados correctamente.";
 }
 
 // Obtener datos actuales
 $sql = "SELECT 
-            p.nombrecompletoper, 
-            p.tipodocumento,
-            p.numerodoc,
             c.correocont, 
             c.numerocont
-        FROM personas p
-        LEFT JOIN contactos c ON p.IDper = c.IDperso
-        WHERE p.IDper = ?";
+        FROM contactos c
+        WHERE c.IDperso = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $idUsuario);
@@ -63,7 +50,7 @@ $usuario = $result->fetch_assoc();
 
 if (!$usuario) {
     echo "<div style='padding: 2rem; background: #fdd; color: red; font-weight: bold;'>
-            No se encontró el perfil del usuario con ID $idUsuario.
+            No se encontró la información de contacto del usuario con ID $idUsuario.
           </div>";
     exit;
 }
@@ -71,10 +58,9 @@ if (!$usuario) {
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Editar Perfil - Loautech</title>
+    <title>Editar Contacto - Loautech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -87,7 +73,7 @@ if (!$usuario) {
             <a href="perfil-porteria.php" class="text-white fs-4 text-decoration-none">
                 <i class="bi bi-arrow-left"></i>
             </a>
-            <h1 class="mb-0 fs-4 fw-bold text-center flex-grow-1">EDITAR PERFIL</h1>
+            <h1 class="mb-0 fs-4 fw-bold text-center flex-grow-1">EDITAR CONTACTO</h1>
             <span class="fs-4 text-white" style="width: 32px;"></span>
         </div>
 
@@ -96,8 +82,9 @@ if (!$usuario) {
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
                     <?php if (!empty($mensaje)): ?>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <i class="bi bi-check-circle-fill me-2"></i><?= $mensaje ?>
+                        <div class="alert alert-<?= strpos($mensaje, 'Error') !== false ? 'danger' : 'success' ?> alert-dismissible fade show" role="alert">
+                            <i class="bi <?= strpos($mensaje, 'Error') !== false ? 'bi-exclamation-triangle-fill' : 'bi-check-circle-fill' ?> me-2"></i>
+                            <?= $mensaje ?>
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                         </div>
                     <?php endif; ?>
@@ -106,41 +93,22 @@ if (!$usuario) {
                         <div class="card-body">
                             <form method="POST" action="">
                                 <div class="mb-3">
-                                    <label for="nombre" class="form-label">Nombre completo</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" value="<?= htmlspecialchars($usuario['nombrecompletoper'] ?? '') ?>" required>
+                                    <label for="correo" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="correo" name="correo" 
+                                           value="<?= htmlspecialchars($usuario['correocont'] ?? '') ?>" required>
+                                    <div class="form-text">Ingrese su dirección de correo electrónico.</div>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="tipodocumento" class="form-label">Tipo de Documento</label>
-                                    <select class="form-select" id="tipodocumento" name="tipodocumento" required>
-                                        <option value="TI" <?= ($usuario['tipodocumento'] ?? '') === 'TI' ? 'selected' : '' ?>>TI</option>
-                                        <option value="CC" <?= ($usuario['tipodocumento'] ?? '') === 'CC' ? 'selected' : '' ?>>CC</option>
-                                    </select>
+                                <div class="mb-4">
+                                    <label for="telefono" class="form-label">Número de Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono" 
+                                           value="<?= htmlspecialchars($usuario['numerocont'] ?? '') ?>" required>
+                                    <div class="form-text">Ingrese su número de teléfono de contacto.</div>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="numerodoc" class="form-label">Número de Documento</label>
-                                    <input type="number" class="form-control" id="numerodoc" name="numerodoc" value="<?= htmlspecialchars($usuario['numerodoc'] ?? '') ?>" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="correo" class="form-label">Correo</label>
-                                    <input type="email" class="form-control" id="correo" name="correo" value="<?= htmlspecialchars($usuario['correocont'] ?? '') ?>" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="telefono" class="form-label">Teléfono</label>
-                                    <input type="text" class="form-control" id="telefono" name="telefono" value="<?= htmlspecialchars($usuario['numerocont'] ?? '') ?>" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="nueva_contrasena" class="form-label">Nueva Contraseña (opcional)</label>
-                                    <input type="password" class="form-control" id="nueva_contrasena" name="nueva_contrasena" placeholder="Solo si deseas cambiarla">
-                                </div>
-
-                                <div class="d-flex justify-content-between mt-4">
+                                <div class="d-flex justify-content-between">
                                     <a href="perfil-porteria.php" class="btn btn-secondary">
-                                        <i class="bi bi-arrow-left-circle me-2"></i>Volver
+                                        <i class="bi bi-arrow-left-circle me-2"></i>Volver al Perfil
                                     </a>
                                     <div>
                                         <button type="reset" class="btn btn-warning me-2">
@@ -151,11 +119,9 @@ if (!$usuario) {
                                         </button>
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -163,5 +129,4 @@ if (!$usuario) {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

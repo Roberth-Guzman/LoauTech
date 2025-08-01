@@ -1,13 +1,16 @@
+// Variables globales
+let currentRequestId = null;
+let currentEmail = null;
+let currentPhone = null;
+
 // Funciones para manejar modales
 function openModal(modalId, itemId = null) {
     const modal = document.getElementById(modalId);
     modal.classList.remove('hidden');
     
-    // Configurar el ID del elemento en el modal correspondiente
     if (itemId) {
-        if (modalId === 'confirmInventoryModal' || modalId === 'denyInventoryModal') {
-            document.getElementById('confirmRequestId').value = itemId;
-            document.getElementById('denyRequestId').value = itemId;
+        if (modalId === 'rechazoModal') {
+            currentRequestId = itemId;
         }
     }
 }
@@ -40,41 +43,94 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Funciones específicas de inventario para solicitudes
-function confirmInventory(requestId) {
-    const location = document.getElementById('itemLocation').value;
-    const condition = document.getElementById('itemCondition').value;
-    const notes = document.getElementById('inventoryNotes').value;
-    
-    console.log('Confirmando inventario para:', requestId, 'Ubicación:', location, 'Estado:', condition, 'Notas:', notes);
-    
-    // Lógica para confirmar inventario (AJAX al servidor)
-    alert(`Inventario confirmado para solicitud #${requestId}`);
-    
-    // Cerrar modal y limpiar formulario
-    closeModal('confirmInventoryModal');
-    document.getElementById('itemLocation').value = '';
-    document.getElementById('inventoryNotes').value = '';
+// Función para aprobar una solicitud
+function aprobarSolicitud(requestId, email, phone) {
+    if (confirm('¿Está seguro de aprobar esta solicitud?')) {
+        enviarAccionSolicitud(requestId, 'aprobar', email, phone);
+    }
 }
 
-function denyInventory(requestId) {
-    const reason = document.getElementById('unavailableReason').value;
-    const details = document.getElementById('unavailableDetails').value;
-    const alternative = document.getElementById('alternativeSuggestion').value;
+// Función para rechazar una solicitud
+function rechazarSolicitud(requestId, email, phone) {
+    currentRequestId = requestId;
+    currentEmail = email;
+    currentPhone = phone;
+    openModal('rechazoModal');
+}
+
+// Función para confirmar el rechazo
+function confirmarRechazo() {
+    const motivo = document.getElementById('motivoRechazo').value.trim();
     
-    if (!reason) {
-        alert('Por favor seleccione un motivo');
+    if (!motivo) {
+        alert('Por favor ingrese el motivo del rechazo');
         return;
     }
     
-    console.log('Denegando inventario para:', requestId, 'Motivo:', reason, 'Detalles:', details, 'Alternativa:', alternative);
+    enviarAccionSolicitud(currentRequestId, 'rechazar', currentEmail, currentPhone, motivo);
+    closeModal('rechazoModal');
+}
+
+// Función para enviar la acción al servidor
+function enviarAccionSolicitud(requestId, accion, email, phone, motivo = '') {
+    // Mostrar indicador de carga
+    const botonAccion = document.querySelector(`button[onclick*="${requestId}"]`);
+    const textoOriginal = botonAccion ? botonAccion.innerHTML : '';
     
-    // Lógica para denegar inventario (AJAX al servidor)
-    alert(`Inventario denegado para solicitud #${requestId}. Motivo: ${reason}`);
-    
-    // Cerrar modal y limpiar formulario
-    closeModal('denyInventoryModal');
-    document.getElementById('unavailableReason').value = '';
-    document.getElementById('unavailableDetails').value = '';
-    document.getElementById('alternativeSuggestion').value = '';
+    if (botonAccion) {
+        botonAccion.disabled = true;
+        botonAccion.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
+    }
+
+    // Crear formulario para enviar los datos
+    const formData = new FormData();
+    formData.append('id', requestId);
+    formData.append('accion', accion);
+    formData.append('motivo', motivo);
+    formData.append('email', email);
+    formData.append('telefono', phone);
+
+    // Enviar la petición al servidor
+    fetch('procesar_aprobacion.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Mostrar mensaje de éxito
+            alert(data.message);
+            
+            // Si la acción fue exitosa, recargar la página o actualizar la interfaz
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+        } else {
+            // Mostrar mensaje de error
+            alert('Error: ' + (data.message || 'Ocurrió un error al procesar la solicitud'));
+            
+            // Restaurar el botón
+            if (botonAccion) {
+                botonAccion.disabled = false;
+                botonAccion.innerHTML = textoOriginal;
+            }
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error al procesar la solicitud. Por favor, intente nuevamente.');
+        
+        // Restaurar el botón en caso de error
+        if (botonAccion) {
+            botonAccion.disabled = false;
+            botonAccion.innerHTML = textoOriginal;
+        }
+    });
+}
+
+// Función para enviar notificación por correo (llamada desde el servidor)
+function enviarNotificacion(email, telefono, mensaje, esAprobacion = true) {
+    // Esta función se llamará desde el servidor
+    // La lógica de envío de correo y SMS debe estar en el backend
+    console.log(`Notificación enviada a ${email} (${telefono}): ${mensaje}`);
 }

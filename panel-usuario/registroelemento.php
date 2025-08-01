@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Verificar sesión y rol de usuario
 if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['rol'] !== 'usuario') {
     header('Location: ../login.php');
     exit();
@@ -11,275 +10,165 @@ require_once '../conexion.php';
 
 $error = '';
 $success = '';
+$usuario_id = $_SESSION['usuario']['IDper'] ?? $_SESSION['usuario']['idper'] ?? null;
+$usuario_documento = $_SESSION['usuario']['documento'] ?? 'N/A';
 
-// Procesar el formulario de registro de elementos
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Sanitizar y validar datos
-    $nombre = $conn->real_escape_string(trim($_POST['nombre']));
-    $codigo = $conn->real_escape_string(trim($_POST['codigo']));
-    $categoria = $conn->real_escape_string($_POST['categoria']);
-    $estado = $conn->real_escape_string($_POST['estado']);
-    $descripcion = $conn->real_escape_string(trim($_POST['descripcion']));
-    $cantidad = (int)$_POST['cantidad'];
-    $fecha = $conn->real_escape_string($_POST['fecha']);
+if (!$usuario_id) {
+    $error = "Error: No se pudo obtener el ID del usuario. Por favor, cierre sesión y vuelva a iniciar.";
+}
 
-    // Validaciones adicionales
-    if (empty($nombre) || strlen($nombre) > 100) {
-        $error = "El nombre es requerido y debe tener máximo 100 caracteres";
-    } elseif (empty($codigo) || !preg_match('/^[A-Z0-9-]{5,20}$/', $codigo)) {
-        $error = "El código debe contener solo letras mayúsculas, números y guiones (5-20 caracteres)";
-    } elseif ($cantidad <= 0 || $cantidad > 1000) {
-        $error = "La cantidad debe ser entre 1 y 1000";
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $usuario_id) {
+    $nombre = $conn->real_escape_string(trim($_POST['nombreingele']));
+    $tipo = $conn->real_escape_string(trim($_POST['tipoelemento']));
+    $descripcion = $conn->real_escape_string(trim($_POST['descripcioningele']));
+    $observacion = $conn->real_escape_string(trim($_POST['observacioningele']));
+    $serial = $conn->real_escape_string(trim($_POST['serial']));
+    $idper = $usuario_id;
+
+    if (empty($nombre) || strlen($nombre) > 250) {
+        $error = "El nombre es requerido y debe tener máximo 250 caracteres";
+    } elseif (empty($tipo)) {
+        $error = "Debe seleccionar un tipo de elemento";
+    } elseif (empty($serial) || strlen($serial) > 100) {
+        $error = "El serial es requerido y debe tener máximo 100 caracteres";
     } else {
         try {
             $conn->begin_transaction();
 
-            // Insertar el elemento
-            $stmt = $conn->prepare("INSERT INTO elementos 
-                                   (nombreele, codigoele, categoriaele, estadoele, descripcionele, cantidadele, fecharegistro, idusuario) 
-                                   VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssssiss", $nombre, $codigo, $categoria, $estado, $descripcion, $cantidad, $fecha, $_SESSION['usuario']['id']);
+            $stmt = $conn->prepare("INSERT INTO ingresoelementos 
+                (nombreingele, tipoelemento, descripcioningele, observacioningele, serial, hora_entrada, hora_salida, IDPER) 
+                VALUES (?, ?, ?, ?, ?, NOW(), NULL, ?)");
+            $stmt->bind_param("sssssi", $nombre, $tipo, $descripcion, $observacion, $serial, $idper);
             $stmt->execute();
-            $idElemento = $conn->insert_id;
             $stmt->close();
-
-            // Si hay imagen, procesarla
-            if (!empty($_FILES['imagen']['name'])) {
-                $imagenNombre = guardarImagen($idElemento);
-                if ($imagenNombre) {
-                    $conn->query("UPDATE elementos SET imagenele = '$imagenNombre' WHERE IDele = $idElemento");
-                }
-            }
 
             $conn->commit();
             $success = "Elemento registrado exitosamente";
-            
-            // Limpiar campos después de registro exitoso
             $_POST = array();
-            
         } catch (Exception $e) {
             $conn->rollback();
             $error = "Error al registrar el elemento: " . $e->getMessage();
         }
     }
 }
-
-// Función para guardar imágenes
-function guardarImagen($idElemento) {
-    $directorio = "../uploads/elementos/";
-    if (!file_exists($directorio)) {
-        mkdir($directorio, 0777, true);
-    }
-
-    $extension = pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);
-    $nombreArchivo = "elemento_" . $idElemento . "_" . time() . "." . strtolower($extension);
-    $rutaCompleta = $directorio . $nombreArchivo;
-
-    // Validar tipo de archivo
-    $permitidos = ['jpg', 'jpeg', 'png', 'gif'];
-    if (!in_array(strtolower($extension), $permitidos)) {
-        return false;
-    }
-
-    // Validar tamaño (máximo 2MB)
-    if ($_FILES['imagen']['size'] > 2097152) {
-        return false;
-    }
-
-    if (move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaCompleta)) {
-        return $nombreArchivo;
-    }
-    
-    return false;
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Elementos - LOAUTECH</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .required:after {
-            content: " *";
-            color: red;
-        }
-        .preview-img {
-            max-width: 200px;
-            max-height: 200px;
-            display: none;
-            margin-top: 10px;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <div class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h3 class="mb-0">Registro de Elementos</h3>
-                            <a href="panel-principal.php" class="btn btn-sm btn-light">
-                                <i class="fas fa-arrow-left me-1"></i> Volver
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="card-body">
-                        <?php if ($error): ?>
-                            <div class="alert alert-danger alert-dismissible fade show">
-                                <i class="fas fa-exclamation-circle me-2"></i>
-                                <?= htmlspecialchars($error) ?>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            </div>
-                        <?php endif; ?>
-                        
-                        <?php if ($success): ?>
-                            <div class="alert alert-success alert-dismissible fade show">
-                                <i class="fas fa-check-circle me-2"></i>
-                                <?= htmlspecialchars($success) ?>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            </div>
-                        <?php endif; ?>
-                        
-                        <form method="POST" action="registroelemento.php" enctype="multipart/form-data" id="formElemento">
-                            <div class="row g-3">
-                                <!-- Nombre del Elemento -->
-                                <div class="col-md-6">
-                                    <label for="nombre" class="form-label required">Nombre del Elemento</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" 
-                                           value="<?= htmlspecialchars($_POST['nombre'] ?? '') ?>" 
-                                           required maxlength="100">
-                                </div>
-                                
-                                <!-- Código del Elemento -->
-                                <div class="col-md-6">
-                                    <label for="codigo" class="form-label required">Código</label>
-                                    <input type="text" class="form-control" id="codigo" name="codigo" 
-                                           value="<?= htmlspecialchars($_POST['codigo'] ?? '') ?>" 
-                                           required pattern="[A-Z0-9-]{5,20}" 
-                                           title="Solo letras mayúsculas, números y guiones (5-20 caracteres)">
-                                </div>
-                                
-                                <!-- Categoría -->
-                                <div class="col-md-4">
-                                    <label for="categoria" class="form-label required">Categoría</label>
-                                    <select class="form-select" id="categoria" name="categoria" required>
-                                        <option value="" disabled selected>Seleccione...</option>
-                                        <option value="Tecnología" <?= ($_POST['categoria'] ?? '') === 'Tecnología' ? 'selected' : '' ?>>Tecnología</option>
-                                        <option value="Oficina" <?= ($_POST['categoria'] ?? '') === 'Oficina' ? 'selected' : '' ?>>Oficina</option>
-                                        <option value="Herramientas" <?= ($_POST['categoria'] ?? '') === 'Herramientas' ? 'selected' : '' ?>>Herramientas</option>
-                                        <option value="Mobiliario" <?= ($_POST['categoria'] ?? '') === 'Mobiliario' ? 'selected' : '' ?>>Mobiliario</option>
-                                        <option value="Otro" <?= ($_POST['categoria'] ?? '') === 'Otro' ? 'selected' : '' ?>>Otro</option>
-                                    </select>
-                                </div>
-                                
-                                <!-- Estado -->
-                                <div class="col-md-4">
-                                    <label for="estado" class="form-label required">Estado</label>
-                                    <select class="form-select" id="estado" name="estado" required>
-                                        <option value="Disponible" <?= ($_POST['estado'] ?? '') === 'Disponible' ? 'selected' : '' ?>>Disponible</option>
-                                        <option value="En uso" <?= ($_POST['estado'] ?? '') === 'En uso' ? 'selected' : '' ?>>En uso</option>
-                                        <option value="Mantenimiento" <?= ($_POST['estado'] ?? '') === 'Mantenimiento' ? 'selected' : '' ?>>Mantenimiento</option>
-                                        <option value="Dañado" <?= ($_POST['estado'] ?? '') === 'Dañado' ? 'selected' : '' ?>>Dañado</option>
-                                    </select>
-                                </div>
-                                
-                                <!-- Cantidad -->
-                                <div class="col-md-4">
-                                    <label for="cantidad" class="form-label required">Cantidad</label>
-                                    <input type="number" class="form-control" id="cantidad" name="cantidad" 
-                                           value="<?= htmlspecialchars($_POST['cantidad'] ?? 1) ?>" 
-                                           min="1" max="1000" required>
-                                </div>
-                                
-                                <!-- Fecha de Registro -->
-                                <div class="col-md-6">
-                                    <label for="fecha" class="form-label required">Fecha de Registro</label>
-                                    <input type="date" class="form-control" id="fecha" name="fecha" 
-                                           value="<?= htmlspecialchars($_POST['fecha'] ?? date('Y-m-d')) ?>" 
-                                           required>
-                                </div>
-                                
-                                <!-- Imagen -->
-                                <div class="col-md-6">
-                                    <label for="imagen" class="form-label">Imagen del Elemento</label>
-                                    <input type="file" class="form-control" id="imagen" name="imagen" 
-                                           accept="image/jpeg, image/png, image/gif">
-                                    <img id="preview" class="img-thumbnail preview-img" src="#" alt="Vista previa">
-                                    <small class="text-muted">Formatos aceptados: JPG, PNG, GIF (Máx. 2MB)</small>
-                                </div>
-                                
-                                <!-- Descripción -->
-                                <div class="col-12">
-                                    <label for="descripcion" class="form-label">Descripción</label>
-                                    <textarea class="form-control" id="descripcion" name="descripcion" 
-                                              rows="3" maxlength="500"><?= htmlspecialchars($_POST['descripcion'] ?? '') ?></textarea>
-                                </div>
-                                
-                                <!-- Botón de envío -->
-                                <div class="col-12 mt-4">
-                                    <button type="submit" class="btn btn-primary px-4 py-2">
-                                        <i class="fas fa-save me-2"></i> Registrar Elemento
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+<body class="bg-gray-100">
+<div class="flex h-screen">
+    <!-- Sidebar -->
+    <?php include __DIR__ . '/includes/usuario-sidebar.php'; ?>
+
+    <!-- Contenido principal -->
+    <div class="flex-1 ml-64 overflow-auto">
+        <div class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-gray-900">Registro de Elementos</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                        <?= ucfirst(htmlspecialchars($_SESSION['usuario']['rol'] ?? 'usuario')); ?>
+                    </span>
                 </div>
             </div>
         </div>
+
+        <main class="p-6">
+            <?php if ($error): ?>
+                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 rounded"><?= $error ?></div>
+            <?php endif; ?>
+            <?php if ($success): ?>
+                <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6 rounded"><?= $success ?></div>
+            <?php endif; ?>
+
+            <!-- Info del usuario -->
+            <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                <h3 class="text-lg font-medium text-gray-900 mb-3">Información del Usuario</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-sm font-medium text-gray-500">Nombre</p>
+                        <p class="mt-1 text-sm text-gray-900"><?= htmlspecialchars($_SESSION['usuario']['nombre'] ?? '') ?></p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-500">Documento</p>
+                        <p class="mt-1 text-sm text-gray-900"><?= htmlspecialchars($usuario_documento) ?></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="px-6 py-4 border-b border-gray-200">
+                    <h3 class="text-lg font-medium text-gray-900">Datos del Elemento</h3>
+                    <p class="text-sm text-gray-500">Complete todos los campos obligatorios (*)</p>
+                </div>
+
+                <form method="POST" class="p-6 space-y-6">
+                    <div>
+                        <label class="block font-semibold text-sm text-gray-700" for="nombreingele">Nombre del Elemento *</label>
+                        <input type="text" id="nombreingele" name="nombreingele" required
+                               value="<?= htmlspecialchars($_POST['nombreingele'] ?? '') ?>"
+                               class="w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring focus:ring-blue-200">
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold text-sm text-gray-700" for="tipoelemento">Tipo de Elemento *</label>
+                        <select id="tipoelemento" name="tipoelemento" required
+                                class="w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring focus:ring-blue-200">
+                            <option value="" disabled selected>Seleccione una categoría</option>
+                            <?php
+                            $categorias = ['Computadores', 'Monitores', 'Teclados', 'Mouse', 'Impresoras', 'Muebles', 'Otros'];
+                            foreach ($categorias as $cat):
+                                $selected = ($_POST['tipoelemento'] ?? '') === $cat ? 'selected' : '';
+                                echo "<option value=\"$cat\" $selected>$cat</option>";
+                            endforeach;
+                            ?>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold text-sm text-gray-700" for="descripcioningele">Descripción</label>
+                        <textarea id="descripcioningele" name="descripcioningele" rows="3"
+                                  class="w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring focus:ring-blue-200"><?= htmlspecialchars($_POST['descripcioningele'] ?? '') ?></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold text-sm text-gray-700" for="serial">Serial *</label>
+                        <input type="text" id="serial" name="serial" required
+                               value="<?= htmlspecialchars($_POST['serial'] ?? '') ?>"
+                               class="w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring focus:ring-blue-200">
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold text-sm text-gray-700" for="observacioningele">Observaciones</label>
+                        <textarea id="observacioningele" name="observacioningele" rows="2"
+                                  class="w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring focus:ring-blue-200"><?= htmlspecialchars($_POST['observacioningele'] ?? '') ?></textarea>
+                    </div>
+
+                    <div class="flex justify-end space-x-3 pt-4">
+                        <a href="panel-principal.php" class="px-4 py-2 border rounded text-gray-700 hover:bg-gray-100">Cancelar</a>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">
+                            Registrar Elemento
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="bg-white border-t mt-8">
+            <div class="max-w-7xl mx-auto px-4 py-4 text-center text-sm text-gray-500">
+                &copy; <?= date('Y') ?> LOAUTECH - Todos los derechos reservados
+            </div>
+        </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Vista previa de la imagen
-        document.getElementById('imagen').addEventListener('change', function(e) {
-            const preview = document.getElementById('preview');
-            const file = e.target.files[0];
-            
-            if (file) {
-                const reader = new FileReader();
-                
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
-                    preview.style.display = 'block';
-                }
-                
-                reader.readAsDataURL(file);
-            } else {
-                preview.style.display = 'none';
-                preview.src = '#';
-            }
-        });
-
-        // Validación del formulario
-        document.getElementById('formElemento').addEventListener('submit', function(e) {
-            const imagenInput = document.getElementById('imagen');
-            if (imagenInput.files.length > 0) {
-                const file = imagenInput.files[0];
-                const extension = file.name.split('.').pop().toLowerCase();
-                const permitidos = ['jpg', 'jpeg', 'png', 'gif'];
-                
-                if (!permitidos.includes(extension)) {
-                    e.preventDefault();
-                    alert('Solo se permiten imágenes JPG, PNG o GIF');
-                    return false;
-                }
-                
-                if (file.size > 2097152) { // 2MB
-                    e.preventDefault();
-                    alert('La imagen no debe exceder 2MB');
-                    return false;
-                }
-            }
-            
-            return true;
-        });
-    </script>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>
