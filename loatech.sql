@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-07-2025 a las 22:42:14
+-- Tiempo de generación: 01-08-2025 a las 06:17:47
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `aprobaciones`
 --
+DROP DATABASE IF EXISTS loautech;
+CREATE DATABASE loautech;
+USE loautech;
 
 CREATE TABLE `aprobaciones` (
   `id` int(11) NOT NULL,
@@ -56,7 +59,27 @@ INSERT INTO `aprobaciones` (`id`, `IDprestamo`, `estado`, `fecha_creacion`, `fec
 (45, 27, 'rechazado', '2025-07-28 07:47:15', NULL, NULL, NULL, NULL, 'almacen', 'usuario pruebas', NULL, 'xd'),
 (46, 26, 'aprobado', '2025-07-28 07:47:18', NULL, NULL, '2025-07-28 07:47:20', NULL, 'almacen', 'usuario pruebas', NULL, ''),
 (48, 29, 'aprobado', '2025-07-28 09:00:29', NULL, NULL, NULL, NULL, 'almacen', 'usuario pruebas', NULL, ''),
-(49, 30, 'aprobado', '2025-07-28 09:01:54', NULL, NULL, NULL, NULL, 'almacen', 'usuario pruebas', NULL, '');
+(49, 30, 'aprobado', '2025-07-28 09:01:54', NULL, NULL, NULL, NULL, 'almacen', 'usuario pruebas', NULL, ''),
+(50, 31, 'rechazado', '2025-07-30 16:04:05', NULL, NULL, NULL, NULL, 'almacen', 'usuario pruebas', NULL, 'no'),
+(51, 32, 'rechazado', '2025-07-30 16:04:09', NULL, NULL, NULL, NULL, 'almacen', 'usuario pruebas', NULL, 'z'),
+(52, 35, 'pendiente_almacen', '2025-07-30 16:07:30', NULL, NULL, NULL, NULL, 'cuentadante', 'Roberth Adrian Guzman Salazar', NULL, NULL),
+(53, 36, 'aprobado', '2025-07-30 16:12:35', NULL, NULL, '2025-07-30 16:26:13', NULL, 'almacen', 'usuario pruebas', NULL, ''),
+(54, 9, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(55, 10, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(56, 11, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(57, 12, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(58, 13, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(59, 14, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(60, 15, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(61, 16, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(62, 17, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(63, 18, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(64, 20, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(65, 28, 'pendiente', '2025-07-30 16:17:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(66, 33, 'rechazado', '2025-07-30 16:17:35', NULL, NULL, '2025-07-30 16:19:08', NULL, 'almacen', 'usuario pruebas', NULL, 'x'),
+(67, 34, 'rechazado', '2025-07-30 16:17:35', NULL, NULL, '2025-07-30 16:19:11', NULL, 'almacen', 'usuario pruebas', NULL, 'a'),
+(71, 37, 'aprobado', '2025-07-30 16:19:46', NULL, NULL, '2025-07-30 16:20:10', NULL, 'almacen', 'usuario pruebas', NULL, ''),
+(75, 38, 'aprobado', '2025-07-30 22:53:13', NULL, NULL, '2025-07-30 22:56:16', NULL, 'almacen', 'usuario pruebas', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -70,7 +93,7 @@ CREATE TABLE `autorizacion` (
   `nomquienaturiza` varchar(255) NOT NULL,
   `cargoquienautoriza` varchar(50) NOT NULL,
   `firmaquienautoriza` varchar(50) NOT NULL,
-  `estadoaut` enum('pendiente','activo','inactivo','en_prestamo') NOT NULL
+  `estadoaut` enum('pendiente','pendiente_almacen','activo','aprobado','rechazado','inactivo','en_prestamo') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -78,32 +101,37 @@ CREATE TABLE `autorizacion` (
 --
 
 INSERT INTO `autorizacion` (`IDaut`, `VoBoCuentadanteaut`, `nomquienaturiza`, `cargoquienautoriza`, `firmaquienautoriza`, `estadoaut`) VALUES
-(4, 'veronica', 'julia', 'biblioteca', 'lucas', ''),
-(6, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(7, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(8, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(9, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(10, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(11, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(12, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(13, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(14, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(15, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(16, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(17, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(18, 'Pendiente', 'brandod', 'sistema', 'pendiente', ''),
-(19, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', ''),
-(20, 'Pendiente | Salida autorizada por portería: porteria robsito - 2025-07-27 17:59:02', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', ''),
-(21, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', ''),
-(22, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', ''),
-(23, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', ''),
-(24, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', ''),
+(4, 'veronica', 'julia', 'biblioteca', 'lucas', 'pendiente'),
+(6, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(7, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(8, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(9, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(10, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(11, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(12, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(13, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(14, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(15, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(16, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(17, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(18, 'Pendiente', 'brandod', 'sistema', 'pendiente', 'pendiente'),
+(19, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(20, 'Pendiente | Salida autorizada por portería: porteria robsito - 2025-07-27 17:59:02', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(21, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(22, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(23, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(24, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
 (25, 'Pendiente | Salida autorizada por portería: porteria robsito - 2025-07-28 08:25:22', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'en_prestamo'),
-(26, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', ''),
-(27, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', ''),
-(28, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'activo'),
-(29, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'activo'),
-(30, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'activo');
+(26, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(27, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(28, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(29, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(30, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'rechazado'),
+(31, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'rechazado'),
+(32, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'pendiente'),
+(33, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'aprobado'),
+(34, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'aprobado'),
+(35, 'Pendiente', 'Roberth Adrian Guzman Salazar', 'sistema', 'pendiente', 'aprobado');
 
 -- --------------------------------------------------------
 
@@ -266,7 +294,12 @@ INSERT INTO `detallesprestamo` (`IDdetpre`, `descelementodetpre`, `codigoinvdetp
 (24, 'computador portatil HP 15 - xd', 112312, 'activo', 'inactivo', 'Pendiente de asignación', 15),
 (25, 'el super computador - xddddddddd', 22, 'activo', 'inactivo', 'Pendiente de asignación', 17),
 (26, 'computador portatil HP 15 - xd', 112312, 'activo', 'inactivo', 'Pendiente de asignación', 15),
-(27, 'el super computador - xddddddddd', 22, 'activo', 'inactivo', 'Pendiente de asignación', 17);
+(27, 'el super computador - xddddddddd', 22, 'activo', 'inactivo', 'Pendiente de asignación', 17),
+(28, 'computador portatil HP 15 - xd', 112312, 'activo', 'inactivo', 'Pendiente de asignación', 15),
+(29, 'el super computador - xddddddddd', 22, 'activo', 'inactivo', 'Pendiente de asignación', 17),
+(30, 'el super computador - xddddddddd', 22, 'activo', 'inactivo', 'Pendiente de asignación', 17),
+(31, 'el super computador - xddddddddd', 22, 'activo', 'inactivo', 'Pendiente de asignación', 17),
+(32, 'computador portatil HP 15 - xd', 112312, 'activo', 'inactivo', 'Pendiente de asignación', 15);
 
 -- --------------------------------------------------------
 
@@ -298,7 +331,7 @@ INSERT INTO `elementos` (`IDele`, `nombreele`, `cantidadele`, `cantidadest`, `co
 (14, 'pc', 2, 'activo', 111222333, 'buen estado pc DELL 2019', 'Computadores', 'en prestamo', 'activo', 11231, ''),
 (15, 'computador portatil HP 15', 4, 'activo', 33233333, 'xd', '', 'activo', 'activo', 112312, NULL),
 (16, 'pc gamer pa el clash', 0, 'activo', 111222, 'super good', 'Otros', 'en prestamo', 'activo', 12, ''),
-(17, 'el super computador', 5, 'activo', 12345, 'xddddddddd', 'Computadores', 'activo', 'activo', 22, '');
+(17, 'el super computador', 0, 'activo', 12345, 'xddddddddd', 'Computadores', 'en prestamo', 'activo', 22, '');
 
 -- --------------------------------------------------------
 
@@ -427,7 +460,12 @@ INSERT INTO `notificaciones` (`IDnot`, `Tiponot`, `estadonot`, `idautori`, `fech
 (22, 'peticion_pendiente', 'pendiente', 27, '2025-07-28 14:01:26', NULL, 0, NULL, NULL, NULL),
 (23, 'peticion_pendiente', 'pendiente', 28, '2025-07-28 15:24:34', NULL, 0, NULL, NULL, NULL),
 (24, 'peticion_pendiente', 'pendiente', 29, '2025-07-28 21:47:05', NULL, 0, NULL, NULL, NULL),
-(25, 'peticion_pendiente', 'pendiente', 30, '2025-07-30 12:09:30', NULL, 0, NULL, NULL, NULL);
+(25, 'peticion_pendiente', 'pendiente', 30, '2025-07-30 12:09:30', NULL, 0, NULL, NULL, NULL),
+(26, 'peticion_pendiente', 'pendiente', 31, '2025-07-30 21:01:30', NULL, 0, NULL, NULL, NULL),
+(27, 'peticion_pendiente', 'pendiente', 32, '2025-07-30 21:07:10', NULL, 0, NULL, NULL, NULL),
+(28, 'peticion_pendiente', 'pendiente', 33, '2025-07-30 21:12:17', NULL, 0, NULL, NULL, NULL),
+(29, 'peticion_pendiente', 'pendiente', 34, '2025-07-30 21:19:34', NULL, 0, NULL, NULL, NULL),
+(30, 'peticion_pendiente', 'pendiente', 35, '2025-07-31 03:52:56', NULL, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -518,9 +556,14 @@ INSERT INTO `prestamos` (`IDpre`, `cantidad`, `formacionodependencia`, `cargopre
 (28, 1, 'informatica', 'aprendiz', 'ambiente 07', 22, 25, 15, 30, NULL, '2025-07-28 08:22:31'),
 (29, 1, 'ADSO  MAÑANA 2874006', 'APRENDIZ', 'ambiente 09', 23, 26, 17, 30, NULL, '2025-07-28 08:59:25'),
 (30, 1, 'ADSO  MAÑANA 2874006', 'APRENDIZ', 'crra 4e 2a 104', 24, 27, 15, 30, NULL, '2025-07-28 09:01:26'),
-(31, 1, 'ing sistemas', 'APRENDIZ', 'crra 4e 2a 104', 25, 28, 17, 30, NULL, '2025-07-28 10:24:34'),
-(32, 1, 'ADSO', 'APRENDIZ', 'ambiente 09', 26, 29, 15, 30, NULL, '2025-07-28 16:47:05'),
-(33, 1, 'ADSO', 'APRENDIZ', 'ambiente 09', 27, 30, 17, 30, NULL, '2025-07-30 07:09:30');
+(31, 1, 'ing sistemas', 'APRENDIZ', 'crra 4e 2a 104', 25, 28, 17, 30, 'no', '2025-07-28 10:24:34'),
+(32, 1, 'ADSO', 'APRENDIZ', 'ambiente 09', 26, 29, 15, 30, 'z', '2025-07-28 16:47:05'),
+(33, 1, 'ADSO', 'APRENDIZ', 'ambiente 09', 27, 30, 17, 30, 'x', '2025-07-30 07:09:30'),
+(34, 1, 'adso', 'aprendiz', 'ambiente 09', 28, 31, 15, 30, 'a', '2025-07-30 16:01:30'),
+(35, 1, 'a', 'se', 'xa', 29, 32, 17, 30, NULL, '2025-07-30 16:07:10'),
+(36, 1, 'a', 'b', 'cdd', 30, 33, 17, 30, NULL, '2025-07-30 16:12:17'),
+(37, 1, 'xx', 'x', 'xx', 31, 34, 17, 30, NULL, '2025-07-30 16:19:34'),
+(38, 1, 'ADSO  MAÑANA 2874006', 'APRENDIZ', 'ambiente 09', 32, 35, 15, 30, NULL, '2025-07-30 22:52:56');
 
 -- --------------------------------------------------------
 
@@ -725,13 +768,13 @@ ALTER TABLE `vigilantes`
 -- AUTO_INCREMENT de la tabla `aprobaciones`
 --
 ALTER TABLE `aprobaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT de la tabla `autorizacion`
 --
 ALTER TABLE `autorizacion`
-  MODIFY `IDaut` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `IDaut` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de la tabla `codigos_barras`
@@ -761,7 +804,7 @@ ALTER TABLE `cuentas`
 -- AUTO_INCREMENT de la tabla `detallesprestamo`
 --
 ALTER TABLE `detallesprestamo`
-  MODIFY `IDdetpre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `IDdetpre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `elementos`
@@ -797,7 +840,7 @@ ALTER TABLE `marcador`
 -- AUTO_INCREMENT de la tabla `notificaciones`
 --
 ALTER TABLE `notificaciones`
-  MODIFY `IDnot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `IDnot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `personas`
@@ -809,7 +852,7 @@ ALTER TABLE `personas`
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `IDpre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `IDpre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
