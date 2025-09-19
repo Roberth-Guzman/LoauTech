@@ -8,6 +8,7 @@ if (!defined('BASE_URL')) die('BASE_URL no está definida');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Loautech</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="<?php echo BASE_URL; ?>/public/img/logo_loautech_white.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .shake {
@@ -84,19 +85,12 @@ if (!defined('BASE_URL')) die('BASE_URL no está definida');
             </div>
           </div>
 
-          <!-- Opciones adicionales -->
+           <!-- Opciones adicionales -->
           <div class="flex items-center justify-between">
-            <div class="flex items-center">
-              <input
-                id="remember-me"
-                name="remember-me"
-                type="checkbox"
-                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-              />
-              <label for="remember-me" class="ml-2 block text-sm text-gray-700">Recordarme</label>
-            </div>
             <div class="text-sm">
-              <a href="<?php echo BASE_URL; ?>recuperar" class="font-medium text-blue-600 hover:text-blue-500">¿Olvidaste tu contraseña?</a>
+                <a href="<?php echo BASE_URL; ?>/login/forgotPassword" class="font-medium text-blue-600 hover:text-blue-500">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="flex items-center">
             </div>
           </div>
 

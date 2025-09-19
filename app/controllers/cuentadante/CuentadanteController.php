@@ -33,23 +33,26 @@ class CuentadanteController extends Controller
         $pagina_actual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
         $registros_por_pagina = 10; // O el número que prefieras
         $offset = ($pagina_actual - 1) * $registros_por_pagina;
+        $cuentadante_id = $_SESSION['user_id'];
 
-        // Obtener total de peticiones para el cuentadante
-        $total_peticiones = $this->peticionModel->contarPeticionesParaCuentadante();
-        $total_paginas = ceil($total_peticiones / $registros_por_pagina);
+        // 1. Obtener las solicitudes que están pendientes de la aprobación del cuentadante
+        $solicitudes_pendientes = $this->peticionModel->obtenerSolicitudesPendientesCuentadante($cuentadante_id);
 
-        // Obtener peticiones paginadas
-        $peticiones = $this->peticionModel->obtenerPeticionesParaCuentadante($registros_por_pagina, $offset);
+        // 2. Obtener las estadísticas para las tarjetas
+        $estadisticas = $this->peticionModel->obtenerEstadisticasCuentadante($cuentadante_id);
 
-        // Obtener estadísticas
-        $estadisticas = $this->peticionModel->obtenerEstadisticasCuentadante();
+        // 3. Obtener el historial de peticiones ya procesadas por el cuentadante (para paginación)
+        $total_peticiones_historial = $this->peticionModel->contarPeticionesHistorialCuentadante($cuentadante_id);
+        $total_paginas = ceil($total_peticiones_historial / $registros_por_pagina);
+        $peticiones_historial = $this->peticionModel->obtenerPeticionesHistorialCuentadante($cuentadante_id, $registros_por_pagina, $offset);
 
         // Preparar los datos para la vista
         $data = [
             'page_title' => 'Panel de Cuentadante',
             'active_menu' => 'peticiones',
-            'peticiones' => $peticiones,
-            'estadisticas' => $estadisticas,
+            'solicitudes_pendientes' => $solicitudes_pendientes, // Para la nueva tabla de pendientes
+            'peticiones' => $peticiones_historial, // Para la tabla de historial
+            'stats' => $estadisticas, // Para las tarjetas de estadísticas
             'paginacion' => [
                 'total_paginas' => $total_paginas,
                 'pagina_actual' => $pagina_actual
@@ -59,6 +62,45 @@ class CuentadanteController extends Controller
         // Cargar la vista del panel principal del cuentadante
         $this->view('panel-cuentadante/panel-principal', $data);
     }
+
+    public function solicitudes()
+    {
+        // Redirigir al panel principal, ya que ahora se gestiona todo allí.
+        header('Location: ' . BASE_URL . '/cuentadante/panelPrincipal');
+        exit;
+    }
+
+    public function procesarSolicitud()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $aprobacion_id = $_POST['id_aprobacion'];
+            $accion = $_POST['accion'];
+
+            if ($accion == 'aprobar') {
+                if ($this->peticionModel->aprobarPeticionCuentadante($aprobacion_id)) {
+                    // Éxito
+                    header('Location: ' . BASE_URL . '/cuentadante/panelPrincipal?exito=aprobacion');
+                } else {
+                    // Error
+                    header('Location: ' . BASE_URL . '/cuentadante/panelPrincipal?error=aprobacion');
+                }
+            } elseif ($accion == 'rechazar') {
+                $motivo = $_POST['motivo'] ?? 'Rechazado por cuentadante';
+                if ($this->peticionModel->rechazarPeticionCuentadante($aprobacion_id, $motivo)) {
+                    // Éxito
+                    header('Location: ' . BASE_URL . '/cuentadante/panelPrincipal?exito=rechazo');
+                } else {
+                    // Error
+                    header('Location: ' . BASE_URL . '/cuentadante/panelPrincipal?error=rechazo');
+                }
+            }
+            exit;
+        } else {
+            header('Location: ' . BASE_URL . '/cuentadante/panelPrincipal');
+            exit;
+        }
+    }
+
 
     public function perfil()
     {

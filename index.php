@@ -4,6 +4,7 @@ session_start();
 
 // Cargar la configuración de la aplicación (constantes como BASE_URL, DB_HOST, etc.)
 require_once 'app/config.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 /**
  * Autoloader para las clases del Core y Controladores.

@@ -87,8 +87,18 @@ class Database {
         return $this->dbh->rollBack();
     }
 
+    // Obtener información de error de la última operación
+    public function errorInfo() {
+        return $this->stmt->errorInfo();
+    }
+
     // Obtener el último ID insertado
     public function lastInsertId() {
         return $this->dbh->lastInsertId();
+    }
+
+    // Verificar si hay una transacción activa
+    public function inTransaction() {
+        return $this->dbh->inTransaction();
     }
 }

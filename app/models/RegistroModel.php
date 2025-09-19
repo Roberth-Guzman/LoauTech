@@ -48,13 +48,11 @@ class RegistroModel {
             }
             
             error_log('Transacción iniciada correctamente');
-            // 1. Insertar en la tabla personas
-            $this->db->query("INSERT INTO personas (nombrecompletoper, tipodocumento, numerodoc, contrasenaper, estadoper) 
-                             VALUES (:nombre, :tipo_doc, :numero_doc, :password, 'activo')");
+           $this->db->query("INSERT INTO personas (nombrecompletoper, tipodocumento, numerodoc) 
+                             VALUES (:nombre, :tipo_doc, :numero_doc)");
             $this->db->bind(':nombre', trim($datos['nombre']));
             $this->db->bind(':tipo_doc', strtoupper($datos['tipoIdentidad'])); // Asegurar que sea mayúscula
             $this->db->bind(':numero_doc', $datos['numeroIdentidad']);
-            $this->db->bind(':password', password_hash($datos['password'], PASSWORD_DEFAULT));
             
             if (!$this->db->execute()) {
                 $errorInfo = $this->db->errorInfo();
@@ -82,9 +80,9 @@ class RegistroModel {
             // 3. Insertar en la tabla cuentas (contraseña hasheada)
             $password_hash = password_hash($datos['password'], PASSWORD_DEFAULT);
             $this->db->query("INSERT INTO cuentas (numerodoc, contracue, estadocue) 
-                             VALUES (:numero_doc, :password, 'activo')");
+                             VALUES (:numero_doc, :contracue, 'activo')");
             $this->db->bind(':numero_doc', $datos['numeroIdentidad']);
-            $this->db->bind(':password', $password_hash);
+            $this->db->bind(':contracue', $password_hash);
             
             if (!$this->db->execute()) {
                 $errorInfo = $this->db->errorInfo();

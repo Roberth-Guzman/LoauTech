@@ -19,10 +19,6 @@ class Controller {
             die("Error 404: La vista {$view} no existe en {$rutaVista}");
         }
     }
-
-    /**
-     * Cargar un modelo
-     */
     protected function model($model) {
         $modelFile = __DIR__ . '/../models/' . $model . '.php';
 
@@ -37,4 +33,9 @@ class Controller {
             die("Error 404: El archivo de modelo <strong>$model.php</strong> no existe en $modelFile");
         }
     }
+    public function redirect($location) {
+        header('Location: ' . BASE_URL . '/' . $location);
+        exit();
+    }
+
 }

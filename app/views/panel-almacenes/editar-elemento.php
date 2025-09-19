@@ -22,7 +22,7 @@
         <div class="bg-white p-8 rounded-lg shadow-2xl">
             <form action="<?php echo BASE_URL; ?>/almacen/almacen/editarElemento/<?php echo htmlspecialchars($data['elemento']->IDele); ?>" method="post" enctype="multipart/form-data" id="edit-form">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Columna Izquierda: Campos de texto -->
+                   <!-- Columna Izquierda: Campos de texto -->
                     <div class="md:col-span-2">
                         <!-- Nombre del Elemento -->
                         <div class="mb-4">
@@ -69,13 +69,24 @@
                                     <option value="inactivo" <?php echo (isset($data['elemento']->estado) && $data['elemento']->estado === 'inactivo') ? 'selected' : ''; ?>>Inactivo</option>
                                 </select>
                             </div>
-                            <div class="w-full md:w-1/2 px-2">
-                                <label for="estadoelemento" class="block text-gray-700 text-sm font-bold mb-2">Condición Física:</label>
-                                <input type="text" id="estadoelemento" name="estadoelemento" value="<?php echo htmlspecialchars($data['elemento']->estadoelemento ?? ''); ?>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            </div>
+        
+                        </div>
+
+                        <!-- Asignar Cuentadante -->
+                        <div class="mb-4">
+                            <label for="cuentadante_id" class="block text-gray-700 text-sm font-bold mb-2">Asignar Cuentadante:</label>
+                            <select id="cuentadante_id" name="cuentadante_id" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option value="">Sin Asignar</option>
+                                <?php if (isset($data['cuentadantes']) && is_array($data['cuentadantes'])): ?>
+                                    <?php foreach ($data['cuentadantes'] as $cuentadante): ?>
+                                        <option value="<?php echo $cuentadante->IDper; ?>" <?php echo (isset($data['elemento']->cuentadante_id) && $data['elemento']->cuentadante_id == $cuentadante->IDper) ? 'selected' : ''; ?>>
+                                            <?php echo htmlspecialchars($cuentadante->nombrecompletoper); ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </select>
                         </div>
                     </div>
-
                     <!-- Columna Derecha: Imagen -->
                     <div class="flex flex-col items-center justify-center">
                         <label class="block text-gray-700 text-sm font-bold mb-2">Imagen del Elemento:</label>

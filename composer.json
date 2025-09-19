@@ -1,0 +1,13 @@
+{
+    "name": "user/mvc_dev",
+    "description": "Proyecto MVC con funcionalidades de gestion de inventarios y prestamos.",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your@email.com"
+        }
+    ]
+}

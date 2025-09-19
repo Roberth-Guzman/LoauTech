@@ -65,7 +65,11 @@
                 </p>
             </div>
 
-            <div class="text-center mt-8">
+             <div class="text-center mt-8 flex justify-center gap-4">
+                <a href="<?= BASE_URL ?>" class="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                    <i class="fas fa-home mr-2"></i>
+                    Volver al Inicio
+                </a>
                 <a href="<?= BASE_URL ?>terminos/tecnicos" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
                     Ver Términos Técnicos Detallados
                     <i class="fas fa-arrow-right ml-2"></i>

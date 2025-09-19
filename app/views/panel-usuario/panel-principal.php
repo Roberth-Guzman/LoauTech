@@ -18,10 +18,15 @@
                     <h1 class="text-xl font-bold text-gray-900">
                         Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario']['nombre'] ?? 'Usuario'); ?>
                     </h1>
-                    <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-6">
+                        <!-- Notifications Dropdown -->
+                        <?php include __DIR__ . '/../layouts/_notification_dropdown.php'; ?>
+                        
                         <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
                             <?php echo ucfirst(htmlspecialchars($_SESSION['usuario']['rol'] ?? 'usuario')); ?>
                         </span>
+                        
+                        <!-- Cerrar Sesión -->
                         <a href="<?php echo BASE_URL; ?>/logout" class="text-gray-500 hover:text-red-600" title="Cerrar Sesión">
                             <i class="fas fa-sign-out-alt text-lg"></i>
                         </a>

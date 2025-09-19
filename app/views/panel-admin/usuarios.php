@@ -20,7 +20,12 @@
 
         <!-- Contenido Principal -->
         <div class="flex-1 p-10">
-            <h1 class="text-3xl font-bold mb-6"><?= htmlspecialchars($data['titulo']) ?></h1>
+            <div class="flex items-center justify-between mb-6">
+                <h1 class="text-3xl font-bold"><?= htmlspecialchars($data['titulo']) ?></h1>
+                <a href="<?= BASE_URL ?>/admin/agregarUsuario" class="inline-flex items-center px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white">
+                    <i class="fas fa-user-plus mr-2"></i> Agregar Usuario
+                </a>
+            </div>
 
             <!-- Tabla de Usuarios -->
             <div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -47,7 +52,8 @@
                                     <p><?= htmlspecialchars($usuario->numerocont) ?></p>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <a href="<?= BASE_URL ?>/admin/editarUsuario/<?= $usuario->IDper ?>" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-pencil-alt"></i></a>
+                                    <a href="<?= BASE_URL ?>/admin/verUsuario/<?= $usuario->IDper ?>" class="text-gray-700 hover:text-gray-900 mr-3" title="Ver"><i class="fas fa-eye"></i></a>
+                                    <a href="<?= BASE_URL ?>/admin/editarUsuario/<?= $usuario->IDper ?>" class="text-blue-600 hover:text-blue-900 mr-3" title="Editar"><i class="fas fa-pencil-alt"></i></a>
                                     <a href="<?= BASE_URL ?>/admin/eliminarUsuario/<?= $usuario->IDper ?>" class="text-red-600 hover:text-red-900" onclick="return confirm('¿Estás seguro de que quieres eliminar a este usuario?');"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>

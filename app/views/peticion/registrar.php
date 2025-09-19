@@ -73,10 +73,7 @@
                                 <div>
                                     <label for="fecha_prestamo" class="block text-sm font-medium text-gray-700">Fecha de Préstamo</label>
                                     <input type="date" name="fecha_prestamo" id="fecha_prestamo" value="<?php echo date('Y-m-d'); ?>" class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm" readonly>
-                                </div>
-                                <div>
-                                    <label for="fecha_devolucion" class="block text-sm font-medium text-gray-700">Fecha de Devolución</label>
-                                    <input type="date" name="fecha_devolucion" id="fecha_devolucion" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                                    <input type="hidden" name="fecha_devolucion" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>">
                                 </div>
                                 <div class="md:col-span-2">
                                     <label for="lugar_uso" class="block text-sm font-medium text-gray-700">Lugar de Uso</label>

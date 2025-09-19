@@ -38,7 +38,7 @@
                                 <i class="fas fa-check-circle text-green-500 mr-2"></i>
                             </div>
                             <div>
-                                <p class="font-bold">¡Petición enviada exitosamente!</p>
+                                <p class="font-bold">¡Petición enviada exitosamente!</p>    
                                 <p class="text-sm">Tu solicitud ha sido registrada y está pendiente de autorización.</p>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                     <?php else : ?>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
                             <?php foreach ($data['elementos'] as $elemento) : ?>
-                                <div onclick='mostrarDetalleElemento(<?php echo json_encode($elemento); ?>)' class="cursor-pointer block bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                                <div onclick='mostrarDetalleElemento(<?php echo json_encode($elemento, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>)' class="cursor-pointer block bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                     <div class="p-4">
                                         <div class="flex justify-between items-start">
                                             <div>
@@ -136,7 +136,7 @@
         </div>
     </div>
 
-    <script>
+     <script>
         function mostrarDetalleElemento(elemento) {
             document.getElementById('modalTitulo').textContent = elemento.nombreele;
             
@@ -159,11 +159,28 @@
                     <p class="text-sm font-medium text-gray-500">Características</p>
                     <p class="text-gray-800">${elemento.caracteristicasele || 'No especificadas'}</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-gray-200 flex justify-end">
+                <div class="mt-6 pt-4 border-t border-gray-200 flex justify-end">`;
+
+            // Lógica condicional para el botón de solicitar
+            if (elemento.cuentadante_id) {
+                contenidoHtml += `
+                    <div class="text-right">
+                        <p class="text-lg font-semibold text-gray-800">Aprobación Requerida</p>
+                        <p class="text-sm text-gray-600">Este elemento será solicitado a un cuentadante para su aprobación.</p>
+                        <a href="../peticion/registrar?elemento_id=${elemento.IDele}" class="mt-2 inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Continuar y Solicitar
+                        </a>
+                    </div>`;
+            } else {
+                contenidoHtml += `
                     <a href="../peticion/registrar?elemento_id=${elemento.IDele}" class="inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                         <i class="fas fa-paper-plane mr-2"></i>
                         Solicitar Elemento
-                    </a>
+                    </a>`;
+            }
+
+            contenidoHtml += `
                 </div>
             `;
 

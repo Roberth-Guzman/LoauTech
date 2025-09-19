@@ -22,9 +22,16 @@
                 <div class="flex justify-between items-center mb-6">
                     <h1 class="text-2xl font-bold text-gray-800"><?php echo $data['titulo']; ?></h1>
                     <a href="/mvc_dev/admin/crearAdmin" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <i class="fas fa-plus mr-2"></i> Nuevo Usuario
+                        <i class="fas fa-plus mr-2"></i> Nuevo Admin
                     </a>
                 </div>
+                
+                <?php if(isset($_SESSION['mensaje'])): ?>
+                <div class="mb-4 px-4 py-3 rounded relative <?php echo ($_SESSION['tipo_mensaje'] == 'success') ? 'bg-green-100 border border-green-400 text-green-700' : 'bg-red-100 border border-red-400 text-red-700'; ?>">
+                    <span class="block sm:inline"><?php echo $_SESSION['mensaje']; ?></span>
+                    <?php unset($_SESSION['mensaje']); unset($_SESSION['tipo_mensaje']); ?>
+                </div>
+                <?php endif; ?>
                                 
                 <div class="bg-white shadow overflow-hidden sm:rounded-lg">
                     <div class="overflow-x-auto">
@@ -78,15 +85,15 @@
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                 <div class="flex justify-end space-x-2">
-                                                    <a href="#" class="text-indigo-600 hover:text-indigo-900 mr-3" title="Editar (Próximamente)">
+                                                    <a href="/mvc_dev/admin/verAdmin/<?php echo $admin->IDper; ?>" class="text-blue-600 hover:text-blue-900 mr-3" title="Ver detalles">
+                                                        <i class="fas fa-eye"></i>
+                                                    </a>
+                                                    <a href="/mvc_dev/admin/editarAdmin/<?php echo $admin->IDper; ?>" class="text-indigo-600 hover:text-indigo-900 mr-3" title="Editar">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a href="#" class="text-purple-600 hover:text-purple-900 mr-3" title="Asignar Permisos (Próximamente)">
-                                                        <i class="fas fa-user-shield"></i>
-                                                    </a>
-                                                    <button class="text-red-600 hover:text-red-900" title="Eliminar (Próximamente)" disabled>
+                                                    <a href="/mvc_dev/admin/eliminarAdmin/<?php echo $admin->IDper; ?>" class="text-red-600 hover:text-red-900" title="Eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este administrador?')">
                                                         <i class="fas fa-trash"></i>
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </td>
                                         </tr>

@@ -49,6 +49,23 @@
 
     <!-- Contenido principal -->
     <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+        
+        <!-- Bloque para mostrar mensajes de sesión -->
+        <?php if(Session::exists('mensaje_exito')): ?>
+            <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4 rounded-md" role="alert">
+                <p class="font-bold">Éxito</p>
+                <p><?php echo Session::get('mensaje_exito'); ?></p>
+                <?php Session::remove('mensaje_exito'); ?>
+            </div>
+        <?php endif; ?>
+        <?php if(Session::exists('mensaje_error')): ?>
+            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4 rounded-md" role="alert">
+                <p class="font-bold">Error</p>
+                <p><?php echo Session::get('mensaje_error'); ?></p>
+                <?php Session::remove('mensaje_error'); ?>
+            </div>
+        <?php endif; ?>
+
         <div class="bg-white rounded-xl shadow-lg overflow-hidden">
             <!-- Encabezado -->
             <div class="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-4">
@@ -84,51 +101,39 @@
             <!-- Contenido Principal -->
             <div class="p-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <!-- Columna Izquierda: Tarjetas de Solicitud -->
+                   <!-- Columna Izquierda: Tarjetas de Solicitud -->
                     <div class="lg:col-span-2 space-y-6">
-                        <?php if (!empty($data['peticionesAprobadas'])): ?>
-                            <?php foreach($data['peticionesAprobadas'] as $peticion): ?>
+                        <?php if (!empty($data['peticiones'])): ?>
+                            <?php foreach($data['peticiones'] as $peticion): ?>
                                 <div class="bg-white border border-green-200 rounded-lg shadow-sm overflow-hidden tarjeta-animada">
                                     <div class="bg-green-600 px-4 py-3">
                                         <h3 class="text-lg font-semibold text-white flex items-center">
                                             <i class="fas fa-box-open mr-2"></i>
-                                            SOLICITUD #<?php echo htmlspecialchars($peticion->IDpre); ?> - LISTA PARA SALIDA
+                                            SOLICITUD #<?php echo htmlspecialchars($peticion->id); ?> - LISTA PARA SALIDA
                                         </h3>
                                     </div>
                                     <div class="p-4">
                                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                             <div class="space-y-2">
-                                                <p class="text-sm"><span class="font-medium text-gray-700">Solicitante:</span> <span class="text-gray-900"><?php echo htmlspecialchars($peticion->nombrecompletoper); ?></span></p>
-                                                <p class="text-sm"><span class="font-medium text-gray-700">Elemento:</span> <span class="text-gray-900"><?php echo htmlspecialchars($peticion->nombreele); ?></span></p>
-                                                <p class="text-sm"><span class="font-medium text-gray-700">Código:</span> <span class="font-mono bg-gray-100 px-2 py-0.5 rounded"><?php echo htmlspecialchars($peticion->codigoinventario); ?></span></p>
+                                                <p class="text-sm"><span class="font-medium text-gray-700">Solicitante:</span> <span class="text-gray-900"><?php echo htmlspecialchars($peticion->solicitante_nombre . ' ' . $peticion->solicitante_apellido); ?></span></p>
+                                                <p class="text-sm"><span class="font-medium text-gray-700">Elemento:</span> <span class="text-gray-900"><?php echo htmlspecialchars($peticion->elemento_nombre); ?></span></p>
+                                                <p class="text-sm"><span class="font-medium text-gray-700">Código:</span> <span class="font-mono bg-gray-100 px-2 py-0.5 rounded"><?php echo htmlspecialchars($peticion->elemento_codigo); ?></span></p>
                                             </div>
                                             <div class="space-y-2">
-                                                <p class="text-sm"><span class="font-medium text-gray-700">Aprobada por:</span> <span class="text-gray-900">Inventario</span></p>
-                                                <p class="text-sm"><span class="font-medium text-gray-700">Estado:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"><i class="fas fa-check-circle mr-1"></i> Lista para salida</span></p>
-                                                <p class="text-sm"><span class="font-medium text-gray-700">Lugar de traslado:</span> <span class="text-gray-900"><?php echo htmlspecialchars($peticion->lugardetraslado); ?></span></p>
+                                                <p class="text-sm"><span class="font-medium text-gray-700">Aprobada por:</span> <span class="text-gray-900"><?php echo htmlspecialchars($peticion->aprobador_nombre . ' ' . $peticion->aprobador_apellido); ?></span></p>
+                                                <p class="text-sm"><span class="font-medium text-gray-700">Estado:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"><i class="fas fa-check-circle mr-1"></i> <?php echo htmlspecialchars(ucfirst(str_replace('_', ' ', $peticion->estado_autorizacion))); ?></span></p>
+                                                <p class="text-sm"><span class="font-medium text-gray-700">Lugar de traslado:</span> <span class="text-gray-900"><?php echo htmlspecialchars($peticion->lugar_traslado); ?></span></p>
                                             </div>
                                         </div>
                                         <hr class="my-4 border-gray-200">
-                                        <form method="POST" action="<?php echo BASE_URL; ?>/porteria/registrarSalida" class="space-y-3">
-                                            <input type="hidden" name="id_prestamo" value="<?php echo htmlspecialchars($peticion->IDpre); ?>">
-                                            <div>
-                                                <label for="vigilante_<?php echo $peticion->IDpre; ?>" class="block text-sm font-medium text-gray-700 mb-1">Vigilante Responsable:</label>
-                                                <input type="text" name="nombre_vigilante" id="vigilante_<?php echo $peticion->IDpre; ?>" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" value="<?php echo htmlspecialchars($data['nombre_usuario']); ?>" required>
-                                            </div>
-                                            <div>
-                                                <label for="horaSalida_<?php echo $peticion->IDpre; ?>" class="block text-sm font-medium text-gray-700 mb-1">Hora de Salida:</label>
-                                                <input type="datetime-local" name="hora_salida" id="horaSalida_<?php echo $peticion->IDpre; ?>" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
-                                            </div>
-                                            <div>
-                                                <label for="observaciones_<?php echo $peticion->IDpre; ?>" class="block text-sm font-medium text-gray-700 mb-1">Observaciones de Salida:</label>
-                                                <textarea name="observaciones" id="observaciones_<?php echo $peticion->IDpre; ?>" rows="2" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
-                                            </div>
-                                            <div class="mt-6 flex justify-end">
-                                                <button type="submit" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                                                    <i class="fas fa-check-circle mr-2"></i> Autorizar Salida
-                                                </button>
-                                            </div>
-                                        </form>
+                                        
+                                        <div class="mt-6 flex justify-end">
+                                            <a href="<?php echo BASE_URL; ?>/porteria/autorizarSalida/<?php echo $peticion->id; ?>" 
+                                               class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                                               onclick="return confirm('¿Está seguro de que desea autorizar la salida de este elemento?');">
+                                                <i class="fas fa-check-circle mr-2"></i> Autorizar Salida
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -175,9 +180,15 @@
                     <!-- Columna Derecha: Registro de Salidas del Día -->
                     <div class="lg:col-span-1">
                         <div class="bg-white rounded-xl shadow-md p-4 border border-gray-200">
-                            <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
-                                <i class="fas fa-history mr-2 text-blue-500"></i> Registro de Salidas del Día
-                            </h3>
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-lg font-bold text-gray-800 flex items-center">
+                                    <i class="fas fa-history mr-2 text-blue-500"></i> Registro de Salidas del Día
+                                </h3>
+                                <a href="<?php echo BASE_URL; ?>/porteria/estadisticas" class="inline-flex items-center px-3 py-1 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                                    <i class="fas fa-chart-bar mr-2"></i>
+                                    Reportes
+                                </a>
+                            </div>
                             <div class="overflow-auto" style="max-height: 500px;">
                                 <table class="min-w-full bg-white">
                                     <thead class="bg-gray-100 sticky top-0">

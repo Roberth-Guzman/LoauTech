@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="<?php echo BASE_URL; ?>/public/img/logo_loautech_white.png" type="image/x-icon">
 </head>
 
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
@@ -36,7 +37,7 @@
                     </div>
                 <?php endif; ?>
 
-                <form method="POST" action="<?= BASE_URL ?>register/register" class="grid grid-cols-1 md:grid-cols-2 gap-6" id="formRegistro">
+                <form method="POST" action="<?= BASE_URL ?>registro/guardar" class="grid grid-cols-1 md:grid-cols-2 gap-6" id="formRegistro">
                     <!-- Tipo y número de identidad -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Tipo de identidad *</label>
@@ -117,7 +118,7 @@
                             <div class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                                 <i class="fas fa-lock"></i>
                             </div>
-                            <input type="password" name="contrasena" id="contrasena" required minlength="8"
+                            <input type="password" name="password" id="contrasena" required minlength="8"
                                 class="w-full pl-10 pr-3 py-2 border rounded-lg" placeholder="Crea una contraseña">
                         </div>
                         <div class="text-xs text-gray-500 mt-1">Mínimo 8 caracteres</div>
@@ -129,27 +130,13 @@
                             <div class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                                 <i class="fas fa-lock"></i>
                             </div>
-                            <input type="password" id="confirmar_contrasena" required minlength="8"
+                            <input type="password" name="confirm_password" id="confirmar_contrasena" required minlength="8"
                                 class="w-full pl-10 pr-3 py-2 border rounded-lg" placeholder="Repite la contraseña">
                         </div>
                     </div>
 
-                    <!-- Rol y botón -->
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Tipo de usuario *</label>
-                        <div class="relative">
-                            <div class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-                                <i class="fas fa-user-tag"></i>
-                            </div>
-                            <select name="rol" required class="w-full pl-10 pr-3 py-2 border rounded-lg">
-                                <option value="1">Usuario Normal</option>
-                                <option value="2">Portería</option>
-                                <option value="3">Administrador</option>
-                                <option value="4">cuentadante</option>
-                                <option value="5">almacenes</option>
-                            </select>
-                        </div>
-                    </div>
+                     <!-- Rol (oculto) -->
+                    <input type="hidden" name="rol" value="1">
 
                     <!-- Términos y Condiciones -->
                     <div class="md:col-span-2 mt-4 space-y-4">

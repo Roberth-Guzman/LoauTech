@@ -167,12 +167,15 @@
                 <p>Nos comprometemos a responder a todas las consultas en un plazo máximo de 48 horas hábiles.</p>
             </div>
         </div>
-
         <!-- Botón de regreso -->
-        <div class="text-center mt-8">
+        <div class="text-center mt-8 flex justify-center gap-4">
             <a href="<?= BASE_URL ?>terminos" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
                 <i class="fas fa-arrow-left mr-2"></i>
-                Volver a Términos y Condiciones Generales
+                Volver a Términos Generales
+            </a>
+            <a href="<?= BASE_URL ?>" class="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                <i class="fas fa-home mr-2"></i>
+                Volver al Inicio
             </a>
         </div>
     </div>

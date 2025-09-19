@@ -3,25 +3,19 @@ class Elemento extends Model {
 
     /**
      * Obtiene todos los elementos del inventario que están activos.
-     * Este método ahora usa la clase Database (PDO Wrapper).
      */
-   public function obtenerElementosDisponibles() {
-        // 1. Preparamos la consulta usando el método query() de nuestra clase Database.
-        $this->db->query("SELECT * FROM elementos WHERE estado = 'activo'");
+    public function obtenerElementosDisponibles() {
 
-        // 2. Ejecutamos la consulta y obtenemos todos los resultados.
-
+        $this->db->query("SELECT IDele, nombreele, cantidadele, codigoele, descripcionele, caracteristicasele, cuentadante_id FROM elementos WHERE estado = 'activo' AND estadoelemento = 'activo'");
         return $this->db->resultSet();
     }
-
     public function obtenerElementoPorId($id) {
         $this->db->query("SELECT * FROM elementos WHERE IDele = :id");
         $this->db->bind(':id', $id);
         return $this->db->single();
     }
  /**
-     * Obtiene absolutamente todos los elementos del inventario, sin importar su estado.
-     * Ideal para la vista del personal de almacén.
+     * Obtiene absolutamente todos los elementos del inventario
      */
     public function obtenerTodosLosElementos() {
         $this->db->query("SELECT * FROM elementos ORDER BY IDele DESC");
@@ -83,7 +77,8 @@ class Elemento extends Model {
                           caracteristicasele = :caracteristicasele,
                           estado = :estado,
                           estadoelemento = :estadoelemento,
-                          imagen = :imagen
+                          imagen = :imagen,
+                          cuentadante_id = :cuentadante_id
                           WHERE IDele = :id');
 
         // Bind values
@@ -97,6 +92,7 @@ class Elemento extends Model {
         $this->db->bind(':estado', $data['estado']);
         $this->db->bind(':estadoelemento', $data['estadoelemento']);
         $this->db->bind(':imagen', $data['imagen']);
+        $this->db->bind(':cuentadante_id', $data['cuentadante_id']);
 
         // Execute
         if ($this->db->execute()) {
@@ -104,6 +100,64 @@ class Elemento extends Model {
         } else {
             return false;
         }
+    }
+    
+    /**
+     * Crea un nuevo elemento en la base de datos.
+     * @param array $data Datos del elemento a crear.
+     * @return bool True si la creación fue exitosa, false en caso contrario.
+     */
+    public function crearElemento($data)
+    {
+        $this->db->query('INSERT INTO elementos (nombreele, cantidadele, cantidadest, codigoele, descripcionele, caracteristicasele, estado, estadoelemento, codigoinventario, imagen) 
+                          VALUES (:nombreele, :cantidadele, :cantidadest, :codigoele, :descripcionele, :caracteristicasele, :estado, :estadoelemento, :codigoinventario, :imagen)');
+
+        // Bind values
+        $this->db->bind(':nombreele', $data['nombreele']);
+        $this->db->bind(':cantidadele', $data['cantidadele']);
+        $this->db->bind(':cantidadest', $data['cantidadest'] ?? 'activo');
+        $this->db->bind(':codigoele', $data['codigoele']);
+        $this->db->bind(':descripcionele', $data['descripcionele']);
+        $this->db->bind(':caracteristicasele', $data['caracteristicasele']);
+        $this->db->bind(':estado', $data['estado']);
+        $this->db->bind(':estadoelemento', $data['estadoelemento']);
+        $this->db->bind(':codigoinventario', $data['codigoinventario']);
+        $this->db->bind(':imagen', $data['imagen'] ?? null);
+
+        // Execute
+        if ($this->db->execute()) {
+            return $this->db->lastInsertId();
+        } else {
+            return false;
+        }
+    }
+    
+    /**
+     * Elimina un elemento de la base de datos.
+     * @param int $id ID del elemento a eliminar.
+     * @return bool True si la eliminación fue exitosa, false en caso contrario.
+     */
+    public function eliminarElemento($id)
+    {
+        // Cambia el estado del elemento a 'inactivo' en lugar de borrarlo
+        $this->db->query("UPDATE elementos SET estado = 'inactivo' WHERE IDele = :id");
+        $this->db->bind(':id', $id);
+        
+        return $this->db->execute();
+    }
+    
+    /**
+     * Verifica si un elemento está siendo utilizado en préstamos.
+     * @param int $id ID del elemento a verificar.
+     * @return bool True si el elemento está en uso, false en caso contrario.
+     */
+    public function elementoEnUso($id)
+    {
+        $this->db->query('SELECT COUNT(*) as total FROM prestamos WHERE IDelementos = :id AND estado_autorizacion = "aprobado"');
+        $this->db->bind(':id', $id);
+        $resultado = $this->db->single();
+        
+        return $resultado && (int)$resultado->total > 0;
     }
 }
 ?>

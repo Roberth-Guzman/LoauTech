@@ -51,4 +51,20 @@ class Session {
         self::init();
         return isset($_SESSION[$key]);
     }
+    /**
+     * Verifica si el usuario ha iniciado sesión
+     */
+    public static function isLoggedIn() {
+        self::init();
+        return isset($_SESSION['user_id']);
+    }
+
+    /**
+     * Obtiene el rol del usuario actual
+     */
+    public static function getUserRole() {
+        self::init();
+        return self::get('user_role');
+    }
 }
+

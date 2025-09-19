@@ -21,21 +21,16 @@ class PeticionController extends Controller {
 
     // Muestra el formulario para registrar la petición
     public function registrar() {
-        // Validar que se pasó un ID de elemento
         if (!isset($_GET['elemento_id']) || !is_numeric($_GET['elemento_id'])) {
             header('Location: ' . BASE_URL . '/usuario/inventario?error=elemento_invalido');
             exit();
         }
-
         $idElemento = intval($_GET['elemento_id']);
         $elemento = $this->elementoModel->obtenerElementoPorId($idElemento);
-
-        // Verificar que el elemento exista
         if (!$elemento) {
             header('Location: ' . BASE_URL . '/usuario/inventario?error=elemento_no_encontrado');
             exit();
         }
-
         $data = [
             'titulo' => 'Registrar Petición',
             'elemento' => $elemento,
@@ -46,7 +41,7 @@ class PeticionController extends Controller {
     }
 
     // Procesa el formulario de registro de la petición
-    public function procesar() {
+      public function procesar() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             header('Location: ' . BASE_URL . '/usuario/inventario');
             exit();
@@ -54,19 +49,18 @@ class PeticionController extends Controller {
 
         // Recolectar y sanear los datos del POST
         $data = [
-            'id_elemento' => intval($_POST['idele']),
-            'id_usuario' => intval($_SESSION['user_id']),
+            'elemento_id' => intval($_POST['idele']),
+            'usuario_id' => intval($_SESSION['user_id']),
             'cantidad' => intval($_POST['cantidad_solicitada']),
-            'formacionodependencia' => trim($_POST['cargo']),
-            'cargopre' => trim($_POST['cargo']), // Asumiendo que 'cargo' es el campo correcto
+            'formacionodependencia' => trim($_POST['razon_descripcion']),
+            'cargopre' => trim($_POST['cargo']),
             'lugardetraslado' => trim($_POST['lugar_uso'])
         ];
 
         // Validar campos
         if (empty($data['formacionodependencia']) || empty($data['cargopre']) || empty($data['lugardetraslado']) || $data['cantidad'] <= 0) {
             // Si hay un error de validación, redirigir de nuevo al formulario con un mensaje
-            header('Location: ' . BASE_URL . '/peticion/registrar?elemento_id=' . $data['id_elemento'] . '&error=campos_obligatorios');
-            exit();
+            header('Location: ' . BASE_URL . '/peticion/registrar?elemento_id=' . $data['elemento_id'] . '&error=campos_obligatorios');
         }
 
         try {
@@ -80,9 +74,9 @@ class PeticionController extends Controller {
                 throw new Exception("No se pudo procesar la petición.");
             }
         } catch (Exception $e) {
-            // Capturar cualquier excepción (ej. stock insuficiente) y redirigir con el mensaje de error
+            // Capturar cualquier excepción y redirigir con el mensaje de error
             $error_message = urlencode($e->getMessage());
-            header('Location: ' . BASE_URL . '/peticion/registrar?elemento_id=' . $data['id_elemento'] . '&error=' . $error_message);
+            header('Location: ' . BASE_URL . '/peticion/registrar?elemento_id=' . $data['elemento_id'] . '&error=' . $error_message);
             exit();
         }
     }

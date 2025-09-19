@@ -44,9 +44,9 @@
                                         </span>
                                     </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-eye"></i></a>
-                                        <a href="#" class="text-yellow-600 hover:text-yellow-900 mr-3"><i class="fas fa-edit"></i></a>
-                                        <a href="#" class="text-red-600 hover:text-red-900"><i class="fas fa-trash"></i></a>
+                                        <a href="<?php echo BASE_URL; ?>/admin/verAutorizacion/<?php echo $autorizacion->IDaut; ?>" class="text-blue-600 hover:text-blue-900 mr-3"><i class="fas fa-eye"></i></a>
+                                        <a href="<?php echo BASE_URL; ?>/admin/editarAutorizacion/<?php echo $autorizacion->IDaut; ?>" class="text-yellow-600 hover:text-yellow-900 mr-3"><i class="fas fa-edit"></i></a>
+                                        <a href="<?php echo BASE_URL; ?>/admin/eliminarAutorizacion/<?php echo $autorizacion->IDaut; ?>" class="text-red-600 hover:text-red-900" onclick="return confirm('¿Está seguro de eliminar esta autorización?');"><i class="fas fa-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

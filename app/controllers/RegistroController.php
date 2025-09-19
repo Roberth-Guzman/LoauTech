@@ -22,7 +22,15 @@ class RegistroController extends Controller {
             'error' => null
         ];
 
-        $this->view('register/index', $data); 
+        $this->view('register/index', $data);
+    }
+
+    public function exito() {
+        $data = [
+            'titulo' => 'Registro Exitoso - Loautech',
+            'mensaje' => 'Tu cuenta ha sido creada exitosamente. Ahora puedes iniciar sesión.'
+        ];
+        $this->view('register/exito', $data);
     }
 
     public function guardar() {
@@ -121,11 +129,11 @@ class RegistroController extends Controller {
                         'rol' => 'usuario'
                     ];
                     
-                    // Usar la clase Session para manejar la sesión
-                    Session::set('usuario', $usuario);
-                    
-                    // Redirigir al panel de usuario
-                    header('Location: ' . BASE_URL . 'usuario/dashboard');
+                    // Mostrar mensaje de éxito y redirigir al login
+                    echo '<script>
+                        alert("¡Registro exitoso! Ahora puedes iniciar sesión con tus credenciales.");
+                        window.location.href = "' . BASE_URL . 'login";
+                    </script>';
                     exit();
                 } else {
                     $error = 'Error al procesar el registro. Por favor, inténtalo de nuevo.';

@@ -1,10 +1,6 @@
 <?php
 class LogoutController extends Controller {
     public function index() {
-        // Iniciar la sesión para poder acceder a ella
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
 
         // 1. Desvincular todas las variables de sesión
         $_SESSION = [];

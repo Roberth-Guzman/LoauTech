@@ -54,10 +54,15 @@
                 <div class="flex-shrink-0">
                   <div class="relative group">
                     <?php 
+                      // Asegurarse de que la ruta de la foto sea relativa y no comience con /
                       $foto = $data['perfil']->foto_ruta ?? null;
                       if ($foto): 
+                        // Eliminar cualquier barra inicial para evitar dobles barras
+                        $foto = ltrim($foto, '/');
+                        // Construir la URL completa
+                        $fotoUrl = BASE_URL . '/' . $foto;
                     ?>
-                      <img src="<?= BASE_URL ?>/<?= htmlspecialchars($foto) ?>" alt="Foto de perfil" class="h-40 w-40 rounded-full object-cover border-4 border-white shadow-md">
+                      <img src="<?= htmlspecialchars($fotoUrl) ?>" alt="Foto de perfil" class="h-40 w-40 rounded-full object-cover border-4 border-white shadow-md" id="imagen-perfil">
                     <?php else: ?>
                       <div class="h-40 w-40 rounded-full bg-gray-200 flex items-center justify-center">
                         <i class="fas fa-user text-gray-400 text-6xl"></i>
@@ -65,7 +70,7 @@
                     <?php endif; ?>
                     <div class="absolute inset-0 bg-black bg-opacity-50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                       <div class="flex space-x-2">
-                        <a href="#" class="bg-white p-2 rounded-full text-gray-800 hover:bg-gray-100" onclick="openModal()" title="Cambiar foto"><i class="fas fa-camera"></i></a>
+                        <a href="#" class="bg-white p-2 rounded-full text-gray-800 hover:bg-gray-100" onclick="openModal(); return false;" title="Cambiar foto"><i class="fas fa-camera"></i></a>
                         <?php if ($foto): ?>
                         <a href="#" class="bg-white p-2 rounded-full text-red-600 hover:bg-red-50" onclick="return confirm('¿Estás seguro de que quieres eliminar tu foto de perfil?');" title="Eliminar foto"><i class="fas fa-trash"></i></a>
                         <?php endif; ?>
@@ -73,7 +78,7 @@
                     </div>
                   </div>
                   <div class="mt-4 text-center">
-                    <button type="button" class="text-sm text-blue-600 hover:text-blue-800 font-medium" onclick="openModal()">
+                    <button type="button" class="text-sm text-blue-600 hover:text-blue-800 font-medium" onclick="openModal(); return false;">
                       Cambiar foto
                     </button>
                   </div>
@@ -239,6 +244,24 @@
   </div>
   
   <script>
+  // Función para abrir el modal
+  function openModal() {
+    document.getElementById('modalSubirFoto').classList.remove('hidden');
+  }
+  
+  // Función para cerrar el modal
+  function closeModal() {
+    document.getElementById('modalSubirFoto').classList.add('hidden');
+  }
+  
+  // Cerrar el modal al hacer clic fuera de él
+  window.onclick = function(event) {
+    const modal = document.getElementById('modalSubirFoto');
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
+  
   // Manejar envío del formulario de avatar con AJAX
   document.getElementById('avatarForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -258,34 +281,73 @@
       method: 'POST',
       body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error en la respuesta del servidor');
+      }
+      return response.json();
+    })
     .then(data => {
+      console.log('Respuesta del servidor:', data); // Para depuración
+      
       if (data.success) {
         // Actualizar la imagen de perfil mostrada
         if (data.avatar_url) {
-          const imgPerfil = document.querySelector('.img-perfil');
+          // Buscar la etiqueta img que muestra el avatar
+          const imgPerfil = document.getElementById('imagen-perfil');
           if (imgPerfil) {
             // Añadir un parámetro de tiempo para evitar el caché
-            imgPerfil.src = data.avatar_url + '?t=' + new Date().getTime();
+            const timestamp = new Date().getTime();
+            const newSrc = data.avatar_url + (data.avatar_url.includes('?') ? '&' : '?') + 't=' + timestamp;
+            imgPerfil.src = newSrc;
+            
+            // Forzar la recarga de la imagen
+            imgPerfil.onload = function() {
+              console.log('Imagen cargada correctamente');
+            };
+            
+            imgPerfil.onerror = function() {
+              console.error('Error al cargar la imagen:', newSrc);
+            };
+            
+            // Recargar la imagen forzando el navegador a no usar caché
+            imgPerfil.src = '';
+            imgPerfil.src = newSrc;
+            
+            console.log('Nueva URL de imagen:', newSrc);
+          } else {
+            console.error('No se encontró el elemento de imagen de perfil');
           }
         }
+        
         // Cerrar el modal
         closeModal();
+        
         // Mostrar mensaje de éxito
         alert('¡Avatar actualizado correctamente!');
+        
+        // Recargar la página después de un breve retraso
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+        
       } else {
-        alert(data.error || 'Error al actualizar el avatar');
+        const errorMsg = data.error || 'Error al actualizar el avatar';
+        console.error('Error del servidor:', errorMsg);
+        alert(errorMsg);
       }
     })
     .catch(error => {
-      console.error('Error:', error);
-      alert('Error al procesar la solicitud');
+      console.error('Error en la petición:', error);
+      alert('Error al procesar la solicitud: ' + error.message);
     })
     .finally(() => {
       // Restaurar el botón
-      btnText.classList.remove('hidden');
-      btnLoading.classList.add('hidden');
-      btnSubmit.disabled = false;
+      setTimeout(() => {
+        btnText.classList.remove('hidden');
+        btnLoading.classList.add('hidden');
+        btnSubmit.disabled = false;
+      }, 1000);
     });
   });
   </script>

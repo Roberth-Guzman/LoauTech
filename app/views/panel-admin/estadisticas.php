@@ -137,24 +137,15 @@ $inventario_counts = json_encode(array_map(fn($item) => $item->count, $distribuc
                         <tbody>
                             <!-- Fila de ejemplo 1 -->
                             <tr class="border-b">
-                                <td class="py-2 px-4 text-gray-700">2023-10-27 10:15:00</td>
-                                <td class="py-2 px-4 text-gray-700">admin@loatech.com</td>
-                                <td class="py-2 px-4 text-red-600 font-semibold">Eliminación de Usuario</td>
-                                <td class="py-2 px-4 text-gray-700">Usuario 'test_user' eliminado</td>
+                                
                             </tr>
                             <!-- Fila de ejemplo 2 -->
-                            <tr class="border-b">
-                                <td class="py-2 px-4 text-gray-700">2023-10-27 09:30:12</td>
-                                <td class="py-2 px-4 text-gray-700">superadmin@loatech.com</td>
-                                <td class="py-2 px-4 text-yellow-600 font-semibold">Cambio de Rol</td>
-                                <td class="py-2 px-4 text-gray-700">Rol de 'user@loatech.com' cambiado a 'Almacén'</td>
+                            <tr class="border-b">   
+                            
                             </tr>
                             <!-- Fila de ejemplo 3 -->
                             <tr>
-                                <td class="py-2 px-4 text-gray-700">2023-10-26 18:05:45</td>
-                                <td class="py-2 px-4 text-gray-700">admin@loatech.com</td>
-                                <td class="py-2 px-4 text-blue-600 font-semibold">Reseteo de Contraseña</td>
-                                <td class="py-2 px-4 text-gray-700">Contraseña reseteada para 'support@loatech.com'</td>
+    
                             </tr>
                         </tbody>
                     </table>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $data['titulo']; ?></title>
+    <title>Crear Administrador</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -16,13 +16,13 @@
         <!-- Contenido Principal -->
         <div class="flex-1 p-10">
             <div class="flex justify-between items-center mb-6">
-                <h1 class="text-3xl font-bold">Crear Nuevo Usuario</h1>
-                <a href="<?php echo BASE_URL; ?>/admin/usuarios" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                    <i class="fas fa-arrow-left mr-2"></i> Volver a Usuarios
+                <h1 class="text-3xl font-bold">Crear Nuevo Administrador</h1>
+                <a href="<?php echo BASE_URL; ?>/admin/gestionarAdmin" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                    <i class="fas fa-arrow-left mr-2"></i> Volver a Administradores
                 </a>
             </div>
 
-            <div class="bg-white shadow-md rounded-lg p-8">
+            <div class="bg-white shadow-md rounded-lg p-8"> 
             
                 <?php if (!empty($data['error'])): ?>
                     <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
@@ -81,24 +81,13 @@
                         </div>
                     </div>
 
-                    <div>
-                        <!-- Rol -->
-                        <div class="col-span-1">
-                            <label for="rol" class="block text-sm font-medium text-gray-700">Rol</label>
-                            <select name="rol" id="rol" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                                <option value="">Seleccione un rol</option>
-                                <?php foreach ($data['roles'] as $rol_obj): ?>
-                                    <option value="<?php echo htmlspecialchars($rol_obj->rol); ?>" <?php echo (isset($data['rol']) && $data['rol'] == $rol_obj->rol) ? 'selected' : ''; ?>>
-                                        <?php echo htmlspecialchars(ucfirst($rol_obj->rol)); ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- Contraseñas -->
+                    <!-- Rol (automático como admin) -->
+                    <input type="hidden" name="rol" value="admin">
+
+                    <!-- Botón de envío -->
                     <div class="flex justify-end pt-4">
                         <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            <i class="fas fa-save mr-2"></i> Crear Usuario
+                            <i class="fas fa-save mr-2"></i> Crear Administrador
                         </button>
                     </div>
 

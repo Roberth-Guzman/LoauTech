@@ -66,7 +66,7 @@ require_once __DIR__ . '/includes/navbar.php';
                     <p><strong>Dirección:</strong> <?php echo htmlspecialchars($data['perfil']->direccioncont ?? 'No disponible'); ?></p>
                 </div>
                 <div class="text-right mt-6">
-                    <a href="#" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Editar Información</a>
+                    <a href="<?php echo BASE_URL; ?>/almacen/editarPerfil" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Editar Información</a>
                 </div>
             </div>
         </div>

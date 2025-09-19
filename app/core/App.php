@@ -7,6 +7,7 @@ class App {
 
     public function __construct() {
         $url = $this->parseUrl();
+        
         $baseControllerPath = dirname(dirname(__FILE__)) . '/controllers/';
 
         // --- Lógica de Enrutamiento Mejorada ---
@@ -40,7 +41,6 @@ class App {
             }
             
             unset($url[0]);
-            
             // Llamar al controlador y método
             call_user_func_array([$this->controller, $this->method], $this->params);
             return;
@@ -52,7 +52,7 @@ class App {
             $subDir = $url[0];
             $controllerFound = false;
 
-            // Prioridad 1: Buscar un controlador específico en el subdirectorio (ej: /porteria/escaner -> EscanerController)
+            // Prioridad 1: Buscar un controlador específico en el subdirectorio
             if (isset($url[1])) {
                 $controllerName = ucwords($url[1]) . 'Controller';
                 $controllerFile = $baseControllerPath . $subDir . '/' . $controllerName . '.php';
@@ -95,14 +95,25 @@ class App {
         // Re-indexar el array de la URL para que el método esté en el índice 0
         $url = array_values($url);
 
-        // 3. BUSCAR MÉTODO
-        if (isset($url[0]) && method_exists($this->controller, $url[0])) {
-            $this->method = $url[0];
-            unset($url[0]);
+        // 3. BUSCAR MÉTODO (CON LÓGICA PARA RESET PASSWORD)
+        if (isset($url[0])) {
+            // Caso especial para /login/resetPassword/{token}
+            if (strtolower($url[0]) === 'resetpassword' && isset($url[1])) {
+                $this->method = 'resetPassword';
+                $this->params = [$url[1]]; // El token es el parámetro
+                unset($url[0], $url[1]);
+            } 
+            // Caso general
+            elseif (method_exists($this->controller, $url[0])) {
+                $this->method = $url[0];
+                unset($url[0]);
+            }
         }
 
-        // 4. OBTENER PARÁMETROS
-        $this->params = $url ? array_values($url) : [];
+        // 4. OBTENER PARÁMETROS (si no fueron establecidos por el caso especial)
+        if (empty($this->params)) {
+            $this->params = $url ? array_values($url) : [];
+        }
 
         // 5. LLAMAR MÉTODO
         call_user_func_array([$this->controller, $this->method], $this->params);
