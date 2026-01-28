@@ -19,10 +19,8 @@ Antes de comenzar, asegúrate de tener instalado el siguiente software en tu sis
 
 ## Credenciales de Acceso
 
-Puedes utilizar las siguientes credenciales para acceder como Administrador y probar el sistema.
-
--   **Documento:** `1081399491`
--   **Contraseña:** `12345678`
 Para ingresar como un usuario por defecto, se puede hacer uso del formulario de registro. El administrador se ecargara de cambiar roles a los usuarios
+
+Los demas roles son unicamente gestionados por personal autorizado.
 
 ---
